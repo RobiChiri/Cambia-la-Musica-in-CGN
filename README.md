@@ -1,52 +1,50 @@
 # Cambia-la-Musica-in-CGN
 
-  # Requisiti funzionali:
-  NAVBAR: 
+# 🎼 Requisiti Funzionali
 
-Replicare il più fedelmente possibile lo stile del manifesto 
+Questo documento descrive i requisiti funzionali del progetto e fornisce una guida per l’implementazione delle varie sezioni dell’applicazione.
 
-OPZIONALE: prevedere un bottone di rimando alla pagina della form; 
+---
 
-SIDEBAR: 
+## 🎛️ NAVBAR
+- [ ] Replicare il più fedelmente possibile lo stile del **manifesto**  
+- [ ] (**Opzionale**) Prevedere un bottone di rimando alla pagina della **form**
 
-La visualizzazione iniziale deve prevedere solo il titolo “IL RITMO GIUSTO” e la nota; 
+---
 
-Al click del titolo, dovrà apparire la tendina con tutte le varie opzioni; 
+## 🎶 SIDEBAR
+- [ ] Visualizzazione iniziale: mostra solo il titolo **“IL RITMO GIUSTO”** e la nota  
+- [ ] Al click sul titolo: aprire un **menu a tendina** con tutte le opzioni  
 
-SEZIONE CENTRALE 
+---
 
-Provare a trovare un’idea per cercare di impaginare in maniera più ordinata le varie scritte (es. raggruppare in delle card i vari momenti della riunione); 
+## 📜 SEZIONE CENTRALE
+- [ ] Organizzare i contenuti in maniera più ordinata (es. raggruppare i momenti della riunione in **card**)  
+- [ ] Nuovo stile di impaginazione:  
+  - [ ] Al click di ogni **nota**, evidenziare la caratteristica del meeting  
+  - [ ] Mostrare un breve **testo esplicativo** associato  
+- [ ] Al click di ogni nota: avviare il **tono musicale** corrispondente  
+- [ ] All’hover dello spartito: introdurre un tasto **PLAY** che riproduca l’intero motivo musicale  
+- [ ] Mettere più in evidenza i testi scritti in piccolo  
+- [ ] Per la caratteristica **“Facilitare”**: al click mostrare un testo che spiega ruolo e importanza della facilitazione (dal documento)  
 
-Riproporre un nuovo stile per l’impaginazione: al click di ogni nota andrà messo in evidenza la caratteristica specifica del meeting, accompagnandola da un piccolo testo esplicativo; 
+---
 
-Al click di ogni nota deve partire il tono musicale corrispondente; 
+## 🎵 FOOTER
+- [ ] Visualizzazione iniziale: mostra solo il titolo **“NOTE STONATE”** e la nota  
+- [ ] Al click sul titolo: aprire l’intera sezione con le varie opzioni  
 
-All’hover dello spartito, introdurre un tasto "PLAY” che riprodurrà tutto il motivo musicale; 
+---
 
-Provare a mettere più in evidenza il testo scritto in piccolino; 
+## ⭐ Requisito Opzionale
+Se il tempo lo permette, sviluppare la seguente funzionalità extra:  
 
-In relazione alla caratteristica “Facilitare” della fase di svolgimento, riportare al click un testo che spiega il ruolo e l’importanza della facilitazione (info ricavabili dal documento) 
+- [ ] Creare una **seconda pagina**, accessibile tramite bottone nella **navbar**  
+- [ ] Implementare una **form quiz** di verifica dei contenuti  
+- [ ] Struttura del quiz:  
+  - [ ] 10 domande con risposta **Vero/Falso**  
+  - [ ] Ad ogni tentativo mostrare **3 domande randomiche** (quiz sempre diverso)  
+- [ ] Condizioni di superamento: 100% risposte corrette  
+- [ ] Prevedere scenari diversi in caso di **successo** o **fallimento**  
 
-FOOTER 
-
-La visualizzazione iniziale deve prevedere solo il titolo “NOTE STONATE” e la nota; 
-
-Al click del titolo, mostrare l’intera sezione con le varie opzioni; 
-
- 
-
-REQUISITO OPZIONALE 
-
-Se vi trovate a buon punto dal punto di vista delle tempistiche, iniziate a lavorare sulla seguente funzionalità: 
-
-Date sfogo alla fantasia e progettate una seconda pagina che verrà aperta al click dell’apposito bottone nella navbar; 
-
-Costruire una form che servirà per sottoporre l’utente ad un quiz per vedere se ha compreso le nozioni della pagina principale; 
-
-Preparate 10 domande con risposta vero o falso; 
-
-Il programma dovrà presentare 3 di queste domande in maniera randomica (quindi ogni volta mi aspetto un quiz diverso dal precedente); 
-
-Il test si supera se si risponde correttamente al 100% delle domande; 
-
-Prevedere degli scenari sia nel caso di successo che di fallimento del test; 
+---
