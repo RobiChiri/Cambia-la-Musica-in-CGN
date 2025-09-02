@@ -1,0 +1,20 @@
+footer
+{
+    display: block;
+    clear: both;
+    
+    height: 300px;
+    width: 1000px;
+    padding: 20px;
+}
+
+div
+{
+    display: block;
+    float: left;
+    width:150px; 
+    height:150px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
