@@ -2,19 +2,35 @@ footer
 {
     display: block;
     clear: both;
-    
+    position: absolute;
+    bottom: 0;
+
     height: 300px;
     width: 1000px;
-    padding: 20px;
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 div
 {
     display: block;
     float: left;
-    width:150px; 
-    height:150px;
+    width: 300px; 
+    height:200px;
 
     margin-left: auto;
     margin-right: auto;
+
+    font-size: 1em;
+}
+
+#title
+{
+    width: 100px;
+}
+
+ul
+{
+    list-style-image: url(Content/images/nota3rp.png);
 }
