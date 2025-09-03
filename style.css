@@ -27,6 +27,14 @@ body{
     left: -400px;
 }
 
+#logo{
+  float: right;
+  position: relative;
+  top: -150px;
+  left: 150px;
+  background-color: white;
+}
+
 .immaginenavbar{
     position: relative;
     display: inline-block;
