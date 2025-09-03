@@ -8,13 +8,17 @@ footer
     height: 250px;
     width: 1200px;
 
-    padding-top: 25px;
+    padding-top: 35px;
     padding-right: 75px;
-    padding-bottom: 25px;
+    padding-bottom: 35px;
 
     margin-bottom: 50px;
 
     background-color:  #666666;
+
+    background-image: url(Content/images/note.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
 }
 
 div
