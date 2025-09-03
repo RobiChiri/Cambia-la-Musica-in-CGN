@@ -24,7 +24,7 @@ footer
 
 div
 {
-    display: block;
+    /*display: block;*/
     float: left;
     width: 300px; 
     height:250px;
