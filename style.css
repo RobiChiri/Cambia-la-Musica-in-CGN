@@ -17,17 +17,17 @@ section{
 }
 
 #titolo{
-visibility: hidden;
+
 position: relative;
 text-align: center;
-top: -120px;
+top: 0px;
 }
 
 #descrizione{
-  visibility: hidden;
+
   position: relative;
   text-align: center;
-  top: -120px;
+  top: 0px;
   font-size: medium;
 }
 
