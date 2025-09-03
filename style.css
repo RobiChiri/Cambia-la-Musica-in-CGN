@@ -3,7 +3,23 @@ body{
 }
 
 
+section{
+  float: left;
+  width: 80%;
+  height: 90%;
+  border-right: 2px solid black;
+}
+
 #immaginenote{
   position: relative;
-  left: 100px;
+  top: 150px;
+  left: 90px;
+}
+
+#testocentrale{
+  width: 1000px;
+  height: 190px;
+  background-color: white;
+  margin-left: 85px;
+
 }
