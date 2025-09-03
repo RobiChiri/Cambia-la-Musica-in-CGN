@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambia la musica in CGN</title>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
    
     <aside> 
-        <div id="Generale">
-        <div id="Titolo"> 
+        <div id="Generale" onclick=Mostra()> 
             <h2 id="IlRitmoGiusto">IL RITMO  </h2>
-            <h2 id="IlRitmoGiusto" >GIUSTO </h2>
-        </div>
+            <h2 id="IlRitmoGiusto" > GIUSTO </h2>
         <img src="Content/images/nota.png" id="notaIntonata" alt="nota Intonata" width="200">
-        <ul> 
-            <li> di non fare una riunione se non serve</li>
+        </div>
+        <ul id="lista"> 
+            <li> Valuta di non fare una riunione se non serve</li>
             <li><hr align="left">Sii puntuale</hr></li>
             <li><hr align="left">Arriva preparato</hr></li>
             <li><hr align="left">Assicurati di aver evaso i To-Do precedenti</hr></li>
@@ -31,7 +31,7 @@
             <li><hr align="left">Evita il giudizio</hr></li>
             <li><hr align="left">Crea un clima accogliente di fiducia</hr></li>
             <li><hr align="left">Relazionati in modo paritario</hr></li>
-        
+            <li id="special"><hr align="left"></hr></li>
         </ul>
         </div>
     </aside>
