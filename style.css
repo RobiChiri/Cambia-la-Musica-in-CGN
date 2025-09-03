@@ -16,6 +16,21 @@ section{
   left: 90px;
 }
 
+#titolo{
+visibility: hidden;
+position: relative;
+text-align: center;
+top: -120px;
+}
+
+#descrizione{
+  visibility: hidden;
+  position: relative;
+  text-align: center;
+  top: -120px;
+  font-size: medium;
+}
+
 #testocentrale{
   position: relative;
   top: -100px;
