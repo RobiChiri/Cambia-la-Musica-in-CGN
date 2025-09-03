@@ -92,9 +92,14 @@ ul
     /*list-style-image: url(Content/images/nota3rp.png);*/
     list-style-image: url("Content/images/nota3r.png");
     line-height: 15px;
+
 }
 
 hr
 {
     margin-top: 3px;
+}
+
+.listaF{
+    visibility: hidden;
 }
