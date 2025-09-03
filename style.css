@@ -27,14 +27,11 @@ div{
     width: 110px;
     line-height: 5px;
 }
-ul {
 
-    list-style-type: none;
-  
-  }
 
-ul li ::before{
-    background-image: url("Content/images/nota3.png");
-    width: 300px;
-  height: 100px; 
+ul{
+
 }
+
+
+
