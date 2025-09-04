@@ -71,6 +71,8 @@ aside {
   width: 110px;
 }
 aside ul {
+  position: relative;
+  top: -250px;
   visibility: hidden;
   line-height: 5px;
   list-style-image: url("Content/images/nota3\ \(2\).png");
@@ -93,9 +95,11 @@ aside hr{
   height: 100%;
   width: 100%;
 }
-
+/* CENTRAL*/
 
 section {
+  position: relative;
+  top: -1000px;
   float: left;
   width: 70%;
   border-right: 2px solid black;
