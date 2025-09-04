@@ -94,7 +94,6 @@ div
 
 ul
 {
-    visibility: hidden;
     /*list-style-image: url(Content/images/nota3rp.png);*/
     list-style-image: url("Content/images/nota3r.png");
     line-height: 15px;
@@ -104,4 +103,13 @@ ul
 hr
 {
     margin-top: 3px;
+}
+#listaF{
+    visibility: hidden;
+}
+#listaC{
+    visibility: hidden;
+}
+#listaD{
+    visibility: hidden;
 }
