@@ -1,0 +1,45 @@
+body{
+    background-color: #ffebd5   ;
+}
+
+#bgsinistra{
+    position: relative;
+    top: -56px;
+    left: -20px;
+}
+
+#bgdestra1{
+    position: relative;
+    top: -56px;
+    left: -460px;
+}
+
+#bgdestra2{
+    float: right;
+    position: relative;
+    top: -168px;
+    left: 5px;
+}
+
+#cambiamusica{
+    position: relative;
+    top: -22px;
+    left: -400px;
+}
+
+#logo{
+  float: right;
+  position: relative;
+  top: -150px;
+  left: 180px;
+}
+
+.immaginenavbar{
+    position: relative;
+    display: inline-block;
+}
+
+.immaginesopra{
+    position: absolute;
+    z-index: 1;
+}
