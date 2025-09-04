@@ -1,17 +1,16 @@
-var miaVar=1;
+var miaVar=true;
 
 function Mostra(){
-    if(miaVar===1){
+    if(miaVar){
         document.getElementById("listaF").style.visibility="visible";
         document.getElementById("listaC").style.visibility="visible";
         document.getElementById("listaD").style.visibility="visible";
-        miaVar=0;
+        miaVar=false;
     }
-    else if(miaVar===0){
-        
+    else{
         document.getElementById("listaF").style.visibility="hidden";
         document.getElementById("listaC").style.visibility="hidden";
-        document.getElementById("listaD").style.visibility="hidden"
-        miaVar=1;
+        document.getElementById("listaD").style.visibility="hidden";
+        miaVar=true;
     }
 }
