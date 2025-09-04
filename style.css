@@ -1,3 +1,4 @@
+/*NAVBAR*/
 body{
     background-color: #ffebd5   ;
 }
@@ -42,4 +43,49 @@ body{
 .immaginesopra{
     position: absolute;
     z-index: 1;
+}
+/* SIDEBAR*/
+aside {
+  width: 30%;
+  padding-left: 20px;
+  margin-left: 20px;
+  float: right;
+  font-style: italic;
+}
+
+#notaIntonata{
+  position:relative;
+  right: -200px;
+  top: 20px;
+
+}
+#IlRitmoGiusto{
+  position: relative;
+  top: 180px;
+  right:-90px;
+  line-height: 8px
+  
+}
+#titolo{
+  height: 50 px ;
+  width: 110px;
+}
+aside ul {
+  visibility: hidden;
+  line-height: 5px;
+  list-style-image: url("Content/images/nota3\ \(2\).png");
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+}
+aside hr{ 
+  width: 400px;
+  margin: 10px out;
+  color: gray;
+}
+#special{
+  list-style: none;
+}
+#Generale{
+  position: relative;
+  top: -250px;
 }
