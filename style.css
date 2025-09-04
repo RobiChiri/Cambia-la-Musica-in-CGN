@@ -12,19 +12,32 @@ footer
     padding-right: 75px;
     padding-bottom: 35px;
 
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    margin-left: -10px;
 
-    background-color:  #666666;
+    background-color: #383838;
 
-    /*
-    background-image: url(Content/images/note.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;*/
+    border-top-right-radius : 20px;
+    border-bottom-right-radius : 20px;
+
+    background-image: url(Content/images/notetbtm.png), url(Content/images/notetop.png);
+    background-repeat: repeat-x, repeat-x;
+    background-position: -50px 305px, -50px -2px;
+    background-size: 80%, 80%;
+}
+
+#footerbase
+{
+    height: 55px;
+    width: 159.5%;
+    padding-top: 18px;
+    margin-left: -10px;
+    
 }
 
 div
 {
-    /*display: block;*/
+    display: block;
     float: left;
     width: 300px; 
     height:250px;
@@ -33,11 +46,8 @@ div
     margin-right: auto;
     margin-top: -20px;
 
-    font-size: 14px;
-    text-align: left;
-    align-items: center;
+    
 }
-
 
 #notastonata
 {
@@ -98,18 +108,20 @@ ul
     list-style-image: url("Content/images/nota3r.png");
     line-height: 15px;
 
+    font-size: 14px;
+    text-align: left;
+    align-items: flex-start;
+    color: #ffebd5;
 }
 
 hr
 {
     margin-top: 3px;
+    color: #ffebd5;
+    list-style: none;
 }
-#listaF{
-    visibility: hidden;
-}
-#listaC{
-    visibility: hidden;
-}
-#listaD{
+
+#listaF, #listaC, #listaD
+{
     visibility: hidden;
 }

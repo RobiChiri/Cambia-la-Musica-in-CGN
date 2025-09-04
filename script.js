@@ -8,9 +8,10 @@ function Mostra(){
         miaVar=0;
     }
     else if(miaVar===0){
+        
         document.getElementById("listaF").style.visibility="hidden";
         document.getElementById("listaC").style.visibility="hidden";
-        document.getElementById("listaD").style.visibility="hidden";
+        document.getElementById("listaD").style.visibility="hidden"
         miaVar=1;
     }
 }
