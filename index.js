@@ -16,8 +16,8 @@ function NotaClick(posizione) {
         visible = true;
     }
 
-    document.getElementById("titolo").innerHTML = elenco[posizione][0];
-    document.getElementById("descrizione").innerHTML = elenco[posizione][1];
+    document.getElementById("titolo").textContent = elenco[posizione][0];           /*provato con innerHTML, innerText, innerContent : non ci sono errori particolari*/
+    document.getElementById("descrizione").textContent = elenco[posizione][1];
     
     if (visible) {
         visible = false;
@@ -32,5 +32,5 @@ function NotaClick(posizione) {
         document.getElementById("descrizione").style.visibility = "visible";
         document.getElementById("titolo").style.visibility = "visible";
     }
-    /*alert(visible + "CIAO");*/
+    /*alert(visible + " CIAO");*/
 }
