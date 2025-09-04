@@ -10,6 +10,14 @@ section{
   margin-top: 100px;
 }
 
+#sfondocard{
+  background-color: blue;
+  width: 150px;
+  position: relative;
+  left: 300px;
+  top: -100px;
+}
+
 #immaginenote{
   position: relative;
   top: 30px;
