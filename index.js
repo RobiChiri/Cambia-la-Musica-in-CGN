@@ -1,13 +1,13 @@
-var miaVar=1;
+var miaVar=true;
 
 function Mostra(){
-    if(miaVar===1){
+    if(miaVar){
         document.getElementById("lista").style.visibility="visible";
-        miaVar=0;
+        miaVar=false;
     }
-    else if(miaVar===0){
+    else{
         document.getElementById("lista").style.visibility="hidden";
-        miaVar=1;
+        miaVar=true;
     }
 }
 
