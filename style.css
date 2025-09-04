@@ -80,3 +80,11 @@ section {
   line-height: 15px;
   margin-left: 130px;
 }
+
+.keywords div
+{
+  display: flex;
+  flex-direction: row;
+  height: 12px;
+  font-size: 9px;
+}
