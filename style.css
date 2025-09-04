@@ -12,6 +12,9 @@ section {
 
 .bloccogrande{
   display: flex;
+  /*background-color: black;*/
+  position: relative;
+  top:-198px ;
 }
 
 #sfondocard1 {
@@ -21,7 +24,7 @@ section {
   height: 300px;
   position: relative;
   left: 287px;
-  top: -198px;
+  top: -0;
 }
 
 #sfondocard2 {
@@ -31,7 +34,7 @@ section {
   height: 300px;
   position: relative;
   left: 327px;
-  top: -198px;
+  top: -0px;
 }
 
 #sfondocard3 {
@@ -41,10 +44,11 @@ section {
   height: 300px;
   position: relative;
   left: 370px;
-  top: -198px;
+  top: -0px;
 }
 
 #immaginenote {
+
   position: relative;
   top: 30px;
   left: 90px;
