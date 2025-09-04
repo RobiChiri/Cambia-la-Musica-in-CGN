@@ -1,18 +1,18 @@
-body{
+body {
   background-color: #ffebd5;
 }
 
 
-section{
+section {
   float: left;
   width: 70%;
   border-right: 2px solid black;
   margin-top: 100px;
 }
 
-#sfondocard1{
+#sfondocard1 {
   background-color: #2c6ca3;
-  background: linear-gradient(to top, #2c6ca3 , #2c6ba325);
+  background: linear-gradient(to top, #2c6ca3, 30%, #2c6ba310);
   width: 413px;
   height: 300px;
   position: relative;
@@ -20,52 +20,53 @@ section{
   top: -198px;
 }
 
-#sfondocard2{
+#sfondocard2 {
   background-color: #2c6ca3;
-  background: linear-gradient(to top, #2c6ca3 , #2c6ba325);
-  width: 413px;
+  background: linear-gradient(to top, #2c6ca3, 30%, #2c6ba310);
+  width: 272px;
   height: 300px;
   position: relative;
-  left: 800px;
-  top: -198px;
+  left: 740px;
+  top: -498px;
 }
 
-#sfondocard3{
+#sfondocard3 {
   background-color: #2c6ca3;
-  background: linear-gradient(to top, #2c6ca3 , #2c6ba325);
-  width: 413px;
+  background: linear-gradient(to top, #2c6ca3, 30%, #2c6ba310);
+  float: right;
+  width: 132px;
   height: 300px;
   position: relative;
-  left: 287px;
-  top: -198px;
+  left: -135px;
+  top: -797px;
 }
 
-#immaginenote{
+#immaginenote {
   position: relative;
   top: 30px;
   left: 90px;
   z-index: 1;
 }
 
-#titolo{
-position: relative;
-text-align: center;
-top: 0px;
+#titolo {
+  position: relative;
+  text-align: center;
+  top: 0px;
 }
 
-#descrizione{
+#descrizione {
   position: relative;
   text-align: center;
   top: 0px;
   font-size: medium;
 }
 
-#testocentrale{
+#testocentrale {
   position: relative;
   top: -100px;
   width: 1000px;
   height: 140px;
-  font-size:smaller;
+  font-size: smaller;
   background-color: #ffebd5;
   line-height: 15px;
   margin-left: 130px;
