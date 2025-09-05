@@ -1,57 +1,87 @@
 /*NAVBAR*/
 body {
   background-color: #ffebd5;
+  padding: 0;
+  margin: 0;
+}
+
+.formcontainer{
+  display: flex;
+  flex-direction: column;
+}
+
+#risultato {
+  visibility: hidden;
+  display: none;
+  text-align: center;
+}
+
+#bottoneinvio {
+  height: 100px;
+  width: 10%;
+  font-size: 20px;
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-top: 2%;
+}
+
+#domanda {
+  width: 20%;
+  height: 80px;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 2%;
+  /*border-color: lightgreen;*/
+}
+
+#titolo {
+  font-size: 100px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.navbarcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /*background-color: black;*/  
 }
 
 #bgsinistra {
   position: relative;
-  top: -56px;
-  left: -20px;
+  top: -0;
+  left: -1%;
 }
 
 #bgdestra1 {
   position: relative;
-  top: -56px;
-  left: -460px;
+  top: -0;
+  left: -25.3%;
 }
 
 #bgdestra2 {
-  float: right;
   position: relative;
-  top: -168px;
-  left: 5px;
+  top: -0;
+  left: -26%;
 }
 
 #cambiamusica {
   position: relative;
-  top: -22px;
-  left: -400px;
+  margin-top: -0.73%;
+  left: -20%;
+  z-index: 1;
 }
 
 #logo {
-  float: right;
   position: relative;
-  top: -150px;
-  left: 180px;
-}
-
-.immaginenavbar {
-  position: relative;
-  display: inline-block;
-
-  height: 90%;
-}
-
-.immaginesopra {
-  position: absolute;
-  z-index: 1;
+  margin-top: 0.8%;
+  left: -45%;
 }
 
 /* SIDEBAR*/
 aside {
   
-  padding-left: 20px;
-  margin-left: 20px;
+
   font-style: italic;
 
   display: flex;
