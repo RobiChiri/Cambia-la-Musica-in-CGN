@@ -1,6 +1,8 @@
+/* SIDEBAR */
+
 var miaVar=true;
 
-function Mostra(){
+function MostraS(){
     if(miaVar){
         document.getElementById("lista").style.visibility="visible";
         miaVar=false;
@@ -10,6 +12,8 @@ function Mostra(){
         miaVar=true;
     }
 }
+
+/* CENTRAL */
 
 var elenco;
 
@@ -47,3 +51,5 @@ function NotaClick(posizione) {
     }
     /*alert(visible + " CIAO");*/
 }
+
+/*FOOTER*/

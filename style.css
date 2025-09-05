@@ -1,49 +1,50 @@
 /*NAVBAR*/
-body{
-    background-color: #ffebd5   ;
+body {
+  background-color: #ffebd5;
 }
 
-#bgsinistra{
-    position: relative;
-    top: -56px;
-    left: -20px;
+#bgsinistra {
+  position: relative;
+  top: -56px;
+  left: -20px;
 }
 
-#bgdestra1{
-    position: relative;
-    top: -56px;
-    left: -460px;
+#bgdestra1 {
+  position: relative;
+  top: -56px;
+  left: -460px;
 }
 
-#bgdestra2{
-    float: right;
-    position: relative;
-    top: -168px;
-    left: 5px;
+#bgdestra2 {
+  float: right;
+  position: relative;
+  top: -168px;
+  left: 5px;
 }
 
-#cambiamusica{
-    position: relative;
-    top: -22px;
-    left: -400px;
+#cambiamusica {
+  position: relative;
+  top: -22px;
+  left: -400px;
 }
 
-#logo{
+#logo {
   float: right;
   position: relative;
   top: -150px;
   left: 180px;
 }
 
-.immaginenavbar{
-    position: relative;
-    display: inline-block;
+.immaginenavbar {
+  position: relative;
+  display: inline-block;
 }
 
-.immaginesopra{
-    position: absolute;
-    z-index: 1;
+.immaginesopra {
+  position: absolute;
+  z-index: 1;
 }
+
 /* SIDEBAR*/
 aside {
   width: 30%;
@@ -53,23 +54,25 @@ aside {
   font-style: italic;
 }
 
-#notaIntonata{
-  position:relative;
+#notaIntonata {
+  position: relative;
   right: -200px;
   top: 20px;
 
 }
-#IlRitmoGiusto{
+
+#IlRitmoGiusto {
   position: relative;
   top: 180px;
-  right:-90px;
+  right: -90px;
   line-height: 8px
-  
 }
-#titolo{
-  height: 50 px ;
+
+#titolo {
+  height: 50 px;
   width: 110px;
 }
+
 aside ul {
   position: relative;
   top: -250px;
@@ -79,22 +82,28 @@ aside ul {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 700;
 }
-aside hr{ 
+
+aside hr {
   width: 400px;
   margin: 10px out;
   color: gray;
 }
-#special{
+
+#special {
   list-style: none;
 }
-#Generale{
+
+#Generale {
   position: relative;
   top: -250px;
-}body {
+}
+
+body {
   background-color: #ffebd5;
   height: 100%;
   width: 100%;
 }
+
 /* CENTRAL*/
 
 section {
@@ -106,11 +115,11 @@ section {
   margin-top: 100px;
 }
 
-.bloccogrande{
+.bloccogrande {
   display: flex;
   /*background-color: black;*/
   position: relative;
-  top:-198px ;
+  top: -198px;
 }
 
 #sfondocard1 {
@@ -144,7 +153,6 @@ section {
 }
 
 #immaginenote {
-
   position: relative;
   top: 30px;
   left: 90px;
@@ -174,7 +182,8 @@ section {
   line-height: 15px;
   margin-left: 130px;
 }
-#TestoB{
-    position: relative;
-    top: -250px;
+
+#TestoB {
+  position: relative;
+  top: -250px;
 }
