@@ -44,22 +44,33 @@ function controllaRisultato() {
     const radioButtons3 = document.querySelectorAll('input[name="risposta3"]');
 
     for (var i = 0; i < 2; i++) {
-        if (radioButtons1[i]) {
-            if (radioButtons1[i].checked == domanda[a][1]) {
-                alert("ciao1");
+        if (radioButtons1[i].checked) {
+            if ((radioButtons1[i].getAttribute('value') == "vero" && domanda[a][1]) || (radioButtons1[i].getAttribute('value') == "falso" && !domanda[a][1])) {
+                document.getElementById("domanda1").parentElement.style.borderColor = 'lightgreen';
+                /*alert("ciao1" + radioButtons1[i].getAttribute('value'));*/
+            } else {
+                document.getElementById("domanda1").parentElement.style.borderColor = 'red';
+            }
+
+            if (radioButtons2[i].checked) {
+                if ((radioButtons2[i].getAttribute('value') == "vero" && domanda[b][1]) || (radioButtons2[i].getAttribute('value') == "falso" && !domanda[b][1])) {
+                    document.getElementById("domanda2").parentElement.style.borderColor = 'lightgreen';
+                    /*alert("ciao2" + radioButtons2[i].getAttribute('value'));*/
+                } else {
+                    document.getElementById("domanda2").parentElement.style.borderColor = 'red';
+                }
+            }
+
+            if (radioButtons3[i].checked) {
+                if ((radioButtons3[i].getAttribute('value') == "vero" && domanda[c][1]) || (radioButtons3[i].getAttribute('value') == "falso" && !domanda[c][1])) {
+                    document.getElementById("domanda3").parentElement.style.borderColor = 'lightgreen';
+                    /*alert("ciao3" + radioButtons3[i].getAttribute('value'));*/
+                } else {
+                    document.getElementById("domanda3").parentElement.style.borderColor = 'red';
+                }
             }
         }
 
-        if (radioButtons2[i]) {
-            if (radioButtons2[i].checked == domanda[b][1]) {
-                alert("ciao2");
-            }
-        }
 
-        if (radioButtons3[i]) {
-            if (radioButtons3[i].checked == domanda[c][1]) {
-                alert("ciao3");
-            }
-        }
     }
 }
