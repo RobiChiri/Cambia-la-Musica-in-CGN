@@ -20,8 +20,6 @@ section {
 }
 
 #sfondocard1 {
-  background-color: #2c6ca3;
-  background: linear-gradient(to top, #2c6ca3, 1%, #2c6ba300);
   width: 413px;
   height: 300px;
   position: relative;
@@ -30,8 +28,6 @@ section {
 }
 
 #sfondocard2 {
-  background-color: #2c6ca3;
-  background: linear-gradient(to top, #2c6ca3, 1%, #2c6ba300);
   width: 272px;
   height: 300px;
   position: relative;
@@ -40,13 +36,17 @@ section {
 }
 
 #sfondocard3 {
-  background-color: #2c6ca3;
-  background: linear-gradient(to top, #2c6ca3, 1%, #2c6ba300);
   width: 132px;
   height: 300px;
   position: relative;
   left: 370px;
   top: -0px;
+}
+
+.sfondocard
+{
+  background-color: #2c6ca3;
+  background: linear-gradient(to top, #2c6ca3, 1%, #2c6ba300);
 }
 
 #immaginenote {
@@ -84,3 +84,4 @@ section {
     position: relative;
     top: -250px;
 }
+
