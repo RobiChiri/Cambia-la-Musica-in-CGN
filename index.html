@@ -1,221 +1,286 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="stile.css" rel="stylesheet" type="text/css" media="all">
     <title>Cambia la musica in CGN</title>
     <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
-
-    
-    <header class="immaginenavbar">
-        <img id="bgsinistra" src="Content/images/bkg.png" height="108" width="511" >  <!--12% confronto all'immagine originale-->
-        <img id="cambiamusica" src="Content/images/cambia-la-musica.png" height="167  " width="841" class="immaginesopra" >     <!--35% confronto all'immagine originale-->
-        <img id="bgdestra1" src="Content/images/bkg.png" height="108" width="511" >  <!--12% confronto all'immagine originale-->
-        <img id="bgdestra2" src="Content/images/bkg.png" height="108" width="511"  >  <!--12% confronto all'immagine originale-->
-        <img id="logo" src="Content/images/logoCGN.png" height="4%" width="4%" >
-    </header>
-
-   
-    <aside> 
-        <div id="Generale" onclick=MostraS()> 
-            <h2 id="IlRitmoGiusto">IL RITMO  </h2>
-            <h2 id="IlRitmoGiusto" > GIUSTO </h2>
-        <img src="Content/images/nota.png" id="notaIntonata" alt="nota Intonata" width="200">
+    <div id="padreAbsolute">
+        <div id="boxHeader">
+            <header class="immaginenavbar">
+                <img id="bgsinistra" src="Content/images/bkg.png" height="108px" width="511px">
+                <!--12% confronto all'immagine originale-->
+                <img id="cambiamusica" src="Content/images/cambia-la-musica.png" height="167px" width="841px"
+                    class="immaginesopra"> <!--35% confronto all'immagine originale-->
+                <img id="bgdestra1" src="Content/images/bkg.png" height="108px" width="511px">
+                <!--12% confronto all'immagine originale-->
+                <img id="bgdestra2" src="Content/images/bkg.png" height="108px" width="511px">
+                <!--12% confronto all'immagine originale-->
+                <img id="logo" src="Content/images/logoCGN.png" height="4%" width="4%">
+            </header>
         </div>
-        <div id="bohh">
-        <ul id="lista"> 
-            <li> Valuta di non fare una riunione se non serve</li>
-            <li><hr align="left">Sii puntuale</li>
-            <li><hr align="left">Arriva preparato</li>
-            <li><hr align="left">Assicurati di aver evaso i To-Do precedenti</li>
-            <li><hr align="left">Primo minuto di concenrazione (suono del diapason)</li>
-            <li><hr align="left">Ascolta attivamente</li>
-            <li><hr align="left">Mantieni il focus</li>
-            <li><hr align="left">Contribuisci con le tue idee</li>
-            <li><hr align="left">Collabora nella decisione</li>
-            <li><hr align="left">Rispetta i tempi</li>
-            <li><hr align="left">Evita di interrompere</li>
-            <li><hr align="left">Evita le distrazioni</li>
-            <li><hr align="left">Evita il giudizio</li>
-            <li><hr align="left">Crea un clima accogliente di fiducia</li>
-            <li><hr align="left">Relazionati in modo paritario</li>
-            <li id="special"><hr align="left"></li>
-        </ul>
+
+        <div id="son1">
+            <div id="boxAside">
+                <aside>
+                    <div id="Generale" onclick=MostraS()>
+                        <h2 id="IlRitmoGiusto">IL RITMO </h2>
+                        <h2 id="IlRitmoGiusto"> GIUSTO </h2>
+                        <img src="Content/images/nota.png" id="notaIntonata" alt="nota Intonata" width="200">
+                    </div>
+
+                    <ul id="lista">
+                        <li> Valuta di non fare una riunione se non serve</li>
+                        <li>
+                            <hr align="left">Sii puntuale
+                        </li>
+                        <li>
+                            <hr align="left">Arriva preparato
+                        </li>
+                        <li>
+                            <hr align="left">Assicurati di aver evaso i To-Do precedenti
+                        </li>
+                        <li>
+                            <hr align="left">Primo minuto di concenrazione (suono del diapason)
+                        </li>
+                        <li>
+                            <hr align="left">Ascolta attivamente
+                        </li>
+                        <li>
+                            <hr align="left">Mantieni il focus
+                        </li>
+                        <li>
+                            <hr align="left">Contribuisci con le tue idee
+                        </li>
+                        <li>
+                            <hr align="left">Collabora nella decisione
+                        </li>
+                        <li>
+                            <hr align="left">Rispetta i tempi
+                        </li>
+                        <li>
+                            <hr align="left">Evita di interrompere
+                        </li>
+                        <li>
+                            <hr align="left">Evita le distrazioni
+                        </li>
+                        <li>
+                            <hr align="left">Evita il giudizio
+                        </li>
+                        <li>
+                            <hr align="left">Crea un clima accogliente di fiducia
+                        </li>
+                        <li>
+                            <hr align="left">Relazionati in modo paritario
+                        </li>
+                        <li id="special">
+                            <hr align="left">
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            
+            <div id="son2">
+            <div id="boxSection">
+                <section>
+                    <img id="immaginenote" src="Content/images/note2Editata2.png" alt="spartito" usemap="#musicMap">
+
+                    <map name="musicMap">
+                        <area alt="Nota0" title="Nota0" coords="14,64,128,203" shape="rect">
+                        <area alt="Nota1" title="Nota1" coords="173,141,215,66" shape="rect" onclick="NotaClick(0)">
+                        <area alt="Nota2" title="Nota2" coords="220,163,275,79" shape="rect" onclick="NotaClick(1)">
+                        <area alt="Nota3" title="Nota3" coords="332,84,284,160" shape="rect" onclick="NotaClick(2)">
+                        <area alt="Nota4" title="Nota4" coords="336,186,379,108" shape="rect" onclick="NotaClick(3)">
+                        <area alt="Nota5" title="Nota5" coords="395,163,462,78" shape="rect" onclick="NotaClick(4)">
+                        <area alt="Nota6" title="Nota6" coords="473,75,517,167" shape="rect" onclick="NotaClick(5)">
+                        <area alt="Nota7" title="Nota7" coords="526,59,587,141" shape="rect" onclick="NotaClick(6)">
+                        <area alt="Nota8" title="Nota8" coords="586,190,638,115" shape="rect" onclick="NotaClick(7)">
+                        <area alt="Nota9" title="Nota9" coords="647,68,709,148" shape="rect" onclick="NotaClick(8)">
+                        <area alt="Nota10" title="Nota10" coords="729,172,768,91" shape="rect" onclick="NotaClick(9)">
+                        <area alt="Nota11" title="Nota11" coords="789,152,831,68" shape="rect" onclick="NotaClick(10)">
+                        <area alt="Nota12" title="Nota12" coords="844,79,887,160" shape="rect" onclick="NotaClick(11)">
+                        <area alt="Nota13" title="Nota13" coords="908,189,941,111" shape="rect" onclick="NotaClick(12)">
+                        <area alt="Nota14" title="Nota14" coords="964,184,1034,103" shape="rect"
+                            onclick="NotaClick(13)">
+                        <area alt="Nota15" title="Nota15" coords="1052,176,1091,90" shape="rect"
+                            onclick="NotaClick(14)">
+
+                    </map>
+
+                    <div class="bloccogrande">
+                        <div id="sfondocard1">
+                            <h3>Obbiettivo</h3>
+                            <h3>Tipologia di meeting</h3>
+                            <h3>ODG</h3>
+                            <h3>Durata e tempi</h3>
+                            <h3>Persone giuste</h3>
+                            <h3>Documentazione preparatoria</h3>
+                            <h3>Luogo</h3>
+                            <h3>Strumenti</h3>
+                        </div>
+                        <div id="sfondocard2">
+                            <h3>Facilitare</h3>
+                            <h3>Prendere decisioni</h3>
+                            <h3>Recap con To-Do</h3>
+                            <h3>Valutare il meeting</h3>
+                            <h3> Ringraziare</h3>
+                        </div>
+                        <div id="sfondocard3">
+                            <h3>Invio report</h3>
+                            <h3>Verifica To-Do e Feedback</h3>
+                        </div>
+                    </div>
+
+                    <div id="TestoB">
+                        <h2 id="titolo"> TITOLO</h2>
+                        <div id="descrizione"> una descizione base</div>
+
+                        <br><br><br><br><br><br><br><br>
+                        <p id="testocentrale">
+                            Per una efficace riuscita del meeting l&apos;organizzatore deve definire chiaramente il tipo
+                            di
+                            riunione
+                            e
+                            l&apos;obiettivo che desidera raggiungere, esplicitare l&apos;ODG, il numero di partecipanti
+                            e i
+                            loro
+                            ruoli. Definire
+                            poi
+                            con cura la durata del meeting
+                            e le tempistiche dell&apos;ODG, il luogo e la strumentazione idonea. Predisporre infine la
+                            documentazione
+                            necessaria
+                            per la preparazione dei partecipanti ed inviare per tempo l&apos;invito del meeting. Il
+                            meeting
+                            inizier&agrave; con un
+                            momento di silenzio
+                            dove i partecipanti ritrovano la concentrazione per collaborare proficuamente alla riunione.
+                            Verr&agrave; definito
+                            chi
+                            far&agrave; il facilitatore e chi verbalizzer&agrave;. I partecipanti devono arrivare
+                            preparati,
+                            aperti
+                            a condividere in
+                            maniera efficace le loro
+                            idee. Eviteranno le distrazioni, mostreranno attenzione e ascolto attivo agli interventi. Si
+                            impegneranno a
+                            non
+                            manifestare il proprio ego personale e a collaborare concretamente per raggiungere le
+                            decisioni
+                            inerenti
+                            l&apos;obiettivo della
+                            riunione. Il facilitatore dovrà agevolare il contributo di tutti, ricondurre nel binario e
+                            alla
+                            sintesi
+                            le
+                            discussioni dispersive e fuori focus, attenzionare i tempi e la riformulazione delle
+                            espressioni
+                            poco
+                            chiare,
+                            mediare i processi di relazione e
+                            far chiarire eventuali malintesi. A conclusione del meeting l&apos;organizzatore far&agrave;
+                            un
+                            recap
+                            delle decisioni
+                            prese,
+                            del To-Do (chi fa che cosa e in che tempi) e ringrazier&agrave; i partecipanti per il tempo
+                            e
+                            l&apos;impegno dedicato
+                            alla
+                            riunione. Infine
+                            inviter&agrave; i partecipanti ad esprimere la valutazione del meeting. Il verbalizzatore
+                            sintetizzer&agrave; le idee
+                            emerse
+                            senza interpretare e rielaborer&agrave; il To-Do in un report da inviare al termine della
+                            riunione a
+                            tutti i
+                            partecipanti.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <div id="boxFooter">
+                <footer id="freqtop" class="freqbtm">
+                    <div class="flex-container" onclick=MostraF()>
+                        <div id="figlio1"><img src="Content/images/nota2.png" alt="Nota stonata" id="notastonata"></div>
+                        <div id="figlio2">
+                            <h3 id="title">NOTE STONATE</h3>
+                        </div>
+                    </div>
+
+                    <div>
+                        <ul id="listaF">
+                            <li>Obiettivo poco chiaro</li>
+                            <hr>
+                            <li>Assenza di ODG</li>
+                            <hr>
+                            <li>Uso di giudizi e pre-giudizi</li>
+                            <hr>
+                            <li>Paura di esporre le proprie idee</li>
+                            <hr>
+                            <li>Dispersione e assenza di focus</li>
+                            <hr>
+                            <li>Eccesso di persone e ruoli sbagliati</li>
+                            <hr>
+                            <li>Basso ascolto</li>
+                            <hr>
+                            <li>Assenza di verifica del ToDo</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul id="listaC">
+                            <li>Ruoli non paritari</li>
+                            <hr>
+                            <li>Alta distrazione</li>
+                            <hr>
+                            <li>Tempi dilatiati, poca sintesi</li>
+                            <hr>
+                            <li>Ego personali</li>
+                            <hr>
+                            <li>Scarsa preparazione dei partecipanti</li>
+                            <hr>
+                            <li>Interventi poco chiari linguisticamente</li>
+                            <hr>
+                            <li>Assenza di documentazione su cui prepararsi</li>
+                            <hr>
+                            <li>Ambiente non adatto</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul id="listaD">
+                            <li>Strumentazione non verificata</li>
+                            <hr>
+                            <li>Ritardi dei partecipanti</li>
+                            <hr>
+                            <li>Mancato rispetto del To-Do precedente</li>
+                            <hr>
+                            <li>Scarso ingaggio dei partecipanti</li>
+                            <hr>
+                            <li>Assenza di decisioni</li>
+                            <hr>
+                            <li>Assenza di recap e riverifica dell&apos;obiettivo</li>
+                            <hr>
+                            <li>Assenza del facilitatore che non consente di governare i tempi, il focus e l&apos;equo
+                                contributo
+                                dei partecipanti</li>
+                        </ul>
+                    </div>
+
+                    <img src="Content/images/note.png" alt="Note" id="footerbase">
+                </footer>
+            </div>
+            </div>
+        </div>
     </div>
-    </aside>
-
-    <section>
-        <img id="immaginenote" src="Content/images/note2Editata2.png" alt="spartito" usemap="#musicMap">
-
-        <map name="musicMap">
-            <area alt="Nota0" title="Nota0" coords="14,64,128,203" shape="rect">
-            <area alt="Nota1" title="Nota1" coords="173,141,215,66" shape="rect" onclick="NotaClick(0)">
-            <area alt="Nota2" title="Nota2" coords="220,163,275,79" shape="rect" onclick="NotaClick(1)">
-            <area alt="Nota3" title="Nota3" coords="332,84,284,160" shape="rect" onclick="NotaClick(2)">
-            <area alt="Nota4" title="Nota4" coords="336,186,379,108" shape="rect" onclick="NotaClick(3)">
-            <area alt="Nota5" title="Nota5" coords="395,163,462,78" shape="rect" onclick="NotaClick(4)">
-            <area alt="Nota6" title="Nota6" coords="473,75,517,167" shape="rect" onclick="NotaClick(5)">
-            <area alt="Nota7" title="Nota7" coords="526,59,587,141" shape="rect" onclick="NotaClick(6)">
-            <area alt="Nota8" title="Nota8" coords="586,190,638,115" shape="rect" onclick="NotaClick(7)">
-            <area alt="Nota9" title="Nota9" coords="647,68,709,148" shape="rect" onclick="NotaClick(8)">
-            <area alt="Nota10" title="Nota10" coords="729,172,768,91" shape="rect" onclick="NotaClick(9)">
-            <area alt="Nota11" title="Nota11" coords="789,152,831,68" shape="rect" onclick="NotaClick(10)">
-            <area alt="Nota12" title="Nota12" coords="844,79,887,160" shape="rect" onclick="NotaClick(11)">
-            <area alt="Nota13" title="Nota13" coords="908,189,941,111" shape="rect" onclick="NotaClick(12)">
-            <area alt="Nota14" title="Nota14" coords="964,184,1034,103" shape="rect" onclick="NotaClick(13)">
-            <area alt="Nota15" title="Nota15" coords="1052,176,1091,90" shape="rect" onclick="NotaClick(14)">
-
-        </map>
-
-        <div class="bloccogrande">
-            <div id="sfondocard1">
-                <h3>Obbiettivo</h3>
-                <h3>Tipologia di meeting</h3>
-                <h3>ODG</h3>
-                <h3>Durata e tempi</h3>
-                <h3>Persone giuste</h3>
-                <h3>Documentazione preparatoria</h3>
-                <h3>Luogo</h3>
-                <h3>Strumenti</h3>
-            </div>
-            <div id="sfondocard2">
-                <h3>Facilitare</h3>
-                <h3>Prendere decisioni</h3>
-                <h3>Recap con To-Do</h3>
-                <h3>Valutare il meeting</h3>
-                <h3> Ringraziare</h3>
-            </div>
-            <div id="sfondocard3">
-                <h3>Invio report</h3>
-                <h3>Verifica To-Do e Feedback</h3>
-            </div>
-        </div>
-
-        <div id="TestoB">
-            <h2 id="titolo"> TITOLO</h2>
-            <div id="descrizione"> una descizione base</div>
-
-            <br><br><br><br><br><br><br><br>
-            <p id="testocentrale">
-                Per una efficace riuscita del meeting l&apos;organizzatore deve definire chiaramente il tipo di riunione
-                e
-                l&apos;obiettivo che desidera raggiungere, esplicitare l&apos;ODG, il numero di partecipanti e i loro
-                ruoli. Definire
-                poi
-                con cura la durata del meeting
-                e le tempistiche dell&apos;ODG, il luogo e la strumentazione idonea. Predisporre infine la
-                documentazione
-                necessaria
-                per la preparazione dei partecipanti ed inviare per tempo l&apos;invito del meeting. Il meeting
-                inizier&agrave; con un
-                momento di silenzio
-                dove i partecipanti ritrovano la concentrazione per collaborare proficuamente alla riunione.
-                Verr&agrave; definito
-                chi
-                far&agrave; il facilitatore e chi verbalizzer&agrave;. I partecipanti devono arrivare preparati, aperti
-                a condividere in
-                maniera efficace le loro
-                idee. Eviteranno le distrazioni, mostreranno attenzione e ascolto attivo agli interventi. Si
-                impegneranno a
-                non
-                manifestare il proprio ego personale e a collaborare concretamente per raggiungere le decisioni inerenti
-                l&apos;obiettivo della
-                riunione. Il facilitatore dovrà agevolare il contributo di tutti, ricondurre nel binario e alla sintesi
-                le
-                discussioni dispersive e fuori focus, attenzionare i tempi e la riformulazione delle espressioni poco
-                chiare,
-                mediare i processi di relazione e
-                far chiarire eventuali malintesi. A conclusione del meeting l&apos;organizzatore far&agrave; un recap
-                delle decisioni
-                prese,
-                del To-Do (chi fa che cosa e in che tempi) e ringrazier&agrave; i partecipanti per il tempo e
-                l&apos;impegno dedicato
-                alla
-                riunione. Infine
-                inviter&agrave; i partecipanti ad esprimere la valutazione del meeting. Il verbalizzatore
-                sintetizzer&agrave; le idee
-                emerse
-                senza interpretare e rielaborer&agrave; il To-Do in un report da inviare al termine della riunione a
-                tutti i
-                partecipanti.
-            </p>
-        </div>
-    </section>
-    <footer id="freqtop" class="freqbtm">
-        <div class="flex-container" onclick=MostraF()>
-            <div id="figlio1"><img src="Content/images/nota2.png" alt="Nota stonata" id="notastonata"></div>
-            <div id="figlio2">
-                <h3 id="title">NOTE STONATE</h3>
-            </div>
-        </div>
-
-        <div>
-            <ul id="listaF">
-                <li>Obiettivo poco chiaro</li>
-                <hr>
-                <li>Assenza di ODG</li>
-                <hr>
-                <li>Uso di giudizi e pre-giudizi</li>
-                <hr>
-                <li>Paura di esporre le proprie idee</li>
-                <hr>
-                <li>Dispersione e assenza di focus</li>
-                <hr>
-                <li>Eccesso di persone e ruoli sbagliati</li>
-                <hr>
-                <li>Basso ascolto</li>
-                <hr>
-                <li>Assenza di verifica del ToDo</li>
-            </ul>
-        </div>
-
-        <div>
-            <ul id="listaC">
-                <li>Ruoli non paritari</li>
-                <hr>
-                <li>Alta distrazione</li>
-                <hr>
-                <li>Tempi dilatiati, poca sintesi</li>
-                <hr>
-                <li>Ego personali</li>
-                <hr>
-                <li>Scarsa preparazione dei partecipanti</li>
-                <hr>
-                <li>Interventi poco chiari linguisticamente</li>
-                <hr>
-                <li>Assenza di documentazione su cui prepararsi</li>
-                <hr>
-                <li>Ambiente non adatto</li>
-            </ul>
-        </div>
-
-        <div>
-            <ul id="listaD">
-                <li>Strumentazione non verificata</li>
-                <hr>
-                <li>Ritardi dei partecipanti</li>
-                <hr>
-                <li>Mancato rispetto del To-Do precedente</li>
-                <hr>
-                <li>Scarso ingaggio dei partecipanti</li>
-                <hr>
-                <li>Assenza di decisioni</li>
-                <hr>
-                <li>Assenza di recap e riverifica dell&apos;obiettivo</li>
-                <hr>
-                <li>Assenza del facilitatore che non consente di governare i tempi, il focus e l&apos;equo contributo
-                    dei partecipanti</li>
-            </ul>
-        </div>
-
-        <img src="Content/images/note.png" alt="Note" id="footerbase">
-    </footer>
-
 </body>
 
 </html>

@@ -38,6 +38,8 @@ body {
 .immaginenavbar {
   position: relative;
   display: inline-block;
+
+  height: 90%;
 }
 
 .immaginesopra {
@@ -289,4 +291,65 @@ footer hr {
 #listaD {
   visibility: hidden;
 
+}
+
+
+/* FORMATTAZIONE PAGINA CON FLEXBOX */
+
+.padreAbsolute
+{
+  background-color: black;
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#boxHeader
+{
+  background-color: #880015;
+
+  height: 30%;
+}
+
+#son1
+{
+  background-color: red;
+  display: flex;
+  flex-direction: row-reverse;
+
+  height: 70%;
+}
+
+#son2
+{
+  background-image: greenyellow;
+  
+  display: flex;
+  flex-direction: column;
+
+  width: 70%;
+}
+
+#boxAside
+{
+  background-color: green;
+
+  width: 30%;
+}
+
+#boxSection
+{
+  background-color: #C8BFE7;
+
+  height: 60%
+}
+
+#boxFooter
+{
+  background-color: #A349A4;
+
+  height: 40%;
 }
