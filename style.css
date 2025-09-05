@@ -1,8 +1,8 @@
 footer
 {
-    display: block;
+   /* display: block;*/
     clear: both;
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0;
 
     height: 250px;
