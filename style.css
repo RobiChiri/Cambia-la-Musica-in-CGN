@@ -52,28 +52,20 @@ aside {
   width: 30%;
   padding-left: 20px;
   margin-left: 20px;
-  float: right;
   font-style: italic;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
 }
 
-#notaIntonata {
-  position: relative;
-  right: -200px;
-  top: 20px;
-
+body {
+  background-color: #ffebd5;
 }
-
-#IlRitmoGiusto {
-  position: relative;
-  top: 180px;
-  right: -90px;
-  line-height: 8px
-}
-
 
 aside ul {
-  position: relative;
-  top: -250px;
   visibility: hidden;
   line-height: 5px;
   list-style-image: url("Content/images/nota3\ \(2\).png");
@@ -92,10 +84,44 @@ aside hr {
 }
 
 #Generale {
-  position: relative;
-  top: -250px;
+  order: 1;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
 }
 
+
+#TitoloA {
+  order: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  line-height: 0px;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+#IlRitmo {
+  order: 1;
+  line-height: 0px;
+}
+
+#Giusto {
+  order: 2;
+}
+
+#notaIntonata {
+  order: 2;
+}
+
+#BoxLista {
+  order: 2;
+}
 /* CENTRAL*/
 
 section {
