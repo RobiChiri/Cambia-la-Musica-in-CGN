@@ -43,8 +43,10 @@ hr {
   display: flex;
   flex-direction: row;
 
+  width: 100%;
   align-items: center;
   justify-content: center;
+  background-color: purple;
 }
 
 
@@ -53,11 +55,12 @@ hr {
 
   display: flex;
   flex-direction: column;
-
+  width: 40%;
   line-height: 0px;
-  
+
   align-items: center;
   justify-content: center;
+  background-color: blue;
 }
 
 #IlRitmo {
