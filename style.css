@@ -2,6 +2,12 @@ body{
     background-color: #ffebd5   ;
 }
 
+#risultato{
+  font-size: 50px;
+  visibility: hidden;
+  
+}
+
 #bottoneinvio{
   height: 100px;
   width: 10%;

@@ -52,25 +52,36 @@ function controllaRisultato() {
                 document.getElementById("domanda1").parentElement.style.borderColor = 'red';
             }
 
-            if (radioButtons2[i].checked) {
-                if ((radioButtons2[i].getAttribute('value') == "vero" && domanda[b][1]) || (radioButtons2[i].getAttribute('value') == "falso" && !domanda[b][1])) {
-                    document.getElementById("domanda2").parentElement.style.borderColor = 'lightgreen';
-                    /*alert("ciao2" + radioButtons2[i].getAttribute('value'));*/
-                } else {
-                    document.getElementById("domanda2").parentElement.style.borderColor = 'red';
-                }
-            }
-
-            if (radioButtons3[i].checked) {
-                if ((radioButtons3[i].getAttribute('value') == "vero" && domanda[c][1]) || (radioButtons3[i].getAttribute('value') == "falso" && !domanda[c][1])) {
-                    document.getElementById("domanda3").parentElement.style.borderColor = 'lightgreen';
-                    /*alert("ciao3" + radioButtons3[i].getAttribute('value'));*/
-                } else {
-                    document.getElementById("domanda3").parentElement.style.borderColor = 'red';
-                }
-            }
+        }else if(i == 1){
+            document.getElementById("domanda1").parentElement.style.borderColor = 'yellow';
         }
 
+        if (radioButtons2[i].checked) {
+            if ((radioButtons2[i].getAttribute('value') == "vero" && domanda[b][1]) || (radioButtons2[i].getAttribute('value') == "falso" && !domanda[b][1])) {
+                document.getElementById("domanda2").parentElement.style.borderColor = 'lightgreen';
+                /*alert("ciao2" + radioButtons2[i].getAttribute('value'));*/
+            } else {
+                document.getElementById("domanda2").parentElement.style.borderColor = 'red';
+            }
+        }else if(i == 1){
+            document.getElementById("domanda2").parentElement.style.borderColor = 'yellow';
+        }
 
+        if (radioButtons3[i].checked) {
+            if ((radioButtons3[i].getAttribute('value') == "vero" && domanda[c][1]) || (radioButtons3[i].getAttribute('value') == "falso" && !domanda[c][1])) {
+                document.getElementById("domanda3").parentElement.style.borderColor = 'lightgreen';
+                /*alert("ciao3" + radioButtons3[i].getAttribute('value'));*/
+            } else {
+                document.getElementById("domanda3").parentElement.style.borderColor = 'red';
+            }
+        }else if(i == 1){
+            document.getElementById("domanda3").parentElement.style.borderColor = 'yellow';
+        }
+
+    }
+
+
+    if(document.getElementById("domanda1").parentElement.style.borderColor == 'lightgreen' && document.getElementById("domanda2").parentElement.style.borderColor == 'lightgreen' && document.getElementById("domanda3").parentElement.style.borderColor == 'lightgreen'){
+        
     }
 }
