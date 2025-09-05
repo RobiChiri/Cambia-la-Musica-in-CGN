@@ -51,43 +51,43 @@ function controllaRisultato() {
     for (var i = 0; i < 2; i++) {
         if (radioButtons1[i].checked) {
             if ((radioButtons1[i].getAttribute('value') == "vero" && domanda[a][1]) || (radioButtons1[i].getAttribute('value') == "falso" && !domanda[a][1])) {
-                Border1 = 'lightgreen';
+                document.getElementById("domanda1").parentElement.style.borderColor = 'lightgreen';
                 /*alert("ciao1" + radioButtons1[i].getAttribute('value'));*/
             } else {
-                Border1 = 'red';
+                document.getElementById("domanda1").parentElement.style.borderColor = 'red';
             }
 
         } else {
-            if (i == 1 && Border1 != 'lightgreen' && Border1 != 'red') {
-                Border1 = 'yellow';
+            if (i == 1 && document.getElementById("domanda1").parentElement.style.borderColor != 'lightgreen' && document.getElementById("domanda1").parentElement.style.borderColor != 'red') {
+                document.getElementById("domanda1").parentElement.style.borderColor = 'yellow';
             }
         }
 
         if (radioButtons2[i].checked) {
             if ((radioButtons2[i].getAttribute('value') == "vero" && domanda[b][1]) || (radioButtons2[i].getAttribute('value') == "falso" && !domanda[b][1])) {
-                Border2 = 'lightgreen';
+                document.getElementById("domanda2").parentElement.style.borderColor = 'lightgreen';
                 /*alert("ciao2" + radioButtons2[i].getAttribute('value'));*/
             } else {
-                Border2 = 'red';
+                document.getElementById("domanda2").parentElement.style.borderColor = 'red';
             }
         } else {
-            if (i == 1 && Border2 != 'lightgreen' && Border2 != 'red') {
-                Border2 = 'yellow';
+            if (i == 1 && document.getElementById("domanda2").parentElement.style.borderColor != 'lightgreen' && document.getElementById("domanda2").parentElement.style.borderColor != 'red') {
+                document.getElementById("domanda2").parentElement.style.borderColor = 'yellow';
             }
 
         }
 
         if (radioButtons3[i].checked) {
             if ((radioButtons3[i].getAttribute('value') == "vero" && domanda[c][1]) || (radioButtons3[i].getAttribute('value') == "falso" && !domanda[c][1])) {
-                Border3 = 'lightgreen';
+                document.getElementById("domanda3").parentElement.style.borderColor = 'lightgreen';
                 /*alert("ciao3" + radioButtons3[i].getAttribute('value'));*/
             } else {
-                Border3 = 'red';
+                document.getElementById("domanda3").parentElement.style.borderColor = 'red';
             }
 
         } else {
-            if (i == 1 && Border3 != 'lightgreen' && Border3 != 'red') {
-                Border3 = 'yellow';
+            if (i == 1 && document.getElementById("domanda3").parentElement.style.borderColor != 'lightgreen' && document.getElementById("domanda3").parentElement.style.borderColor != 'red') {
+                document.getElementById("domanda3").parentElement.style.borderColor = 'yellow';
             }
 
         }
@@ -95,7 +95,7 @@ function controllaRisultato() {
     }
 
     var risultatoScritta = document.getElementById("risultato");
-    if (Border1 == 'lightgreen' && Border2 == 'lightgreen' && Border3 == 'lightgreen') {
+    if (document.getElementById("domanda1").parentElement.style.borderColor == 'lightgreen' && document.getElementById("domanda2").parentElement.style.borderColor == 'lightgreen' && document.getElementById("domanda3").parentElement.style.borderColor == 'lightgreen') {
         risultatoScritta.textContent = "BRAVO SEI PASSATO!";
         risultatoScritta.style.color = 'lightgreen';
         risultatoScritta.style.visibility = "visible";
