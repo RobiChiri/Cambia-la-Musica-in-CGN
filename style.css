@@ -97,12 +97,11 @@ aside hr {
 /* CENTRAL*/
 
 section {
-  position: relative;
   /*top: -1000px;*/
   float: left;
   width: 70%;
   border-right: 2px solid black;
-  /*margin-top: 100px;*/
+  margin-top: 0px
 }
 
 .bloccogrande {
