@@ -1,12 +1,11 @@
 footer
 {
-   /* display: block;*/
+    display: block;
     clear: both;
-    /*position: absolute;*/
     bottom: 0;
 
     height: 250px;
-    width: 1200px;
+    width: 65%;
 
     padding-top: 35px;
     padding-right: 75px;
@@ -29,7 +28,7 @@ footer
 #footerbase
 {
     height: 55px;
-    width: 159.5%;
+    width: 156%;
     padding-top: 18px;
     margin-left: -10px;
     
