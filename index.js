@@ -3,7 +3,6 @@ var domanda, scelto;
 domanda = [["Il nome di fernando è fernando", true], ["zucc", false], ["ciao", false], ["nlackda", true], ["1", true], ["2312313", true], ["3444444", true], ["7777", true]];
 
 document.addEventListener('DOMContentLoaded', function () {
-
     scegliDomande();
 
 });
@@ -28,13 +27,32 @@ function scegliDomande() {
         c = Math.round(Math.random() * numdomande);
     }
 
-    var domanda1 = document.getElementById("domanda1");
-    var domanda2 = document.getElementById("domanda2");
-    var domanda3 = document.getElementById("domanda3");
+    /*while(a == b){
+        a = Math.round(Math.random() * numdomande);
+        b = Math.round(Math.random() * numdomande);
+    }
 
-    domanda1.textContent = domanda[a][0];
-    domanda2.textContent = domanda[b][0];
-    domanda3.textContent = domanda[c][0];
+    while(c == b){
+        c = Math.round(Math.random() * numdomande);
+        b = Math.round(Math.random() * numdomande);
+    }
+
+    while(c == a){
+        c = Math.round(Math.random() * numdomande);
+        a = Math.round(Math.random() * numdomande);
+    }*/
+    var domanda1;
+    var domanda2;
+    var domanda3;
+    setTimeout(() => {
+        domanda1 = document.getElementById("domanda1");
+        domanda2 = document.getElementById("domanda2");
+        domanda3 = document.getElementById("domanda3");
+        domanda1.textContent = domanda[a][0];
+        domanda2.textContent = domanda[b][0];
+        domanda3.textContent = domanda[c][0];
+    }, 200);
+
 }
 
 
@@ -52,8 +70,10 @@ function controllaRisultato() {
                 document.getElementById("domanda1").parentElement.style.borderColor = 'red';
             }
 
-        }else if(i == 1){
-            document.getElementById("domanda1").parentElement.style.borderColor = 'yellow';
+        } else {
+            if (i == 1 && document.getElementById("domanda1").parentElement.style.borderColor != 'lightgreen' && document.getElementById("domanda1").parentElement.style.borderColor != 'red') {
+                document.getElementById("domanda1").parentElement.style.borderColor = 'yellow';
+            }
         }
 
         if (radioButtons2[i].checked) {
@@ -63,8 +83,11 @@ function controllaRisultato() {
             } else {
                 document.getElementById("domanda2").parentElement.style.borderColor = 'red';
             }
-        }else if(i == 1){
-            document.getElementById("domanda2").parentElement.style.borderColor = 'yellow';
+        } else {
+            if (i == 1 && document.getElementById("domanda2").parentElement.style.borderColor != 'lightgreen' && document.getElementById("domanda2").parentElement.style.borderColor != 'red') {
+                document.getElementById("domanda2").parentElement.style.borderColor = 'yellow';
+            }
+
         }
 
         if (radioButtons3[i].checked) {
@@ -74,14 +97,26 @@ function controllaRisultato() {
             } else {
                 document.getElementById("domanda3").parentElement.style.borderColor = 'red';
             }
-        }else if(i == 1){
-            document.getElementById("domanda3").parentElement.style.borderColor = 'yellow';
+
+        } else {
+            if (i == 1 && document.getElementById("domanda3").parentElement.style.borderColor != 'lightgreen' && document.getElementById("domanda3").parentElement.style.borderColor != 'red') {
+                document.getElementById("domanda3").parentElement.style.borderColor = 'yellow';
+            }
+
         }
 
     }
 
-
-    if(document.getElementById("domanda1").parentElement.style.borderColor == 'lightgreen' && document.getElementById("domanda2").parentElement.style.borderColor == 'lightgreen' && document.getElementById("domanda3").parentElement.style.borderColor == 'lightgreen'){
-        
+    var risultatoScritta = document.getElementById("risultato");
+    if (document.getElementById("domanda1").parentElement.style.borderColor == 'lightgreen' && document.getElementById("domanda2").parentElement.style.borderColor == 'lightgreen' && document.getElementById("domanda3").parentElement.style.borderColor == 'lightgreen') {
+        risultatoScritta.textContent = "BRAVO SEI PASSATO!";
+        risultatoScritta.style.color = 'lightgreen';
+        risultatoScritta.style.visibility = "visible";
+        risultatoScritta.style.display = "block";
+    } else {
+        risultatoScritta.textContent = "NOO NON SEI PASSATO!";
+        risultatoScritta.style.color = 'red';
+        risultatoScritta.style.visibility = "visible";
+        risultatoScritta.style.display = "block";
     }
 }
