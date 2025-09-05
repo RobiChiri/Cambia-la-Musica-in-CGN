@@ -1,178 +1,126 @@
-/*NAVBAR*/
-body {
-  background-color: #ffebd5;
+footer
+{
+    display: block;
+    clear: both;
+    bottom: 0;
+
+    height: 250px;
+    width: 65%;
+
+    padding-top: 35px;
+    padding-right: 75px;
+    padding-bottom: 35px;
+
+    margin-bottom: 60px;
+    margin-left: -10px;
+
+    background-color: #383838;
+
+    border-top-right-radius : 20px;
+    border-bottom-right-radius : 20px;
+
+    background-image: url(Content/images/notetbtm.png), url(Content/images/notetop.png);
+    background-repeat: repeat-x, repeat-x;
+    background-position: -50px 305px, -50px -2px;
+    background-size: 80%, 80%;
 }
 
-#bgsinistra {
-  position: relative;
-  top: -56px;
-  left: -20px;
+#footerbase
+{
+    height: 55px;
+    width: 156%;
+    padding-top: 18px;
+    margin-left: -10px;
+    
 }
 
-#bgdestra1 {
-  position: relative;
-  top: -56px;
-  left: -460px;
+footer div
+{
+    display: block;
+    float: left;
+    width: 300px; 
+    height:250px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+
+    
 }
 
-#bgdestra2 {
-  float: right;
-  position: relative;
-  top: -168px;
-  left: 5px;
+#notastonata
+{
+    height: 250px;
+    width: auto;
 }
 
-#cambiamusica {
-  position: relative;
-  top: -22px;
-  left: -400px;
+#figlio1
+{
+    /*background-color: green;*/
+    align-items: center;
+    width: 200px;
 }
 
-#logo {
-  float: right;
-  position: relative;
-  top: -150px;
-  left: 180px;
+#figlio2
+{
+    
+    /*background-color: aliceblue;*/
+    width: 50px;
+    height: 115px;
+    
+    padding-top: 85px;
+    padding-bottom: 50px;
+    /*align-items: left;*/
 }
 
-.immaginenavbar {
-  position: relative;
-  display: inline-block;
+#title
+{
+    /*background-color: chocolate;*/
+    color: white;
+    /*position: relative;*/
+    transform: rotate(-90deg);
+    width: 250px;
+
+    text-align: center;
+    margin-left: -130px;
+
+    font-size: 25px;
 }
 
-.immaginesopra {
-  position: absolute;
-  z-index: 1;
+.flex-container
+{
+    /*background-color: black;*/
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 300px;
+    height: 250px;
+    margin-top: 20px;
 }
 
-/* SIDEBAR*/
-aside {
-  width: 30%;
-  padding-left: 20px;
-  margin-left: 20px;
-  float: right;
-  font-style: italic;
+footer ul
+{
+    /*list-style-image: url(Content/images/nota3rp.png);*/
+    list-style-image: url("Content/images/nota3r.png");
+    line-height: 15px;
+
+    font-size: 14px;
+    text-align: left;
+    align-items: flex-start;
+    color: #ffebd5;
 }
 
-#notaIntonata {
-  position: relative;
-  right: -200px;
-  top: 20px;
-
+footer hr
+{
+    margin-top: 3px;
+    color: #ffebd5;
+    list-style: none;
 }
 
-#IlRitmoGiusto {
-  position: relative;
-  top: 180px;
-  right: -90px;
-  line-height: 8px
-}
-
-
-aside ul {
-  position: relative;
-  top: -250px;
-  visibility: hidden;
-  line-height: 5px;
-  list-style-image: url("Content/images/nota3\ \(2\).png");
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 700;
-}
-
-aside hr {
-  width: 400px;
-  margin: 10px out;
-  color: gray;
-}
-
-#special {
-  list-style: none;
-}
-
-#Generale {
-  position: relative;
-  top: -250px;
-}
-/* CENTRAL*/
-
-section {
-  position: relative;
-  top: -1000px;
-  float: left;
-  width: 70%;
-  border-right: 2px solid black;
-  margin-top: 100px;
-}
-
-.bloccogrande {
-  display: flex;
-  /*background-color: black;*/
-  position: relative;
-  top: -198px;
-}
-
-#sfondocard1 {
-  background-color: #2c6ca3;
-  background: linear-gradient(to top, #2c6ca3, 1%, #2c6ba300);
-  width: 413px;
-  height: 300px;
-  position: relative;
-  left: 287px;
-  top: -0;
-}
-
-#sfondocard2 {
-  background-color: #2c6ca3;
-  background: linear-gradient(to top, #2c6ca3, 1%, #2c6ba300);
-  width: 272px;
-  height: 300px;
-  position: relative;
-  left: 327px;
-  top: -0px;
-}
-
-#sfondocard3 {
-  background-color: #2c6ca3;
-  background: linear-gradient(to top, #2c6ca3, 1%, #2c6ba300);
-  width: 132px;
-  height: 300px;
-  position: relative;
-  left: 370px;
-  top: -0px;
-}
-
-#immaginenote {
-  position: relative;
-  top: 30px;
-  left: 90px;
-  z-index: 1;
-}
-
-#titolo {
-  position: relative;
-  text-align: center;
-  top: 0px;
-}
-
-#descrizione {
-  position: relative;
-  text-align: center;
-  top: 0px;
-  font-size: medium;
-}
-
-#testocentrale {
-  position: relative;
-  top: -100px;
-  width: 1000px;
-  height: 140px;
-  font-size: smaller;
-  background-color: #ffebd5;
-  line-height: 15px;
-  margin-left: 130px;
-}
-
-#TestoB {
-  position: relative;
-  top: -250px;
+#listaF, #listaC, #listaD
+{
+    visibility: hidden;
 }

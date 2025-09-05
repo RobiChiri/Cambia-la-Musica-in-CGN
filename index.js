@@ -1,15 +1,16 @@
+
 /* SIDEBAR */
 
-var miaVar=true;
+var miaVarS=true;
 
 function MostraS(){
-    if(miaVar){
+    if(miaVarS){
         document.getElementById("lista").style.visibility="visible";
-        miaVar=false;
+        miaVarS=false;
     }
     else{
         document.getElementById("lista").style.visibility="hidden";
-        miaVar=true;
+        miaVarS=true;
     }
 }
 
@@ -53,3 +54,19 @@ function NotaClick(posizione) {
 }
 
 /*FOOTER*/
+var miaVarF=true;
+
+function MostraF(){
+    if(miaVarF){
+        document.getElementById("listaF").style.visibility="visible";
+        document.getElementById("listaC").style.visibility="visible";
+        document.getElementById("listaD").style.visibility="visible";
+        miaVarF=false;
+    }
+    else{
+        document.getElementById("listaF").style.visibility="hidden";
+        document.getElementById("listaC").style.visibility="hidden";
+        document.getElementById("listaD").style.visibility="hidden";
+        miaVarF=true;
+    }
+}
