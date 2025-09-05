@@ -4,9 +4,12 @@ body {
   margin: 0;
 }
 
+.formcontainer{
+  display: flex;
+  flex-direction: column;
+}
 
 #risultato {
-  font-size: 50px;
   visibility: hidden;
   display: none;
   text-align: center;

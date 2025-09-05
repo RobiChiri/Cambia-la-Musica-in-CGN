@@ -39,7 +39,16 @@ function scegliDomande() {
 }
 
 
+var cliccato = false;
+
 function controllaRisultato() {
+
+    if(cliccato){
+        alert("HAI GIA FINITO QUESTO TEST, SE VUOI PUOI PROVARE A FARNE UN ALTRO (il risultato di questo non camgierà)");
+        return;
+    }
+
+    cliccato = true;
     const radioButtons1 = document.querySelectorAll('input[name="risposta1"]');
     const radioButtons2 = document.querySelectorAll('input[name="risposta2"]');
     const radioButtons3 = document.querySelectorAll('input[name="risposta3"]');
