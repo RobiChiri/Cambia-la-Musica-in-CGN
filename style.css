@@ -68,10 +68,6 @@ aside {
   line-height: 8px
 }
 
-#titolo {
-  height: 50 px;
-  width: 110px;
-}
 
 aside ul {
   position: relative;
@@ -97,13 +93,6 @@ aside hr {
   position: relative;
   top: -250px;
 }
-
-body {
-  background-color: #ffebd5;
-  height: 100%;
-  width: 100%;
-}
-
 /* CENTRAL*/
 
 section {
