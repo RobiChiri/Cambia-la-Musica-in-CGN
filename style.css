@@ -365,14 +365,12 @@ footer hr {
 
 #boxHeader
 {
-  background-color: #880015;
 
   height: 30%;
 }
 
 #son1
 {
-  background-color: red;
   display: flex;
   flex-direction: row-reverse;
 
@@ -381,7 +379,6 @@ footer hr {
 
 #son2
 {
-  background-image: greenyellow;
   
   display: flex;
   flex-direction: column;
@@ -391,21 +388,16 @@ footer hr {
 
 #boxAside
 {
-  background-color: green;
 
   width: 30%;
 }
 
 #boxSection
 {
-  background-color: #C8BFE7;
-
   height: 60%
 }
 
 #boxFooter
 {
-  background-color: #A349A4;
-
   height: 40%;
 }
