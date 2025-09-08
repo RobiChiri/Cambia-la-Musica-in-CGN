@@ -10,27 +10,59 @@
 </head>
 
 <body>
+    <!--<audio id="suonoTest" src="Content/music/changethemusic.mp3"></audio>
 
+    <button onclick="riproduciSuono()">Riproduci</button>
+    <button onclick="pausaSuono()">Pausa</button>
+
+    <script>
+        function riproduciSuono() {
+            const audio = document.getElementById("suonoTest");
+            audio.play();
+        }
+
+        function pausaSuono() {
+            const audio = document.getElementById("suonoTest");
+            audio.pause();
+        }
+    </script>-->
+
+
+
+    <!--<p id="myText">Questo è un testo di esempio in cui vogliamo evidenziare una parola.</p>
+
+    <script>
+        const textElement = document.getElementById('myText');
+        const wordToHighlight = "evidenziare";
+
+        // Sostituisce la parola con la versione evidenziata
+        textElement.innerHTML = textElement.innerText.replace(
+            wordToHighlight,
+            `<mark>${wordToHighlight}</mark>`
+        );
+    </script>-->
+    
+    <audio id="musica" src="Content/music/changethemusic.mp3"></audio>
     <section>
         <img id="immaginenote" src="Content/images/note2Editata2.png" alt="spartito" usemap="#musicMap">
 
         <map name="musicMap">
-            <area alt="Nota0" title="Nota0" coords="14,64,128,203" shape="rect">
-            <area alt="Nota1" title="Nota1" coords="173,141,215,66" shape="rect" onclick="NotaClick(0)">
-            <area alt="Nota2" title="Nota2" coords="220,163,275,79" shape="rect" onclick="NotaClick(1)">
-            <area alt="Nota3" title="Nota3" coords="332,84,284,160" shape="rect" onclick="NotaClick(2)">
-            <area alt="Nota4" title="Nota4" coords="336,186,379,108" shape="rect" onclick="NotaClick(3)">
-            <area alt="Nota5" title="Nota5" coords="395,163,462,78" shape="rect" onclick="NotaClick(4)">
-            <area alt="Nota6" title="Nota6" coords="473,75,517,167" shape="rect" onclick="NotaClick(5)">
-            <area alt="Nota7" title="Nota7" coords="526,59,587,141" shape="rect" onclick="NotaClick(6)">
-            <area alt="Nota8" title="Nota8" coords="586,190,638,115" shape="rect" onclick="NotaClick(7)">
-            <area alt="Nota9" title="Nota9" coords="647,68,709,148" shape="rect" onclick="NotaClick(8)">
-            <area alt="Nota10" title="Nota10" coords="729,172,768,91" shape="rect" onclick="NotaClick(9)">
-            <area alt="Nota11" title="Nota11" coords="789,152,831,68" shape="rect" onclick="NotaClick(10)">
-            <area alt="Nota12" title="Nota12" coords="844,79,887,160" shape="rect" onclick="NotaClick(11)">
-            <area alt="Nota13" title="Nota13" coords="908,189,941,111" shape="rect" onclick="NotaClick(12)">
-            <area alt="Nota14" title="Nota14" coords="964,184,1034,103" shape="rect" onclick="NotaClick(13)">
-            <area alt="Nota15" title="Nota15" coords="1052,176,1091,90" shape="rect" onclick="NotaClick(14)">
+            <area alt="Nota0" title="Nota0" coords="14,64,128,203" shape="rect" onclick="NotaClick(0)">
+            <area alt="Nota1" title="Nota1" coords="173,141,215,66" shape="rect" onclick="NotaClick(1)">
+            <area alt="Nota2" title="Nota2" coords="220,163,275,79" shape="rect" onclick="NotaClick(2)">
+            <area alt="Nota3" title="Nota3" coords="332,84,284,160" shape="rect" onclick="NotaClick(3)">
+            <area alt="Nota4" title="Nota4" coords="336,186,379,108" shape="rect" onclick="NotaClick(4)">
+            <area alt="Nota5" title="Nota5" coords="395,163,462,78" shape="rect" onclick="NotaClick(5)">
+            <area alt="Nota6" title="Nota6" coords="473,75,517,167" shape="rect" onclick="NotaClick(6)">
+            <area alt="Nota7" title="Nota7" coords="526,59,587,141" shape="rect" onclick="NotaClick(7)">
+            <area alt="Nota8" title="Nota8" coords="586,190,638,115" shape="rect" onclick="NotaClick(8)">
+            <area alt="Nota9" title="Nota9" coords="647,68,709,148" shape="rect" onclick="NotaClick(9)">
+            <area alt="Nota10" title="Nota10" coords="729,172,768,91" shape="rect" onclick="NotaClick(10)">
+            <area alt="Nota11" title="Nota11" coords="789,152,831,68" shape="rect" onclick="NotaClick(11)">
+            <area alt="Nota12" title="Nota12" coords="844,79,887,160" shape="rect" onclick="NotaClick(12)">
+            <area alt="Nota13" title="Nota13" coords="908,189,941,111" shape="rect" onclick="NotaClick(13)">
+            <area alt="Nota14" title="Nota14" coords="964,184,1034,103" shape="rect" onclick="NotaClick(14)">
+            <area alt="Nota15" title="Nota15" coords="1052,176,1091,90" shape="rect" onclick="NotaClick(15)">
 
         </map>
 
@@ -41,17 +73,17 @@
                         <p>Obbiettivo</p>
                     </div>
                     <div id="kw2">
-                        <p>Tipologia di meeting</p>
+                        <p>Tipologia di Meeting</p>
                     </div>
                     <div id="kw3">
                         <p>ODG</p>
                     </div>
                     <div id="kw4">
-                        <p>Durata e tempi</p>
+                        <p>Durata & Tempi</p>
                     </div>
                 </div>
                 <div class="ColonnaD">
-        
+
                     <div id="kw5">
                         <p>Persone giuste</p>
                     </div>
@@ -83,7 +115,7 @@
                             <p>Recap con To-Do</p>
                         </div>
                         <div id="kw12">
-                            <p>Valutare il meeting</p>
+                            <p>Valutare il Meeting</p>
                         </div>
                     </div>
                 </div>
@@ -99,7 +131,7 @@
 
             <div id="sfondocard3" class="sfondocard">
                 <div id="kw14">
-                    <p>Invio report</p>
+                    <p>Invio Report</p>
                 </div>
                 <div id="kw15">
                     <p>Verifica To-Do e Feedback</p>
