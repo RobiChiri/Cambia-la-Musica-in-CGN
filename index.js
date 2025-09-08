@@ -1,6 +1,6 @@
 var miaVar=true;
 
-function Mostra(){
+function MostraS(){
     if(miaVar){
         document.getElementById("lista").style.visibility="visible";
         miaVar=false;
