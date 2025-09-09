@@ -1,6 +1,6 @@
 var domanda, scelto;
 
-domanda = [["Le fasi di una riunione sono due: svolgimento e chiusura", false], ["Per mantenere il ritmo giusto bisogna interrompere molto spesso per far vedere di star partecipando", false], ["Il nostro proposito nobile è come una bussola", true], ["Non bisogna avere un unico obiettivo chiaro ma molti obiettivi confusi da andare a discutere in sede di meeting", false], ["Il facilitatore è colui che andrà a verbalizzare le idee emerse e rielaborerà il To-Do", false], [" È sempre opportuno fare una riunione", false], ["È importante scegliere un luogo adatto per la riunione", true], ["I meeting sono un insieme di accord", true]["Lavorare in gruppo porta più frutti perché porta meno distrazioni", true],["Non aspettare che le cose cambino da sole comincia a fare la tua parte", true],];
+domanda = [["Le fasi di una riunione sono due: svolgimento e chiusura", false], ["Per mantenere il ritmo giusto bisogna interrompere molto spesso per far vedere di star partecipando", false], ["Il nostro proposito nobile è come una bussola", true], ["Non bisogna avere un unico obiettivo chiaro ma molti obiettivi confusi da andare a discutere in sede di meeting", false], ["Il facilitatore è colui che andrà a verbalizzare le idee emerse e rielaborerà il To-Do", false], [" È sempre opportuno fare una riunione", false], ["È importante scegliere un luogo adatto per la riunione", true], ["I meeting sono un insieme di accord", true], ["Lavorare in gruppo porta più frutti perché porta meno distrazioni", true],["Non aspettare che le cose cambino da sole comincia a fare la tua parte", true],];
 
 document.addEventListener('DOMContentLoaded', function () {
     scegliDomande();
@@ -13,7 +13,7 @@ var a, b, c;
 
 function scegliDomande() {
 
-    const numdomande = 7;
+    const numdomande = 9;
 
     a = Math.round(Math.random() * numdomande);
     b = Math.round(Math.random() * numdomande);
@@ -21,7 +21,7 @@ function scegliDomande() {
 
 
 
-    while ((a == b || a == c || b == c) && (!a || !b || !c)) {
+    while ((a == b || a == c || b == c) /*&& (!a || !b || !c)*/) {  //la seconda condizione porta un probabile errore perchè bisogna metter || al posto del &&
         a = Math.round(Math.random() * numdomande);
         b = Math.round(Math.random() * numdomande);
         c = Math.round(Math.random() * numdomande);
