@@ -7,6 +7,8 @@ elenco = [["", ""], ["Obbiettivo", "Per una efficace riuscita del meeting l\'org
 
 var last = -1;
 
+
+//se si cambia il testo bisogna cambiare qua !!!
 document.addEventListener("DOMContentLoaded", function () {
     const descriz = document.getElementById("testocentrale");
     descriz.textContent = elenco[1][1] + elenco[7][1] + elenco[6][1] + "Il meeting inizierà con un momento di silenzio dove i partecipanti ritrovano la concentrazione per collaborare proficuamente alla riunione." + elenco[9][1] + "partecipanti devono arrivare preparati, aperti a condividere in maniera efficace le loro idee. Eviteranno le distrazioni, mostreranno attenzione e ascolto attivo agli interventi." + elenco[10][1] + "Il facilitatore dovrà agevolare il contributo di tutti, ricondurre nel binario e alla sintesi le discussioni dispersive e fuori focus, attenzionare i tempi e la riformulazione delle espressioni poco chiare, mediare i processi di relazione e far chiarire eventuali malintesi." + elenco[11][1] + " e " + elenco[13][1] + elenco[12][1] + elenco[14][1];
