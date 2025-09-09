@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="index.js"></script>
+    <title>Pagina Form</title>
+</head>
+
+<body>
+    <div class="formcontainer">
+        <header>
+            <h1 id="titolo">QUIZ</h1>
+        </header>
+
+        <fieldset id="domanda">
+            <legend align="center" id="domanda1">DOMANDA1:</legend>
+            <input id="rs1" type="radio" name="risposta1" value="vero" />vero<br>
+            <input id="rs2" type="radio" name="risposta1" value="falso" />falso<br>
+        </fieldset>
+
+        <fieldset id="domanda">
+            <legend align="center" id="domanda2">DOMANDA1:</legend>
+            <input id="rs3" type="radio" name="risposta2" value="vero" />vero<br>
+            <input id="rs4" type="radio" name="risposta2" value="falso" />falso<br>
+        </fieldset>
+
+
+        <fieldset id="domanda">
+            <legend align="center" id="domanda3">DOMANDA1:</legend>
+            <input id="rs5" type="radio" name="risposta3" value="vero" />vero<br>
+            <input id="rs6" type="radio" name="risposta3" value="falso" />falso<br>
+        </fieldset>
+
+        <button type="button" id="bottoneinvio" onclick="controllaRisultato()">INVIA RISPOSTA</button>
+        <p id="risultato"></p>
+    </div>
+
+</body>
+
+</html>
