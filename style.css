@@ -215,16 +215,19 @@ section {
 #testocentrale {
   position: relative;
   top: -100px;
-  width: 1000px;
+  width: 90%;
   height: 140px;
   font-size: smaller;
   background-color: #ffebd5;
   line-height: 15px;
-  margin-left: 130px;
+  margin-left: 80px;
+
+  text-align: justify;
 }
 #TestoB{
     position: relative;
     top: -250px;
+  
 }
 
 
