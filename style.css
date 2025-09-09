@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 
-.formcontainer{
+.formcontainer {
   display: flex;
   flex-direction: column;
 }
@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /*background-color: black;*/  
+  /*background-color: black;*/
 }
 
 #bgsinistra {
@@ -80,7 +80,7 @@ body {
 
 /* SIDEBAR*/
 aside {
-  
+
 
   font-style: italic;
 
@@ -131,7 +131,7 @@ aside hr {
   flex-direction: column;
 
   line-height: 0px;
-  
+
   align-items: center;
   justify-content: center;
 }
@@ -152,6 +152,7 @@ aside hr {
 #BoxLista {
   order: 2;
 }
+
 /* CENTRAL*/
 
 section {
@@ -231,7 +232,7 @@ section {
 
 #TestoB {
   position: relative;
-  top:0px;
+  top: 0px;
 }
 
 /* FOOTER */
@@ -351,9 +352,7 @@ footer hr {
 
 /* FORMATTAZIONE PAGINA CON FLEXBOX */
 
-.padreAbsolute
-{
-  background-color: black;
+.padreAbsolute {
 
   height: 100%;
   width: 100%;
@@ -362,42 +361,35 @@ footer hr {
   flex-direction: column;
 }
 
-#boxHeader
-{
+#boxHeader {
 
   height: 30%;
 }
 
-#son1
-{
+#son1 {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
 
   height: 70%;
 }
 
-#son2
-{
-  
+#son2 {
+  order: 1;
+  flex: 70%;
   display: flex;
   flex-direction: column;
-
-  width: auto;
 }
 
-#boxAside
-{
-
-  width: 30%;
+#boxAside {
+  order: 2;
+  flex: 30%;
 }
 
-#boxSection
-{
-  height: 70%;
+#boxSection {
+  flex: 60%;
 }
 
-#boxFooter
-{
-  height: 40%;
+#boxFooter {
+  flex: 40%;
   width: 100%;
 }
