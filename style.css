@@ -107,10 +107,6 @@ aside {
   justify-content: center;
 }
 
-body {
-  background-color: #ffebd5;
-}
-
 aside ul {
   visibility: hidden;
   line-height: 5px;
