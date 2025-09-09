@@ -39,13 +39,15 @@ body {
   margin-top: 5px;
 }
 
+
 .navbarcontainer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /*background-color: black;*/  
+  /*background-color: black;*/
   /*background: url(Content/images/bkg.png) repeat-x fixed center*/
 }
+
 
 #bgsinistra {
   position: relative;
@@ -79,13 +81,16 @@ body {
 }
 
 #VaiQuiz{
-  position: relative;
-  margin-top: 2%;
-  left: -60%;
   height: 8%;
   width: 8%;
   background-color: transparent;
   border: 0ch;
   font-size: x-large;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#formQuiz{
+  position: relative;
+  margin-top: 2%;
+  left: -60%;
 }
