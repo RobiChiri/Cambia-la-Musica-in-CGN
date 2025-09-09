@@ -241,8 +241,8 @@ footer {
   clear: both;
   bottom: 0;
 
-  height: 250px;
-  width: 65%;
+  height: 60%;
+  width: 90%;
 
   padding-top: 35px;
   padding-right: 75px;
@@ -258,14 +258,14 @@ footer {
 
   background-image: url(Content/images/notetbtm.png), url(Content/images/notetop.png);
   background-repeat: repeat-x, repeat-x;
-  background-position: -50px 305px, -50px -2px;
+  background-position: -50% 307px, -50px -1px;
   background-size: 80%, 80%;
 }
 
 #footerbase {
-  height: 55px;
+  height: 25%;
   width: 156%;
-  padding-top: 18px;
+  padding-top: 1.5%;
   margin-left: -10px;
 
 }
@@ -273,7 +273,7 @@ footer {
 footer div {
   display: block;
   float: left;
-  width: 300px;
+  width: 25%;
   height: 250px;
 
   margin-left: auto;
