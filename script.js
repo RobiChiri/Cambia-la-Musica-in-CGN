@@ -191,4 +191,26 @@ function NotaClick(posizione) {
 //FOOTER
 
 
+var miaVarF=true;
+
+function MostraF(){
+    if(miaVarF){
+        document.getElementById("listaF").style.visibility="visible";
+        document.getElementById("listaC").style.visibility="visible";
+        document.getElementById("listaD").style.visibility="visible";
+        miaVarF=false;
+    }
+    else{
+        document.getElementById("listaF").style.visibility="hidden";
+        document.getElementById("listaC").style.visibility="hidden";
+        document.getElementById("listaD").style.visibility="hidden";
+        miaVarF=true;
+    }
+}
+
+
+//SIDEBAR
+
+
+
 
