@@ -157,8 +157,7 @@ aside hr {
 section {
   /*top: -1000px;*/
   float: left;
-  width: 70%;
-  border-right: 2px solid black;
+  width: auto;
   margin-top: 0px
 }
 
@@ -383,7 +382,7 @@ footer hr {
   display: flex;
   flex-direction: column;
 
-  width: 70%;
+  width: auto;
 }
 
 #boxAside
@@ -394,10 +393,11 @@ footer hr {
 
 #boxSection
 {
-  height: 60%
+  height: 70%;
 }
 
 #boxFooter
 {
   height: 40%;
+  width: 100%;
 }
