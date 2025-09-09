@@ -100,7 +100,7 @@ body {
 
 section {
   float: left;
-  width: 100%;
+  height: 600px;
 }
 
 .bloccogrande{
@@ -230,6 +230,88 @@ section {
 
 
 /*SIDEBAR*/
+
+aside {
+  padding-left: 20px;
+  margin-left: 20px;
+  font-style: italic;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+body {
+  background-color: #ffebd5;
+}
+
+aside ul {
+  visibility: hidden;
+  width: 100%;
+  line-height: 5px;
+  list-style-image: url("Content/images/nota3\ \(2\).png");
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+aside hr {
+  width: 100%;
+  margin: 1% out;
+  color: gray;
+}
+
+#special {
+  list-style: none;
+}
+
+/* FLEX SIDEBAR*/
+
+
+#Generale {
+  order: 1;
+
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#TitoloA {
+  order: 1;
+
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  line-height: 0px;
+
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+#IlRitmo {
+  order: 1;
+  line-height: 0px;
+}
+
+#Giusto {
+  order: 2;
+}
+
+#notaIntonata {
+  order: 2;
+
+}
+
+#BoxLista {
+  order: 2;
+}
+
+
 /*FOOTER*/
 
 footer {
@@ -237,8 +319,8 @@ footer {
   clear: both;
   bottom: 0;
 
-  height: 60%;
-  width: 90%;
+ /* height: 60%;
+  width: 90%; */
 
   padding-top: 35px;
   padding-right: 75px;
@@ -362,13 +444,18 @@ footer hr {
               order: 1;
               display: flex;
               flex-direction: column;
+              flex: 70%;
             }
                 #boxCentral{
                   order: 1;
                 }
                 #boxFooter{
                   order: 2;
+                  flex:10%;
                 }
             #boxAside{
                 order: 2;
+                flex: 30%;
+                align-content: normal;
+
             }

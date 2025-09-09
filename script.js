@@ -212,5 +212,20 @@ function MostraF(){
 //SIDEBAR
 
 
+var miaVarS=true;
+
+function MostraS(){
+    if(miaVarS){
+        document.getElementById("lista").style.visibility="visible";
+        miaVarS=false;
+    }
+    else{
+        document.getElementById("lista").style.visibility="hidden";
+        miaVarS=true;
+    }
+}
+
+
+
 
 
