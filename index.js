@@ -55,50 +55,52 @@ function controllaRisultato() {
     const radioButtons2 = document.querySelectorAll('input[name="risposta2"]');
     const radioButtons3 = document.querySelectorAll('input[name="risposta3"]');
 
-    var Border1 = document.getElementById("domanda1").parentElement.style.borderColor;
-    var Border2 = document.getElementById("domanda2").parentElement.style.borderColor;
-    var Border3 = document.getElementById("domanda3").parentElement.style.borderColor;
+   //debugger;
+
+    var Border1 = document.getElementById("domanda1").parentElement.style;
+    var Border2 = document.getElementById("domanda2").parentElement.style;
+    var Border3 = document.getElementById("domanda3").parentElement.style;
 
     for (var i = 0; i < 2; i++) {
         if (radioButtons1[i].checked) {
             if ((radioButtons1[i].getAttribute('value') == "vero" && domanda[a][1]) || (radioButtons1[i].getAttribute('value') == "falso" && !domanda[a][1])) {
-                document.getElementById("domanda1").parentElement.style.borderColor = 'lightgreen';
+                Border1.borderColor = 'lightgreen';
                 /*alert("ciao1" + radioButtons1[i].getAttribute('value'));*/
             } else {
-                document.getElementById("domanda1").parentElement.style.borderColor = 'red';
+                Border1.borderColor = 'red';
             }
 
         } else {
-            if (i == 1 && document.getElementById("domanda1").parentElement.style.borderColor != 'lightgreen' && document.getElementById("domanda1").parentElement.style.borderColor != 'red') {
-                document.getElementById("domanda1").parentElement.style.borderColor = 'yellow';
+            if (i == 1 && Border1.borderColor != 'lightgreen' && Border1.borderColor != 'red') {
+                Border1.borderColor = 'yellow';
             }
         }
 
         if (radioButtons2[i].checked) {
             if ((radioButtons2[i].getAttribute('value') == "vero" && domanda[b][1]) || (radioButtons2[i].getAttribute('value') == "falso" && !domanda[b][1])) {
-                document.getElementById("domanda2").parentElement.style.borderColor = 'lightgreen';
+                Border2.borderColor = 'lightgreen';
                 /*alert("ciao2" + radioButtons2[i].getAttribute('value'));*/
             } else {
-                document.getElementById("domanda2").parentElement.style.borderColor = 'red';
+                Border2.borderColor = 'red';
             }
         } else {
-            if (i == 1 && document.getElementById("domanda2").parentElement.style.borderColor != 'lightgreen' && document.getElementById("domanda2").parentElement.style.borderColor != 'red') {
-                document.getElementById("domanda2").parentElement.style.borderColor = 'yellow';
+            if (i == 1 && Border2.borderColor != 'lightgreen' && Border2.borderColor != 'red') {
+                Border2.borderColor = 'yellow';
             }
 
         }
 
         if (radioButtons3[i].checked) {
             if ((radioButtons3[i].getAttribute('value') == "vero" && domanda[c][1]) || (radioButtons3[i].getAttribute('value') == "falso" && !domanda[c][1])) {
-                document.getElementById("domanda3").parentElement.style.borderColor = 'lightgreen';
+                Border3.borderColor = 'lightgreen';
                 /*alert("ciao3" + radioButtons3[i].getAttribute('value'));*/
             } else {
-                document.getElementById("domanda3").parentElement.style.borderColor = 'red';
+                Border3.borderColor = 'red';
             }
 
         } else {
-            if (i == 1 && document.getElementById("domanda3").parentElement.style.borderColor != 'lightgreen' && document.getElementById("domanda3").parentElement.style.borderColor != 'red') {
-                document.getElementById("domanda3").parentElement.style.borderColor = 'yellow';
+            if (i == 1 && Border3.borderColor != 'lightgreen' && Border3.borderColor != 'red') {
+                Border3.borderColor = 'yellow';
             }
 
         }
@@ -106,7 +108,7 @@ function controllaRisultato() {
     }
 
     var risultatoScritta = document.getElementById("risultato");
-    if (document.getElementById("domanda1").parentElement.style.borderColor == 'lightgreen' && document.getElementById("domanda2").parentElement.style.borderColor == 'lightgreen' && document.getElementById("domanda3").parentElement.style.borderColor == 'lightgreen') {
+    if (Border1.borderColor == 'lightgreen' && Border2.borderColor == 'lightgreen' && Border3.borderColor == 'lightgreen') {
         risultatoScritta.textContent = "BRAVO SEI PASSATO!";
         risultatoScritta.style.color = 'lightgreen';
         risultatoScritta.style.visibility = "visible";
