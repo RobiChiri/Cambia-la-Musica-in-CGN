@@ -1,3 +1,5 @@
+/* NAVBAR*/
+
 body {
   background-color: #ffebd5;
   padding: 0;
@@ -94,3 +96,20 @@ body {
   margin-top: 2%;
   left: -60%;
 }
+
+/* CENTRAL*/
+/*SIDEBAR*/
+/*FOOTER*/
+
+
+/* FLEX */
+#padreAbsolut{
+  display: flex;
+  flex-direction: column;
+}
+      #boxHeader{
+        order: 1;
+      }
+      #son1{
+        order: 2;
+      }
