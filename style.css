@@ -57,12 +57,18 @@ body {
   left: -1%;
 }
 
+#sfondocard2 {
+  width: 272px;
+  height: 300px;
 #bgdestra1 {
   position: relative;
   top: -0;
   left: -25.3%;
 }
 
+#sfondocard3 {
+  width: 132px;
+  height: 300px;
 #bgdestra2 {
   position: relative;
   top: -0;
