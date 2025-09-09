@@ -72,11 +72,10 @@ body {
   z-index: 1;
 }
 
-#logo{
-  float: right;
+#logo {
   position: relative;
-  left: 327px;
-  top: -0px;
+  margin-top: 0.8%;
+  left: -45%;
 }
 
 #VaiQuiz{
@@ -134,7 +133,6 @@ aside hr {
   align-items: center;
   justify-content: center;
 }
-
 
 #TitoloA {
   order: 1;
