@@ -27,7 +27,9 @@ function scegliDomande() {
         c = Math.round(Math.random() * numdomande);
     }
 
-    console.log(a + " " + b + " "+ c);
+    //console.log(a + " " + b + " "+ c);
+
+    //debugger;
 
     var domanda1 = document.getElementById("domanda1");
     var domanda2 = document.getElementById("domanda2");
@@ -44,7 +46,7 @@ var cliccato = false;
 function controllaRisultato() {
 
     if(cliccato){
-        alert("HAI GIA FINITO QUESTO TEST, SE VUOI PUOI PROVARE A FARNE UN ALTRO (il risultato di questo non cambierà)");
+        alert("HAI GIA FINITO QUESTO TEST, SE VUOI PUOI PROVARE A FARNE UN ALTRO (il risultato di questo non camgierà)");
         return;
     }
 
