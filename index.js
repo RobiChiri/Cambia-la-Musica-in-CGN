@@ -28,7 +28,8 @@ function NotaClick(posizione) {
     const descriz = document.getElementById("testocentrale");
     const descreal = descriz.textContent;
 
-    console.log(elenco[posizione][1]);
+    //console.log(elenco[posizione][1]);
+    
     if (visible) {
         const testoTabLast = document.getElementById("kw" + last);
         const testoReal2 = testoTabLast.textContent;
