@@ -1,126 +1,111 @@
-footer
-{
-    display: block;
-    clear: both;
-    bottom: 0;
+footer {
+  display: block;
+  clear: both;
+  bottom: 0;
 
-    height: 250px;
-    width: 65%;
+  height: 60%;
+  width: 90%;
 
-    padding-top: 35px;
-    padding-right: 75px;
-    padding-bottom: 35px;
+  padding-top: 35px;
+  padding-right: 75px;
+  padding-bottom: 35px;
 
-    margin-bottom: 60px;
-    margin-left: -10px;
+  margin-bottom: 60px;
+  margin-left: -10px;
 
-    background-color: #383838;
+  background-color: #383838;
 
-    border-top-right-radius : 20px;
-    border-bottom-right-radius : 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 
-    background-image: url(Content/images/notetbtm.png), url(Content/images/notetop.png);
-    background-repeat: repeat-x, repeat-x;
-    background-position: -50px 305px, -50px -2px;
-    background-size: 80%, 80%;
+  background-image: url(Content/images/notetbtm.png), url(Content/images/notetop.png);
+  background-repeat: repeat-x, repeat-x;
+  background-position: -50% 307px, -50px -1px;
+  background-size: 80%, 80%;
 }
 
-#footerbase
-{
-    height: 55px;
-    width: 156%;
-    padding-top: 18px;
-    margin-left: -10px;
-    
+#footerbase {
+  height: 25%;
+  width: 156%;
+  padding-top: 1.5%;
+  margin-left: -10px;
+
 }
 
-footer div
-{
-    display: block;
-    float: left;
-    width: 300px; 
-    height:250px;
+footer div {
+  display: block;
+  float: left;
+  width: 25%;
+  height: 250px;
 
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -20px;
-
-    
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -20px;
 }
 
-#notastonata
-{
-    height: 250px;
-    width: auto;
+#notastonata {
+  height: 250px;
+  width: auto;
 }
 
-#figlio1
-{
-    /*background-color: green;*/
-    align-items: center;
-    width: 200px;
+#figlio1 {
+  align-items: center;
+  width: 200px;
 }
 
-#figlio2
-{
-    
-    /*background-color: aliceblue;*/
-    width: 50px;
-    height: 115px;
-    
-    padding-top: 85px;
-    padding-bottom: 50px;
-    /*align-items: left;*/
+#figlio2 {
+  width: 50px;
+  height: 115px;
+  padding-top: 85px;
+  padding-bottom: 50px;
 }
 
-#title
-{
-    /*background-color: chocolate;*/
-    color: white;
-    /*position: relative;*/
-    transform: rotate(-90deg);
-    width: 250px;
+#title {
+  /*background-color: chocolate;*/
+  color: white;
+  /*position: relative;*/
+  transform: rotate(-90deg);
+  width: 250px;
 
-    text-align: center;
-    margin-left: -130px;
+  text-align: center;
+  margin-left: -130px;
 
-    font-size: 25px;
+  font-size: 25px;
 }
 
-.flex-container
-{
-    /*background-color: black;*/
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
+.flex-container {
+  /*background-color: black;*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
 
-    width: 300px;
-    height: 250px;
-    margin-top: 20px;
+  width: 300px;
+  height: 250px;
+  margin-top: 20px;
 }
 
-footer ul
-{
-    /*list-style-image: url(Content/images/nota3rp.png);*/
-    list-style-image: url("Content/images/nota3r.png");
-    line-height: 15px;
+footer ul {
+  /*list-style-image: url(Content/images/nota3rp.png);*/
+  list-style-image: url("Content/images/nota3r.png");
+  line-height: 15px;
 
-    font-size: 14px;
-    text-align: left;
-    align-items: flex-start;
-    color: #ffebd5;
+  font-size: 14px;
+  text-align: left;
+  align-items: flex-start;
+  color: #ffebd5;
 }
 
-footer hr
-{
-    margin-top: 3px;
-    color: #ffebd5;
-    list-style: none;
+footer hr {
+  margin-top: 3px;
+  color: #ffebd5;
+  list-style: none;
 }
 
-#listaF, #listaC, #listaD
-{
-    visibility: hidden;
+#listaF,
+#listaC,
+#listaD {
+  visibility: hidden;
+
 }
