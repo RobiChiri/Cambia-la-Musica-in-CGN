@@ -112,4 +112,12 @@ body {
       }
       #son1{
         order: 2;
+        display: flex;
+        flex-direction: row;
       }
+            #son2{
+              order: 1;
+            }
+            #boxAside{
+                order: 2;
+            }
