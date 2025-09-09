@@ -54,6 +54,20 @@ body {
   position: relative;
   top: -0;
   left: -1%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: last baseline;
+}
+.ColonnaS{
+  order:1;
+  margin-left: 10%;
+  text-align: center;
+}
+.ColonnaD{
+  order: 2;
+  text-align: center;
+  margin-left: 5%;
 }
 
 #bgdestra1 {
@@ -61,6 +75,40 @@ body {
   top: -0;
   left: -25.3%;
 }
+  left: 327px;
+  top: -0px;
+
+  display: flex;
+  flex-direction: column-reverse;
+
+}
+
+#figlioA{
+  order:2;
+  display: flex;
+  flex-direction: row;
+  
+}
+#Centralee{
+  order:1;
+  text-align: center;
+  align-items: flex-start;
+}
+#ColonnaS2{
+  order: 1;
+  text-align: center;
+  margin-left: 2%;
+}
+#ColonnaD2{
+  order: 2;
+  text-align: center;
+  margin-left: 6%;
+
+}
+
+
+
+
 
 #bgdestra2 {
   position: relative;
