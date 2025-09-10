@@ -204,12 +204,17 @@ function MostraF() {
         document.getElementById("listaC").style.visibility = "visible";
         document.getElementById("listaD").style.visibility = "visible";
         miaVarF = false;
+        document.getElementById("footer").style.width="100%";
+        document.getElementById("footer").style.height="70%";
     }
     else {
         document.getElementById("listaF").style.visibility = "hidden";
         document.getElementById("listaC").style.visibility = "hidden";
         document.getElementById("listaD").style.visibility = "hidden";
         miaVarF = true;
+        document.getElementById("footer").style.width="15%";
+        document.getElementById("footer").style.height="45%";
+       
     }
 }
 
