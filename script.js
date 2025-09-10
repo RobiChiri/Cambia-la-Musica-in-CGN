@@ -1,9 +1,7 @@
 //NAVBAR
-
-
 var domanda, scelto;
 
-domanda = [["Le fasi di una riunione sono due: svolgimento e chiusura", false], ["Per mantenere il ritmo giusto bisogna interrompere molto spesso per far vedere di star partecipando", false], ["Il nostro proposito nobile è come una bussola", true], ["Non bisogna avere un unico obiettivo chiaro ma molti obiettivi confusi da andare a discutere in sede di meeting", false], ["Il facilitatore è colui che andrà a verbalizzare le idee emerse e rielaborerà il To-Do", false], [" È sempre opportuno fare una riunione", false], ["È importante scegliere un luogo adatto per la riunione", true], ["I meeting sono un insieme di accordi", true], ["Lavorare in gruppo porta più frutti perché porta meno distrazioni", true], ["Non aspettare che le cose cambino da sole comincia a fare la tua parte", true]];
+domanda = [["Le fasi di una riunione sono due: svolgimento e chiusura", false], ["Per mantenere il ritmo giusto bisogna interrompere molto spesso per far vedere di star partecipando", false], ["Il nostro proposito nobile è come una bussola", true], ["Non bisogna avere un unico obiettivo chiaro ma molti obiettivi confusi da andare a discutere in sede di meeting", false], ["Il facilitatore è colui che andrà a verbalizzare le idee emerse e rielaborerà il To-Do", false], [" È sempre opportuno fare una riunione", false], ["È importante scegliere un luogo adatto per la riunione", true], ["I meeting sono un insieme di accordi", true], ["Lavorare in gruppo porta più frutti perché porta meno distrazioni", true],["Non aspettare che le cose cambino da sole comincia a fare la tua parte", true],];
 
 document.addEventListener('DOMContentLoaded', function () {
     scegliDomande();
@@ -13,21 +11,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 var a, b, c;
 
+function random(max){
+    return Math.round(Math.random() * max);
+}
+
 
 function scegliDomande() {
 
-    const numdomande = 9;
+    const ndom = 9;
 
-    a = Math.round(Math.random() * numdomande);
-    b = Math.round(Math.random() * numdomande);
-    c = Math.round(Math.random() * numdomande);
+    a = random(ndom);
+    b = random(ndom);
+    c = random(ndom);
 
 
 
     while ((a == b || a == c || b == c) /*&& (!a || !b || !c)*/) {  //la seconda condizione porta un probabile errore perchè bisogna metter || al posto del &&
-        a = Math.round(Math.random() * numdomande);
-        b = Math.round(Math.random() * numdomande);
-        c = Math.round(Math.random() * numdomande);
+        a = random(ndom);
+        b = random(ndom);
+        c = random(ndom);
     }
 
     //console.log(a + " " + b + " "+ c);
@@ -43,12 +45,54 @@ function scegliDomande() {
     domanda3.textContent = domanda[c][0];
 }
 
-
 var cliccato = false;
+
+
+function fieldBase(Border){
+    Border.borderStyle = "groove";
+    Border.borderColor = "threedface";
+    Border.borderImage = "initial";
+}
+
+
+function rifai(){
+    scegliDomande();
+    var Border1 = document.getElementById("domanda1").parentElement.style;
+    var Border2 = document.getElementById("domanda2").parentElement.style;
+    var Border3 = document.getElementById("domanda3").parentElement.style;
+
+    fieldBase(Border1);
+    fieldBase(Border2);
+    fieldBase(Border3);
+
+    cliccato = false;
+
+    var risultatoScritta = document.getElementById("risultato");
+
+    risultatoScritta.textContent = "";
+}
+
+
+
+//funzione per controllare se un radiobutton è checkato oppure no
+function radioChecked(radioButtons, Border, i){
+    if (radioButtons.checked) {
+        if ((radioButtons.getAttribute('value') == "vero" && domanda[a][1]) || (radioButtons.getAttribute('value') == "falso" && !domanda[a][1])) {
+            Border.borderColor = 'lightgreen';
+        } else {
+            Border.borderColor = 'red';
+        }
+
+    } else {
+        if (i == 1 && Border.borderColor != 'lightgreen' && Border.borderColor != 'red') {
+            Border.borderColor = 'yellow';
+        }
+    }
+}
 
 function controllaRisultato() {
 
-    if (cliccato) {
+    if(cliccato){
         alert("HAI GIA FINITO QUESTO TEST, SE VUOI PUOI PROVARE A FARNE UN ALTRO (il risultato di questo non camgierà)");
         return;
     }
@@ -58,56 +102,17 @@ function controllaRisultato() {
     const radioButtons2 = document.querySelectorAll('input[name="risposta2"]');
     const radioButtons3 = document.querySelectorAll('input[name="risposta3"]');
 
-    //debugger;
+
 
     var Border1 = document.getElementById("domanda1").parentElement.style;
     var Border2 = document.getElementById("domanda2").parentElement.style;
     var Border3 = document.getElementById("domanda3").parentElement.style;
 
     for (var i = 0; i < 2; i++) {
-        if (radioButtons1[i].checked) {
-            if ((radioButtons1[i].getAttribute('value') == "vero" && domanda[a][1]) || (radioButtons1[i].getAttribute('value') == "falso" && !domanda[a][1])) {
-                Border1.borderColor = 'lightgreen';
-                /*alert("ciao1" + radioButtons1[i].getAttribute('value'));*/
-            } else {
-                Border1.borderColor = 'red';
-            }
-
-        } else {
-            if (i == 1 && Border1.borderColor != 'lightgreen' && Border1.borderColor != 'red') {
-                Border1.borderColor = 'yellow';
-            }
-        }
-
-        if (radioButtons2[i].checked) {
-            if ((radioButtons2[i].getAttribute('value') == "vero" && domanda[b][1]) || (radioButtons2[i].getAttribute('value') == "falso" && !domanda[b][1])) {
-                Border2.borderColor = 'lightgreen';
-                /*alert("ciao2" + radioButtons2[i].getAttribute('value'));*/
-            } else {
-                Border2.borderColor = 'red';
-            }
-        } else {
-            if (i == 1 && Border2.borderColor != 'lightgreen' && Border2.borderColor != 'red') {
-                Border2.borderColor = 'yellow';
-            }
-
-        }
-
-        if (radioButtons3[i].checked) {
-            if ((radioButtons3[i].getAttribute('value') == "vero" && domanda[c][1]) || (radioButtons3[i].getAttribute('value') == "falso" && !domanda[c][1])) {
-                Border3.borderColor = 'lightgreen';
-                /*alert("ciao3" + radioButtons3[i].getAttribute('value'));*/
-            } else {
-                Border3.borderColor = 'red';
-            }
-
-        } else {
-            if (i == 1 && Border3.borderColor != 'lightgreen' && Border3.borderColor != 'red') {
-                Border3.borderColor = 'yellow';
-            }
-
-        }
-
+        debugger;
+        radioChecked(radioButtons1[i],Border1,i);
+        radioChecked(radioButtons2[i],Border2,i);
+        radioChecked(radioButtons3[i],Border3,i);
     }
 
     var risultatoScritta = document.getElementById("risultato");
@@ -123,9 +128,6 @@ function controllaRisultato() {
         risultatoScritta.style.display = "block";
     }
 }
-
-
-
 
 
 // CENTRAL 
