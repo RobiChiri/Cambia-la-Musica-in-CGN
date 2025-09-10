@@ -3,6 +3,8 @@ body {
   background-color: #ffebd5;
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .formcontainer {
@@ -95,9 +97,9 @@ body {
 
 /* SIDEBAR*/
 aside {
-
-
   font-style: italic;
+    padding-left: 20px;
+  margin-left: 20px;
 
   display: flex;
   flex-direction: column;
@@ -109,6 +111,7 @@ aside {
 aside ul {
   visibility: hidden;
   line-height: 5px;
+  
   list-style-image: url("Content/images/nota3\ \(2\).png");
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 700;
@@ -116,7 +119,7 @@ aside ul {
 
 aside hr {
   width: 400px;
-  margin: 10px out;
+  margin: 1% out;
   color: gray;
 }
 
@@ -139,6 +142,7 @@ aside hr {
 
   display: flex;
   flex-direction: column;
+  width: 40%;
 
   line-height: 0px;
 
@@ -168,6 +172,8 @@ aside hr {
 section {
   float: left;
   width: 70%;
+  margin-top: 100px;
+  border-right: 2px solid black;
   margin-top: 100px;
 }
 
