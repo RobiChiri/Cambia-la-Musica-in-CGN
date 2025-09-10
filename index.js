@@ -10,21 +10,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 var a, b, c;
 
+function random(max){
+    return Math.round(Math.random() * max);
+}
+
 
 function scegliDomande() {
 
-    const numdomande = 9;
+    const ndom = 9;
 
-    a = Math.round(Math.random() * numdomande);
-    b = Math.round(Math.random() * numdomande);
-    c = Math.round(Math.random() * numdomande);
+    a = random(ndom);
+    b = random(ndom);
+    c = random(ndom);
 
 
 
     while ((a == b || a == c || b == c) /*&& (!a || !b || !c)*/) {  //la seconda condizione porta un probabile errore perchè bisogna metter || al posto del &&
-        a = Math.round(Math.random() * numdomande);
-        b = Math.round(Math.random() * numdomande);
-        c = Math.round(Math.random() * numdomande);
+        a = random(ndom);
+        b = random(ndom);
+        c = random(ndom);
     }
 
     //console.log(a + " " + b + " "+ c);
@@ -43,21 +47,22 @@ function scegliDomande() {
 var cliccato = false;
 
 
+function fieldBase(Border){
+    Border.borderStyle = "groove";
+    Border.borderColor = "threedface";
+    Border.borderImage = "initial";
+}
+
+
 function rifai(){
     scegliDomande();
     var Border1 = document.getElementById("domanda1").parentElement.style;
     var Border2 = document.getElementById("domanda2").parentElement.style;
     var Border3 = document.getElementById("domanda3").parentElement.style;
 
-    Border1.borderStyle = "groove";
-    Border1.borderColor = "threedface";
-    Border1.borderImage = "initial";
-    Border2.borderStyle = "groove";
-    Border2.borderColor = "threedface";
-    Border2.borderImage = "initial";
-    Border3.borderStyle = "groove";
-    Border3.borderColor = "threedface";
-    Border3.borderImage = "initial";
+    fieldBase(Border1);
+    fieldBase(Border2);
+    fieldBase(Border3);
 
     cliccato = false;
 
@@ -67,6 +72,22 @@ function rifai(){
 }
 
 
+
+//funzione per controllare se un radiobutton è checkato oppure no
+function radioChecked(radioButtons, Border, i){
+    if (radioButtons.checked) {
+        if ((radioButtons.getAttribute('value') == "vero" && domanda[a][1]) || (radioButtons.getAttribute('value') == "falso" && !domanda[a][1])) {
+            Border.borderColor = 'lightgreen';
+        } else {
+            Border.borderColor = 'red';
+        }
+
+    } else {
+        if (i == 1 && Border.borderColor != 'lightgreen' && Border.borderColor != 'red') {
+            Border.borderColor = 'yellow';
+        }
+    }
+}
 
 function controllaRisultato() {
 
@@ -80,56 +101,17 @@ function controllaRisultato() {
     const radioButtons2 = document.querySelectorAll('input[name="risposta2"]');
     const radioButtons3 = document.querySelectorAll('input[name="risposta3"]');
 
-   //debugger;
+
 
     var Border1 = document.getElementById("domanda1").parentElement.style;
     var Border2 = document.getElementById("domanda2").parentElement.style;
     var Border3 = document.getElementById("domanda3").parentElement.style;
 
     for (var i = 0; i < 2; i++) {
-        if (radioButtons1[i].checked) {
-            if ((radioButtons1[i].getAttribute('value') == "vero" && domanda[a][1]) || (radioButtons1[i].getAttribute('value') == "falso" && !domanda[a][1])) {
-                Border1.borderColor = 'lightgreen';
-                /*alert("ciao1" + radioButtons1[i].getAttribute('value'));*/
-            } else {
-                Border1.borderColor = 'red';
-            }
-
-        } else {
-            if (i == 1 && Border1.borderColor != 'lightgreen' && Border1.borderColor != 'red') {
-                Border1.borderColor = 'yellow';
-            }
-        }
-
-        if (radioButtons2[i].checked) {
-            if ((radioButtons2[i].getAttribute('value') == "vero" && domanda[b][1]) || (radioButtons2[i].getAttribute('value') == "falso" && !domanda[b][1])) {
-                Border2.borderColor = 'lightgreen';
-                /*alert("ciao2" + radioButtons2[i].getAttribute('value'));*/
-            } else {
-                Border2.borderColor = 'red';
-            }
-        } else {
-            if (i == 1 && Border2.borderColor != 'lightgreen' && Border2.borderColor != 'red') {
-                Border2.borderColor = 'yellow';
-            }
-
-        }
-
-        if (radioButtons3[i].checked) {
-            if ((radioButtons3[i].getAttribute('value') == "vero" && domanda[c][1]) || (radioButtons3[i].getAttribute('value') == "falso" && !domanda[c][1])) {
-                Border3.borderColor = 'lightgreen';
-                /*alert("ciao3" + radioButtons3[i].getAttribute('value'));*/
-            } else {
-                Border3.borderColor = 'red';
-            }
-
-        } else {
-            if (i == 1 && Border3.borderColor != 'lightgreen' && Border3.borderColor != 'red') {
-                Border3.borderColor = 'yellow';
-            }
-
-        }
-
+        debugger;
+        radioChecked(radioButtons1[i],Border1,i);
+        radioChecked(radioButtons2[i],Border2,i);
+        radioChecked(radioButtons3[i],Border3,i);
     }
 
     var risultatoScritta = document.getElementById("risultato");

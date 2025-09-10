@@ -10,9 +10,19 @@ body {
   justify-content: center;
 }
 
-#bottoni{
+#formbutton2{
+  width: 5%;
+}
+
+#bottoni1{
   height: 100px;
   width: 5%;
+  font-size: 20px;
+}
+
+#bottoni2{
+  height: 100px;
+  width: 100%;
   font-size: 20px;
 }
 
