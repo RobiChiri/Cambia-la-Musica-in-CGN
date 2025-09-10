@@ -11,6 +11,23 @@
     <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
+    <audio id="musica" src="Content/music/changethemusic.mp3"></audio>
+    <audio id="Nota1" src="Content/music/noteCGN/nota1/nota1.mp3"></audio>
+    <audio id="Nota2" src="Content/music/noteCGN/nota2/nota2.mp3"></audio>
+    <audio id="Nota3" src="Content/music/noteCGN/nota3/nota3.mp3"></audio>
+    <audio id="Nota4" src="Content/music/noteCGN/nota4/nota4.mp3"></audio>
+    <audio id="Nota5" src="Content/music/noteCGN/nota5/nota5.mp3"></audio>
+    <audio id="Nota6" src="Content/music/noteCGN/nota6/nota6.mp3"></audio>
+    <audio id="Nota7" src="Content/music/noteCGN/nota7/nota7.mp3"></audio>
+    <audio id="Nota8" src="Content/music/noteCGN/nota8/nota8.mp3"></audio>
+    <audio id="Nota9" src="Content/music/noteCGN/nota9/nota9.mp3"></audio>
+    <audio id="Nota10" src="Content/music/noteCGN/nota10/nota10.mp3"></audio>
+    <audio id="Nota11" src="Content/music/noteCGN/nota11/nota11.mp3"></audio>
+    <audio id="Nota12" src="Content/music/noteCGN/nota12/nota12.mp3"></audio>
+    <audio id="Nota13" src="Content/music/noteCGN/nota13/nota13.mp3"></audio>
+    <audio id="Nota14" src="Content/music/noteCGN/nota14/nota14.mp3"></audio>
+    <audio id="Nota15" src="Content/music/noteCGN/nota15/nota15.mp3"></audio>
+
     <div id="padreAbsolute">
         <div id="boxHeader">
             <header class="immaginenavbar">
@@ -94,48 +111,143 @@
                     <section>
                         <img id="immaginenote" src="Content/images/note2Editata2.png" alt="spartito" usemap="#musicMap">
 
-                        <map name="musicMap">
-                            <area alt="Nota0" title="Nota0" coords="14,64,128,203" shape="rect">
-                            <area alt="Nota1" title="Nota1" coords="173,141,215,66" shape="rect" onclick="NotaClick(0)">
-                            <area alt="Nota2" title="Nota2" coords="220,163,275,79" shape="rect" onclick="NotaClick(1)">
-                            <area alt="Nota3" title="Nota3" coords="332,84,284,160" shape="rect" onclick="NotaClick(2)">
-                            <area alt="Nota4" title="Nota4" coords="336,186,379,108" shape="rect"onclick="NotaClick(3)">
-                            <area alt="Nota5" title="Nota5" coords="395,163,462,78" shape="rect" onclick="NotaClick(4)">
-                            <area alt="Nota6" title="Nota6" coords="473,75,517,167" shape="rect" onclick="NotaClick(5)">
-                            <area alt="Nota7" title="Nota7" coords="526,59,587,141" shape="rect" onclick="NotaClick(6)">
-                            <area alt="Nota8" title="Nota8" coords="586,190,638,115" shape="rect"onclick="NotaClick(7)">
-                            <area alt="Nota9" title="Nota9" coords="647,68,709,148" shape="rect" onclick="NotaClick(8)">
-                            <area alt="Nota10" title="Nota10" coords="729,172,768,91" shape="rect" onclick="NotaClick(9)"> 
-                            <area alt="Nota11" title="Nota11" coords="789,152,831,68" shape="rect" onclick="NotaClick(10)">
-                            <area alt="Nota12" title="Nota12" coords="844,79,887,160" shape="rect" onclick="NotaClick(11)">
-                            <area alt="Nota13" title="Nota13" coords="908,189,941,111" shape="rect" onclick="NotaClick(12)">
-                            <area alt="Nota14" title="Nota14" coords="964,184,1034,103" shape="rect" onclick="NotaClick(13)">
-                            <area alt="Nota15" title="Nota15" coords="1052,176,1091,90" shape="rect" onclick="NotaClick(14)">
-                        </map>
+        <map name="musicMap">
+            <area alt="Nota0" title="Nota0" coords="14,64,128,203" shape="rect" onclick="NotaClick(0)">
+            <area alt="Nota1" title="Nota1" coords="173,141,215,66" shape="rect" onclick="NotaClick(1)">
+            <area alt="Nota2" title="Nota2" coords="220,163,275,79" shape="rect" onclick="NotaClick(2)">
+            <area alt="Nota3" title="Nota3" coords="332,84,284,160" shape="rect" onclick="NotaClick(3)">
+            <area alt="Nota4" title="Nota4" coords="336,186,379,108" shape="rect" onclick="NotaClick(4)">
+            <area alt="Nota5" title="Nota5" coords="395,163,462,78" shape="rect" onclick="NotaClick(5)">
+            <area alt="Nota6" title="Nota6" coords="473,75,517,167" shape="rect" onclick="NotaClick(6)">
+            <area alt="Nota7" title="Nota7" coords="526,59,587,141" shape="rect" onclick="NotaClick(7)">
+            <area alt="Nota8" title="Nota8" coords="586,190,638,115" shape="rect" onclick="NotaClick(8)">
+            <area alt="Nota9" title="Nota9" coords="647,68,709,148" shape="rect" onclick="NotaClick(9)">
+            <area alt="Nota10" title="Nota10" coords="729,172,768,91" shape="rect" onclick="NotaClick(10)">
+            <area alt="Nota11" title="Nota11" coords="789,152,831,68" shape="rect" onclick="NotaClick(11)">
+            <area alt="Nota12" title="Nota12" coords="844,79,887,160" shape="rect" onclick="NotaClick(12)">
+            <area alt="Nota13" title="Nota13" coords="908,189,941,111" shape="rect" onclick="NotaClick(13)">
+            <area alt="Nota14" title="Nota14" coords="964,184,1034,103" shape="rect" onclick="NotaClick(14)">
+            <area alt="Nota15" title="Nota15" coords="1052,176,1091,90" shape="rect" onclick="NotaClick(15)">
+        </map>
 
                         <div class="bloccogrande">
-                            <div id="sfondocard1">
-                                <h3>Obbiettivo</h3>
-                                <h3>Tipologia di meeting</h3>
-                                <h3>ODG</h3>
-                                <h3>Durata e tempi</h3>
-                                <h3>Persone giuste</h3>
-                                <h3>Documentazione preparatoria</h3>
-                                <h3>Luogo</h3>
-                                <h3>Strumenti</h3>
-                            </div>
-                            <div id="sfondocard2">
-                                <h3>Facilitare</h3>
-                                <h3>Prendere decisioni</h3>
-                                <h3>Recap con To-Do</h3>
-                                <h3>Valutare il meeting</h3>
-                                <h3> Ringraziare</h3>
-                            </div>
-                            <div id="sfondocard3">
-                                <h3>Invio report</h3>
-                                <h3>Verifica To-Do e Feedback</h3>
-                            </div>
+            <div id="sfondocard1" class="sfondocard">
+                <div class="ColonnaS">
+                    <div id="kw1">
+                        <p>Obbiettivo</p>
+                    </div>
+                    <div id="kw2">
+                        <p>Tipologia di Meeting</p>
+                    </div>
+                    <div id="kw3">
+                        <p>ODG</p>
+                    </div>
+                    <div id="kw4">
+                        <p>Durata & Tempi</p>
+                    </div>
+                </div>
+                <div class="ColonnaD">
+
+                    <div id="kw5">
+                        <p>Persone giuste</p>
+                    </div>
+                    <div id="kw6">
+                        <p>Documentazione preparatoria</p>
+                    </div>
+                    <div id="kw7">
+                        <p>Luogo</p>
+                    </div>
+                    <div id="kw8">
+                        <p>Strumenti</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sfondocard2" class="sfondocard">
+                <div id="figlioA">
+                    <div id="ColonnaS2">
+                        <div id="kw9">
+                            <p>Facilitare</p>
                         </div>
+                        <div id="kw10">
+                            <p>Prendere decisioni</p>
+                        </div>
+                    </div>
+                    <div id="ColonnaD2">
+                        <div id="kw11">
+                            <p>Recap con To-Do</p>
+                        </div>
+                        <div id="kw12">
+                            <p>Valutare il Meeting</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Centralee">
+                    <div id="kw13">
+                        <p> Ringraziare</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="sfondocard3" class="sfondocard">
+                <div id="kw14">
+                    <p>Invio Report</p>
+                </div>
+                <div id="kw15">
+                    <p>Verifica To-Do e Feedback</p>
+                </div>
+            </div>
+
+            <div id="TestoB">
+
+            <br><br><br><br><br><br><br><br>
+            <br><br>
+            <p id="testocentrale">
+                Per una efficace riuscita del meeting l&apos;organizzatore deve definire chiaramente il tipo di riunione
+                e
+                l&apos;obiettivo che desidera raggiungere, esplicitare l&apos;ODG, il numero di partecipanti e i loro
+                ruoli. Definire
+                poi
+                con cura la durata del meeting
+                e le tempistiche dell&apos;ODG, il luogo e la strumentazione idonea. Predisporre infine la
+                documentazione
+                necessaria
+                per la preparazione dei partecipanti ed inviare per tempo l&apos;invito del meeting. Il meeting
+                inizier&agrave; con un
+                momento di silenzio
+                dove i partecipanti ritrovano la concentrazione per collaborare proficuamente alla riunione.
+                Verr&agrave; definito
+                chi
+                far&agrave; il facilitatore e chi verbalizzer&agrave;. I partecipanti devono arrivare preparati, aperti
+                a condividere in
+                maniera efficace le loro
+                idee. Eviteranno le distrazioni, mostreranno attenzione e ascolto attivo agli interventi. Si
+                impegneranno a
+                non
+                manifestare il proprio ego personale e a collaborare concretamente per raggiungere le decisioni inerenti
+                l&apos;obiettivo della
+                riunione. Il facilitatore dovrà agevolare il contributo di tutti, ricondurre nel binario e alla sintesi
+                le
+                discussioni dispersive e fuori focus, attenzionare i tempi e la riformulazione delle espressioni poco
+                chiare,
+                mediare i processi di relazione e
+                far chiarire eventuali malintesi. A conclusione del meeting l&apos;organizzatore far&agrave; un recap
+                delle decisioni
+                prese,
+                del To-Do (chi fa che cosa e in che tempi) e ringrazier&agrave; i partecipanti per il tempo e
+                l&apos;impegno dedicato
+                alla
+                riunione. Infine
+                inviter&agrave; i partecipanti ad esprimere la valutazione del meeting. Il verbalizzatore
+                sintetizzer&agrave; le idee
+                emerse
+                senza interpretare e rielaborer&agrave; il To-Do in un report da inviare al termine della riunione a
+                tutti i
+                partecipanti.
+            </p>
+        </div>
 
                     </section>
                 </div>
