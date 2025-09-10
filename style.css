@@ -166,17 +166,16 @@ aside hr {
 /* CENTRAL*/
 
 section {
-  /*top: -1000px;*/
   float: left;
-  width: auto;
-  margin-top: 0px
+  width: 70%;
+  margin-top: 100px;
 }
 
-.bloccogrande {
+.bloccogrande{
   display: flex;
   /*background-color: black;*/
   position: relative;
-  top: -198px;
+  top:-198px ;
 }
 
 #sfondocard1 {
@@ -185,6 +184,22 @@ section {
   position: relative;
   left: 287px;
   top: -0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: last baseline;
+}
+
+.ColonnaS{
+  order:1;
+  margin-left: 10%;
+  text-align: center;
+}
+
+.ColonnaD{
+  order: 2;
+  text-align: center;
+  margin-left: 5%;
 }
 
 #sfondocard2 {
@@ -193,6 +208,36 @@ section {
   position: relative;
   left: 327px;
   top: -0px;
+
+  display: flex;
+  flex-direction: column-reverse;
+
+}
+
+#figlioA{
+  order:2;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+#Centralee{
+  order:1;
+  text-align: center;
+  align-items: flex-start;
+}
+
+#ColonnaS2{
+  order: 1;
+  text-align: center;
+  margin-left: 2%;
+}
+
+#ColonnaD2{
+  order: 2;
+  text-align: center;
+  margin-left: 6%;
+
 }
 
 #sfondocard3 {
@@ -201,9 +246,26 @@ section {
   position: relative;
   left: 370px;
   top: -0px;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+}
+#kw14{
+  order:2;
+}
+#kw15{
+  order:1;
+}
+
+.sfondocard
+{
+  background-color: #2c6ca3;
+  background: linear-gradient(to top, #2c6ca3, 1%, #2c6ba300);
+
 }
 
 #immaginenote {
+
   position: relative;
   top: 30px;
   left: 90px;
@@ -225,9 +287,9 @@ section {
 
 #testocentrale {
   position: relative;
-  top: 0px;
-
-  height: auto;
+  top: -100px;
+  width: 1000px;
+  height: 140px;
   font-size: smaller;
   background-color: #ffebd5;
   line-height: 15px;
