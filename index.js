@@ -40,8 +40,33 @@ function scegliDomande() {
     domanda3.textContent = domanda[c][0];
 }
 
-
 var cliccato = false;
+
+
+function rifai(){
+    scegliDomande();
+    var Border1 = document.getElementById("domanda1").parentElement.style;
+    var Border2 = document.getElementById("domanda2").parentElement.style;
+    var Border3 = document.getElementById("domanda3").parentElement.style;
+
+    Border1.borderStyle = "groove";
+    Border1.borderColor = "threedface";
+    Border1.borderImage = "initial";
+    Border2.borderStyle = "groove";
+    Border2.borderColor = "threedface";
+    Border2.borderImage = "initial";
+    Border3.borderStyle = "groove";
+    Border3.borderColor = "threedface";
+    Border3.borderImage = "initial";
+
+    cliccato = false;
+
+    var risultatoScritta = document.getElementById("risultato");
+
+    risultatoScritta.textContent = "";
+}
+
+
 
 function controllaRisultato() {
 
