@@ -480,12 +480,6 @@ footer li:hover
   border-right: 2px solid #303030;
 }
 
-/* Risoluzione problema del rollover */
-footer li:first-child,
-footer li:last-child {
-  background: none;
-}
-
 footer hr {
   margin-top: 3px;
   color: #ffebd5;
