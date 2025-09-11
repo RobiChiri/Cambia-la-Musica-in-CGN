@@ -55,6 +55,10 @@ function fieldBase(Border){
 }
 
 
+function checkedTolto(radioButtons){
+    radioButtons.checked = false;
+}
+
 function rifai(){
     scegliDomande();
     var Border1 = document.getElementById("domanda1").parentElement.style;
@@ -70,6 +74,19 @@ function rifai(){
     var risultatoScritta = document.getElementById("risultato");
 
     risultatoScritta.textContent = "";
+
+
+    const radioButtons1 = document.querySelectorAll('input[name="risposta1"]');
+    const radioButtons2 = document.querySelectorAll('input[name="risposta2"]');
+    const radioButtons3 = document.querySelectorAll('input[name="risposta3"]');
+
+
+    for (var i = 0; i < 2; i++) {
+        debugger;
+        checkedTolto(radioButtons1[i]);
+        checkedTolto(radioButtons2[i]);
+        checkedTolto(radioButtons3[i]);
+    }
 }
 
 
@@ -93,7 +110,7 @@ function radioChecked(radioButtons, Border, i){
 function controllaRisultato() {
 
     if(cliccato){
-        alert("HAI GIA FINITO QUESTO TEST, SE VUOI PUOI PROVARE A FARNE UN ALTRO (il risultato di questo non camgierà)");
+        alert("HAI GIA FINITO QUESTO TEST, SE VUOI PUOI PROVARE A FARNE UN ALTRO (il risultato di questo non cambierà)");
         return;
     }
 
@@ -137,7 +154,7 @@ var visible = false;
 
 /*per facilitare forse aggiungere altre cose (ex: facilitatore ecc)*/
 
-elenco = [["", ""], ["Obbiettivo", "Per una efficace riuscita del meeting l\'organizzatore deve definire chiaramente il tipo di riunione e l\'obiettivo che desidera raggiungere, esplicitare l\'ODG, il numero di partecipanti e i loro ruoli."], ["Tipologia di Meeting", "Per una efficace riuscita del meeting l\'organizzatore deve definire chiaramente il tipo di riunione e l\'obiettivo che desidera raggiungere, esplicitare l\'ODG, il numero di partecipanti e i loro ruoli."], ["ODG", "Per una efficace riuscita del meeting l\'organizzatore deve definire chiaramente il tipo di riunione e l\'obiettivo che desidera raggiungere, esplicitare l\'ODG, il numero di partecipanti e i loro ruoli."], ["Durata & Tempi", "Definire poi con cura la durata del meeting e le tempistiche dell\'ODG, il luogo e la strumentazione idonea."], ["Persone giuste", "Per una efficace riuscita del meeting l\'organizzatore deve definire chiaramente il tipo di riunione e l\'obiettivo che desidera raggiungere, esplicitare l\'ODG, il numero di partecipanti e i loro ruoli."], ["Documentazione preparatoria", "Predisporre infine la documentazione necessaria per la preparazione dei partecipanti ed inviare per tempo l\'invito del meeting"], ["Luogo", "Definire poi con cura la durata del meeting e le tempistiche dell\'ODG, il luogo e la strumentazione idonea."], ["Strumenti", "Definire poi con cura la durata del meeting e le tempistiche dell\'ODG, il luogo e la strumentazione idonea."], ["Facilitare", "Verrà definito chi farà il facilitatore e chi verbalizzerà."], ["Prendere decisioni", "Si impegneranno a non manifestare il proprio ego personale e a collaborare concretamente per raggiungere le decisioni inerenti l'obiettivo della riunione"], ["Recap con To-Do", "A conclusione del meeting l\'organizzatore farà un recap delle decisioni prese, del To-Do (chi fa che cosa e in che tempi)"], ["Valutare il Meeting", "Infine inviterà i partecipanti ad esprimere la valutazione del meeting."], ["Ringraziare", "ringrazierà i partecipanti per il tempo e l\'impegno dedicato alla riunione."], ["Invio Report", "verbalizzatore sintetizzerà le idee emerse senza interpretare e rielaborerà il To-Do in un report da inviare al termine della riunione a tutti i partecipanti."], ["Verifica To-Do e Feedback", "verbalizzatore sintetizzerà le idee emerse senza interpretare e rielaborerà il To-Do in un report da inviare al termine della riunione a tutti i partecipanti."]];
+elenco = [["", ""], ["Obbiettivo", "Per una efficace riuscita del meeting l\'organizzatore deve definire chiaramente il tipo di riunione e l\'obiettivo che desidera raggiungere, esplicitare l\'ODG, il numero di partecipanti e i loro ruoli."], ["Tipologia di Meeting", "Per una efficace riuscita del meeting l\'organizzatore deve definire chiaramente il tipo di riunione e l\'obiettivo che desidera raggiungere, esplicitare l\'ODG, il numero di partecipanti e i loro ruoli."], ["ODG", "Per una efficace riuscita del meeting l\'organizzatore deve definire chiaramente il tipo di riunione e l\'obiettivo che desidera raggiungere, esplicitare l\'ODG, il numero di partecipanti e i loro ruoli."], ["Durata & Tempi", "Definire poi con cura la durata del meeting e le tempistiche dell\'ODG, il luogo e la strumentazione idonea."], ["Persone giuste", "Per una efficace riuscita del meeting l\'organizzatore deve definire chiaramente il tipo di riunione e l\'obiettivo che desidera raggiungere, esplicitare l\'ODG, il numero di partecipanti e i loro ruoli."], ["Documentazione preparatoria", "Predisporre infine la documentazione necessaria per la preparazione dei partecipanti ed inviare per tempo l\'invito del meeting."], ["Luogo", "Definire poi con cura la durata del meeting e le tempistiche dell\'ODG, il luogo e la strumentazione idonea."], ["Strumenti", "Definire poi con cura la durata del meeting e le tempistiche dell\'ODG, il luogo e la strumentazione idonea."], ["Facilitare", "Verrà definito chi farà il facilitatore e chi verbalizzerà."], ["Prendere decisioni", "Si impegneranno a non manifestare il proprio ego personale e a collaborare concretamente per raggiungere le decisioni inerenti l'obiettivo della riunione"], ["Recap con To-Do", "A conclusione del meeting l\'organizzatore farà un recap delle decisioni prese, del To-Do (chi fa che cosa e in che tempi)"], ["Valutare il Meeting", "Infine inviterà i partecipanti ad esprimere la valutazione del meeting."], ["Ringraziare", "ringrazierà i partecipanti per il tempo e l\'impegno dedicato alla riunione."], ["Invio Report", "verbalizzatore sintetizzerà le idee emerse senza interpretare e rielaborerà il To-Do in un report da inviare al termine della riunione a tutti i partecipanti."], ["Verifica To-Do e Feedback", "verbalizzatore sintetizzerà le idee emerse senza interpretare e rielaborerà il To-Do in un report da inviare al termine della riunione a tutti i partecipanti."]];
 
 var last = -1;
 
