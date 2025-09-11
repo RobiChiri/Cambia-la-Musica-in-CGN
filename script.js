@@ -255,17 +255,12 @@ function MostraF() {
         document.getElementById("listaC").style.display = "block";
         document.getElementById("listaD").style.display = "block";
         miaVarF = false;
-        document.getElementById("footer").style.width = "100%";
-        document.getElementById("footer").style.height = "70%";
     }
     else {
         document.getElementById("listaF").style.display = "none";
         document.getElementById("listaC").style.display = "none";
         document.getElementById("listaD").style.display = "none";
         miaVarF = true;
-        document.getElementById("footer").style.width = "15%";
-        document.getElementById("footer").style.height = "45%";
-        document.getElementById("divFooter").height = "min-content";
     }
 }
 

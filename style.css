@@ -485,6 +485,9 @@ footer hr {
   color: #ffebd5;
   list-style: none;
 }
+#listaD,#listaC,#listaF{
+  display: none;
+}
 
 
 
