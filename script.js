@@ -220,7 +220,8 @@ function NotaClick(posizione) {
 var miaVarF = true;
 
 function animazioneF(pos) {
-    var tutto = document.getElementById("Generale");
+    var tutto = document.getElementById("figlio1").parentElement;
+    var title = document.getElementById("title");
     var start = Date.now(); // memorizziamo il momento di partenza
 
     var timer = setInterval(function () {
@@ -241,9 +242,13 @@ function animazioneF(pos) {
     // left assume valori che variano tra 0px e 200px
     function draw(timePassed) {
         if (pos) {
-            tutto.style.top = 200 - (timePassed / 5) + 'px';
+            tutto.style.left = 450 - (timePassed / 2.2) + 'px';
+            title.style.transform = "rotate(-"+timePassed/11.1+"deg)";
+            title.style.marginLeft =  -(timePassed / 7.69) +'px';
         } else {
-            tutto.style.top = (timePassed / 5) + 'px';
+            tutto.style.left = (timePassed / 2) + 'px';
+            title.style.transform = "rotate("+(-90+timePassed/11.1)+"deg)";
+            title.style.marginLeft = -130 +(timePassed / 7.69) +'px';
         }
 
     }
@@ -251,17 +256,26 @@ function animazioneF(pos) {
 
 function MostraF() {
     if (miaVarF) {
-        document.getElementById("listaF").style.display = "block";
-        document.getElementById("listaC").style.display = "block";
-        document.getElementById("listaD").style.display = "block";
-        miaVarF = false;
-    }
-    else {
+
+        animazioneF(true);
+
+        setTimeout(function () {
+            document.getElementById("listaF").style.display = "block";
+            document.getElementById("listaC").style.display = "block";
+            document.getElementById("listaD").style.display = "block";
+            miaVarF = false;
+        }, 1000);
+
+    } else {
+
+        animazioneF(false);
+
         document.getElementById("listaF").style.display = "none";
         document.getElementById("listaC").style.display = "none";
         document.getElementById("listaD").style.display = "none";
         miaVarF = true;
     }
+
 }
 
 
