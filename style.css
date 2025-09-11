@@ -64,8 +64,10 @@ body {
   font-size: 50px;
   text-align: center;
   margin-bottom: -5%;
+  height: fit-content;
   margin-top: -3%;
   color: #2c6ca3;
+  z-index: -1;
 }
 
 .navbarcontainer {
