@@ -528,6 +528,7 @@ footer hr {
 #boxFooter {
   order: 2;
   flex: 10%;
+  position: relative;
 }
 
 #boxAside {
