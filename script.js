@@ -219,6 +219,36 @@ function NotaClick(posizione) {
 
 var miaVarF = true;
 
+function animazioneF(pos) {
+    var tutto = document.getElementById("Generale");
+    var start = Date.now(); // memorizziamo il momento di partenza
+
+    var timer = setInterval(function () {
+        // quanto tempo è passato dall'inizio?
+        var timePassed = Date.now() - start;
+
+        if (timePassed >= 1000) {
+            clearInterval(timer); // completiamo l'animazione dopo 2 secondi
+            return;
+        }
+
+        // tracciamo l'animazione all'istante timePassed
+        draw(timePassed);
+
+    }, 1);
+
+    // via via che timePassed va da 0 a 1000
+    // left assume valori che variano tra 0px e 200px
+    function draw(timePassed) {
+        if (pos) {
+            tutto.style.top = 200 - (timePassed / 5) + 'px';
+        } else {
+            tutto.style.top = (timePassed / 5) + 'px';
+        }
+
+    }
+}
+
 function MostraF() {
     if (miaVarF) {
         document.getElementById("listaF").style.display = "block";
@@ -247,7 +277,7 @@ var miaVarS = true;
 
 
 
-function animazione(pos) {
+function animazioneS(pos) {
     var tutto = document.getElementById("Generale");
     var start = Date.now(); // memorizziamo il momento di partenza
 
@@ -284,7 +314,7 @@ function MostraS() {
     if (miaVarS) {
 
 
-        animazione(true)
+        animazioneS(true)
 
 
         setTimeout(function () {
@@ -295,7 +325,7 @@ function MostraS() {
     }
     else {
 
-        animazione(false);
+        animazioneS(false);
 
         document.getElementById("BoxLista").style.display = "none";
         miaVarS = true;
