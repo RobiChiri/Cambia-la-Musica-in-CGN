@@ -5,29 +5,38 @@ body {
   margin: 0;
 }
 
-.pulsanti{
+.pulsanti {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:center;
 }
 
-#formbutton2{
+#formbutton2 {
   width: 5%;
+
 }
 
-#bottoni1{
-  height: 100px;
+#bottoni1 {
+  height: 70px;
   width: 5%;
   font-size: 20px;
+  margin-top: 1%;
 }
 
-#bottoni2{
-  height: 100px;
+#bottoni2 {
+  
+  height: 70px;
   width: 100%;
   font-size: 20px;
+  margin-top: 20%;
+  
 }
-
-.formcontainer{
+#bottoneVuoto{
+  width: 3%;
+  border: 0;
+  background-color: transparent;
+}
+.formcontainer {
   display: flex;
   flex-direction: column;
 }
@@ -39,12 +48,12 @@ body {
 }
 
 #bottoneinvio {
-  height: 100px;
+  height: 70px;
   width: 10%;
-  font-size: 20px;
   margin-left: 45%;
   margin-right: 45%;
   margin-top: 2%;
+
 }
 
 #domanda {
@@ -106,12 +115,6 @@ body {
 #VaiQuiz {
   height: 100%;
   width: 100%;
-  background-color: orange;
-  font-size: large;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: 3px;
-  border-color: transparent;
 }
 
 #formQuiz {
@@ -120,6 +123,16 @@ body {
   left: -60%;
   height: fit-content;
 }
+
+.StylePulsanti {
+  background-color: orange;
+  font-size: large;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 3px;
+  border-color: transparent;
+}
+
 /* CENTRAL*/
 
 
@@ -283,7 +296,7 @@ body {
 }
 
 aside ul {
-  visibility: hidden;
+  visibility: visible;
   width: 100%;
   line-height: 5px;
   list-style-image: url("Content/images/nota3\ \(2\).png");
@@ -349,19 +362,15 @@ aside hr {
 
 
 /*FOOTER*/
-#footer{
-  height: 45%;
-  width: 15%;
-}
-.expanded{
+#footer {
   height: 70%;
   width: 100%;
 }
+
 footer {
   display: block;
   clear: both;
-  bottom: 0;
-
+  
   padding-top: 35px;
   padding-right: 75px;
   padding-bottom: 35px;
@@ -462,11 +471,6 @@ footer hr {
   list-style: none;
 }
 
-#listaF,
-#listaC,
-#listaD {
-  visibility: hidden;
-}
 
 
 /* FLEX */

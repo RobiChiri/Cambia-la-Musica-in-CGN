@@ -1,7 +1,7 @@
 //NAVBAR
 var domanda, scelto;
 
-domanda = [["Le fasi di una riunione sono due: svolgimento e chiusura", false], ["Per mantenere il ritmo giusto bisogna interrompere molto spesso per far vedere di star partecipando", false], ["Il nostro proposito nobile è come una bussola", true], ["Non bisogna avere un unico obiettivo chiaro ma molti obiettivi confusi da andare a discutere in sede di meeting", false], ["Il facilitatore è colui che andrà a verbalizzare le idee emerse e rielaborerà il To-Do", false], [" È sempre opportuno fare una riunione", false], ["È importante scegliere un luogo adatto per la riunione", true], ["I meeting sono un insieme di accordi", true], ["Lavorare in gruppo porta più frutti perché porta meno distrazioni", true],["Non aspettare che le cose cambino da sole comincia a fare la tua parte", true],];
+domanda = [["Le fasi di una riunione sono due: svolgimento e chiusura", false], ["Per mantenere il ritmo giusto bisogna interrompere molto spesso per far vedere di star partecipando", false], ["Il nostro proposito nobile è come una bussola", true], ["Non bisogna avere un unico obiettivo chiaro ma molti obiettivi confusi da andare a discutere in sede di meeting", false], ["Il facilitatore è colui che andrà a verbalizzare le idee emerse e rielaborerà il To-Do", false], [" È sempre opportuno fare una riunione", false], ["È importante scegliere un luogo adatto per la riunione", true], ["I meeting sono un insieme di accordi", true], ["Lavorare in gruppo porta più frutti perché porta meno distrazioni", true], ["Non aspettare che le cose cambino da sole comincia a fare la tua parte", true],];
 
 document.addEventListener('DOMContentLoaded', function () {
     scegliDomande();
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 var a, b, c;
 
-function random(max){
+function random(max) {
     return Math.round(Math.random() * max);
 }
 
@@ -48,14 +48,14 @@ function scegliDomande() {
 var cliccato = false;
 
 
-function fieldBase(Border){
+function fieldBase(Border) {
     Border.borderStyle = "groove";
     Border.borderColor = "threedface";
     Border.borderImage = "initial";
 }
 
 
-function rifai(){
+function rifai() {
     scegliDomande();
     var Border1 = document.getElementById("domanda1").parentElement.style;
     var Border2 = document.getElementById("domanda2").parentElement.style;
@@ -75,7 +75,7 @@ function rifai(){
 
 
 //funzione per controllare se un radiobutton è checkato oppure no
-function radioChecked(radioButtons, Border, i){
+function radioChecked(radioButtons, Border, i) {
     if (radioButtons.checked) {
         if ((radioButtons.getAttribute('value') == "vero" && domanda[a][1]) || (radioButtons.getAttribute('value') == "falso" && !domanda[a][1])) {
             Border.borderColor = 'lightgreen';
@@ -92,7 +92,7 @@ function radioChecked(radioButtons, Border, i){
 
 function controllaRisultato() {
 
-    if(cliccato){
+    if (cliccato) {
         alert("HAI GIA FINITO QUESTO TEST, SE VUOI PUOI PROVARE A FARNE UN ALTRO (il risultato di questo non camgierà)");
         return;
     }
@@ -110,9 +110,9 @@ function controllaRisultato() {
 
     for (var i = 0; i < 2; i++) {
         debugger;
-        radioChecked(radioButtons1[i],Border1,i);
-        radioChecked(radioButtons2[i],Border2,i);
-        radioChecked(radioButtons3[i],Border3,i);
+        radioChecked(radioButtons1[i], Border1, i);
+        radioChecked(radioButtons2[i], Border2, i);
+        radioChecked(radioButtons3[i], Border3, i);
     }
 
     var risultatoScritta = document.getElementById("risultato");
@@ -202,21 +202,21 @@ var miaVarF = true;
 
 function MostraF() {
     if (miaVarF) {
-        document.getElementById("listaF").style.visibility = "visible";
-        document.getElementById("listaC").style.visibility = "visible";
-        document.getElementById("listaD").style.visibility = "visible";
+        document.getElementById("listaF").style.display = "block";
+        document.getElementById("listaC").style.display = "block";
+        document.getElementById("listaD").style.display = "block";
         miaVarF = false;
-        document.getElementById("footer").style.width="100%";
-        document.getElementById("footer").style.height="70%";
+        document.getElementById("footer").style.width = "100%";
+        document.getElementById("footer").style.height = "70%";
     }
     else {
-        document.getElementById("listaF").style.visibility = "hidden";
-        document.getElementById("listaC").style.visibility = "hidden";
-        document.getElementById("listaD").style.visibility = "hidden";
+        document.getElementById("listaF").style.display = "none";
+        document.getElementById("listaC").style.display = "none";
+        document.getElementById("listaD").style.display = "none";
         miaVarF = true;
-        document.getElementById("footer").style.width="15%";
-        document.getElementById("footer").style.height="45%";
-       
+        document.getElementById("footer").style.width = "15%";
+        document.getElementById("footer").style.height = "45%";
+        document.getElementById("divFooter").height="min-content";
     }
 }
 
@@ -226,17 +226,17 @@ function MostraF() {
 
 var miaVarS = true;
 
+
 function MostraS() {
     if (miaVarS) {
-        document.getElementById("lista").style.visibility = "visible";
+        document.getElementById("lista").style.display = "block";
         miaVarS = false;
     }
     else {
-        document.getElementById("lista").style.visibility = "hidden";
+        document.getElementById("lista").style.display = "none";
         miaVarS = true;
     }
 }
-
 
 
 
