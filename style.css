@@ -427,6 +427,13 @@ footer ul {
   color: #ffebd5;
 }
 
+footer li:hover
+{
+  border-left: 1.5px;
+  border-right: 1.5px;
+  border-style: groove;
+}
+
 footer hr {
   margin-top: 3px;
   color: #ffebd5;
