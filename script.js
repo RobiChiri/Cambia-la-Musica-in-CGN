@@ -342,7 +342,13 @@ function MostraS() {
 
     }
 }
+var stato1=false; 
+function prova(){
+    
+    document.getElementById("sfondocard1").style.visibility="hidden";
 
+
+}
 
 
 
