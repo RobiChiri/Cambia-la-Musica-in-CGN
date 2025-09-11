@@ -14,7 +14,9 @@ var a, b, c;
 function random(max) {
     return Math.round(Math.random() * max);
 }
-
+function sito(){
+    window.open("https://www.cgn.it", "_blank");;
+}
 
 function scegliDomande() {
 
@@ -346,6 +348,8 @@ var stato1=false;
 function prova(){
     
     document.getElementById("sfondocard1").style.visibility="hidden";
+
+
 
 
 }
