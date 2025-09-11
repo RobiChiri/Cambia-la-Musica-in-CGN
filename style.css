@@ -330,7 +330,7 @@ aside li:hover
   flex-direction: row;
 
   width: 100%;
-  align-items: center;
+  align-items:center;
   justify-content: center;
 }
 
@@ -364,6 +364,8 @@ aside li:hover
 
 #BoxLista {
   order: 2;
+  align-content: first baseline;
+  display: none;
 }
 
 

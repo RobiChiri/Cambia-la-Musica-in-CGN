@@ -251,11 +251,11 @@ var miaVarS = true;
 
 function MostraS() {
     if (miaVarS) {
-        document.getElementById("lista").style.display = "block";
+        document.getElementById("BoxLista").style.display = "block";
         miaVarS = false;
     }
     else {
-        document.getElementById("lista").style.display = "none";
+        document.getElementById("BoxLista").style.display = "none";
         miaVarS = true;
     }
 }
