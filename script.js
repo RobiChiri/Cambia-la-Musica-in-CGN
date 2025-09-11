@@ -93,7 +93,7 @@ function radioChecked(radioButtons, Border, i){
 function controllaRisultato() {
 
     if(cliccato){
-        alert("HAI GIA FINITO QUESTO TEST, SE VUOI PUOI PROVARE A FARNE UN ALTRO (il risultato di questo non camgierà)");
+        alert("HAI GIA FINITO QUESTO TEST, SE VUOI PUOI PROVARE A FARNE UN ALTRO (il risultato di questo non cambierà)");
         return;
     }
 
