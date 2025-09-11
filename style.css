@@ -5,7 +5,29 @@ body {
   margin: 0;
 }
 
-.formcontainer {
+.pulsanti{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#formbutton2{
+  width: 5%;
+}
+
+#bottoni1{
+  height: 100px;
+  width: 5%;
+  font-size: 20px;
+}
+
+#bottoni2{
+  height: 100px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.formcontainer{
   display: flex;
   flex-direction: column;
 }
@@ -82,20 +104,22 @@ body {
 }
 
 #VaiQuiz {
-  height: 8%;
-  width: 8%;
-  background-color: transparent;
-  border: 0ch;
-  font-size: x-large;
+  height: 100%;
+  width: 100%;
+  background-color: orange;
+  font-size: large;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
+  border-radius: 3px;
+  border-color: transparent;
 }
 
 #formQuiz {
   position: relative;
   margin-top: 2%;
   left: -60%;
+  height: fit-content;
 }
-
 /* CENTRAL*/
 
 
@@ -201,9 +225,10 @@ section {
 #immaginenote {
 
   position: relative;
-  top: 30px;
+  top: 20px;
   left: 90px;
   z-index: 1;
+
 }
 
 #titolo {
@@ -324,14 +349,18 @@ aside hr {
 
 
 /*FOOTER*/
-
+#footer{
+  height: 45%;
+  width: 15%;
+}
+.expanded{
+  height: 70%;
+  width: 100%;
+}
 footer {
   display: block;
   clear: both;
   bottom: 0;
-
-  height: 70%;
-  width: 100%;
 
   padding-top: 35px;
   padding-right: 75px;
@@ -473,6 +502,7 @@ footer hr {
 
 #boxCentral {
   order: 1;
+
 }
 
 #boxFooter {
@@ -481,6 +511,7 @@ footer hr {
 }
 
 #boxAside {
+  padding-top: -10%;
   order: 2;
   flex: 30%;
   align-content: normal;
