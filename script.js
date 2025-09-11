@@ -219,24 +219,63 @@ function NotaClick(posizione) {
 
 var miaVarF = true;
 
+function animazioneF(pos) {
+    var tutto = document.getElementById("figlio1").parentElement;
+    var title = document.getElementById("title");
+    var start = Date.now(); // memorizziamo il momento di partenza
+
+    var timer = setInterval(function () {
+        // quanto tempo è passato dall'inizio?
+        var timePassed = Date.now() - start;
+
+        if (timePassed >= 1000) {
+            clearInterval(timer); // completiamo l'animazione dopo 2 secondi
+            return;
+        }
+
+        // tracciamo l'animazione all'istante timePassed
+        draw(timePassed);
+
+    }, 1);
+
+    // via via che timePassed va da 0 a 1000
+    // left assume valori che variano tra 0px e 200px
+    function draw(timePassed) {
+        if (pos) {
+            tutto.style.left = 450 - (timePassed / 2.2) + 'px';
+            title.style.transform = "rotate(-"+timePassed/11.1+"deg)";
+            title.style.marginLeft =  -(timePassed / 7.69) +'px';
+        } else {
+            tutto.style.left = (timePassed / 2) + 'px';
+            title.style.transform = "rotate("+(-90+timePassed/11.1)+"deg)";
+            title.style.marginLeft = -130 +(timePassed / 7.69) +'px';
+        }
+
+    }
+}
+
 function MostraF() {
     if (miaVarF) {
-        document.getElementById("divListaF").style.display = "block";
-        document.getElementById("divListaC").style.display = "block";
-        document.getElementById("divListaD").style.display = "block";
-        miaVarF = false;
-        document.getElementById("footer").style.width = "100%";
-        document.getElementById("footer").style.height = "70%";
-    }
-    else {
-        document.getElementById("divListaF").style.display = "none";
-        document.getElementById("divListaC").style.display = "none";
-        document.getElementById("divListaD").style.display = "none";
+
+        animazioneF(true);
+
+        setTimeout(function () {
+            document.getElementById("listaF").style.display = "block";
+            document.getElementById("listaC").style.display = "block";
+            document.getElementById("listaD").style.display = "block";
+            miaVarF = false;
+        }, 1000);
+
+    } else {
+
+        animazioneF(false);
+
+        document.getElementById("listaF").style.display = "none";
+        document.getElementById("listaC").style.display = "none";
+        document.getElementById("listaD").style.display = "none";
         miaVarF = true;
-        document.getElementById("footer").style.width = "15%";
-        document.getElementById("footer").style.height = "70%";
-     //   document.getElementsByClassName("divListe").style.display="none";
     }
+
 }
 
 
@@ -246,33 +285,45 @@ function MostraF() {
 var miaVarS = true;
 
 
-function MostraS() {
+
+function animazioneS(pos) {
     var tutto = document.getElementById("Generale");
+    var start = Date.now(); // memorizziamo il momento di partenza
+
+    var timer = setInterval(function () {
+        // quanto tempo è passato dall'inizio?
+        var timePassed = Date.now() - start;
+
+        if (timePassed >= 1000) {
+            clearInterval(timer); // completiamo l'animazione dopo 2 secondi
+            return;
+        }
+
+        // tracciamo l'animazione all'istante timePassed
+        draw(timePassed);
+
+    }, 1);
+
+    // via via che timePassed va da 0 a 1000
+    // left assume valori che variano tra 0px e 200px
+    function draw(timePassed) {
+        if (pos) {
+            tutto.style.top = 200 - (timePassed / 5) + 'px';
+        } else {
+            tutto.style.top = (timePassed / 5) + 'px';
+        }
+
+    }
+}
+
+
+function MostraS() {
+
 
     if (miaVarS) {
 
 
-        var start = Date.now(); // memorizziamo il momento di partenza
-
-        var timer = setInterval(function () {
-            // quanto tempo è passato dall'inizio?
-            var timePassed = Date.now() - start;
-
-            if (timePassed >= 1000) {
-                clearInterval(timer); // completiamo l'animazione dopo 2 secondi
-                return;
-            }
-
-            // tracciamo l'animazione all'istante timePassed
-            draw(timePassed);
-
-        }, 1);
-
-        // via via che timePassed va da 0 a 1000
-        // left assume valori che variano tra 0px e 200px
-        function draw(timePassed) {
-            tutto.style.top = 200 - (timePassed / 5) + 'px';
-        }
+        animazioneS(true)
 
 
         setTimeout(function () {
@@ -283,27 +334,7 @@ function MostraS() {
     }
     else {
 
-        var start = Date.now(); // memorizziamo il momento di partenza
-
-        var timer = setInterval(function () {
-            // quanto tempo è passato dall'inizio?
-            var timePassed = Date.now() - start;
-
-            if (timePassed >= 1000) {
-                clearInterval(timer); // completiamo l'animazione dopo 2 secondi
-                return;
-            }
-
-            // tracciamo l'animazione all'istante timePassed
-            draw(timePassed);
-
-        }, 1);
-
-        // via via che timePassed va da 0 a 1000
-        // left assume valori che variano tra 0px e 200px
-        function draw(timePassed) {
-            tutto.style.top = (timePassed / 5) + 'px';
-        }
+        animazioneS(false);
 
         document.getElementById("BoxLista").style.display = "none";
         miaVarS = true;
@@ -311,7 +342,14 @@ function MostraS() {
 
     }
 }
+var stato1=false; 
+function prova(){
+    if()
+    
+    document.getElementById("sfondocard1").style.visibility="hidden";
 
+
+}
 
 
 
