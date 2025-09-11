@@ -18,7 +18,7 @@ body {
 
 #bottoni1 {
   height: 70px;
-  width: 5%;
+  width: 6%;
   font-size: 20px;
   margin-top: 1%;
 }
@@ -532,7 +532,6 @@ footer hr {
   align-content: normal;
 
 }
-
 /*
 * {
   outline: 1px solid red;
