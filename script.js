@@ -59,9 +59,6 @@ function checkedTolto(radioButtons) {
     radioButtons.checked = false;
 }
 
-function checkedTolto(radioButtons) {
-    radioButtons.checked = false;
-}
 
 
 function rifai() {
@@ -224,21 +221,21 @@ var miaVarF = true;
 
 function MostraF() {
     if (miaVarF) {
-        document.getElementById("listaF").style.display = "block";
-        document.getElementById("listaC").style.display = "block";
-        document.getElementById("listaD").style.display = "block";
+        document.getElementById("divListaF").style.display = "block";
+        document.getElementById("divListaC").style.display = "block";
+        document.getElementById("divListaD").style.display = "block";
         miaVarF = false;
         document.getElementById("footer").style.width = "100%";
         document.getElementById("footer").style.height = "70%";
     }
     else {
-        document.getElementById("listaF").style.display = "none";
-        document.getElementById("listaC").style.display = "none";
-        document.getElementById("listaD").style.display = "none";
+        document.getElementById("divListaF").style.display = "none";
+        document.getElementById("divListaC").style.display = "none";
+        document.getElementById("divListaD").style.display = "none";
         miaVarF = true;
         document.getElementById("footer").style.width = "15%";
-        document.getElementById("footer").style.height = "45%";
-        document.getElementById("divFooter").height = "min-content";
+        document.getElementById("footer").style.height = "70%";
+     //   document.getElementsByClassName("divListe").style.display="none";
     }
 }
 
