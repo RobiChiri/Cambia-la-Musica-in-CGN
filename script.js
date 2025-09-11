@@ -246,7 +246,7 @@ function animazioneF(pos) {
             title.style.transform = "rotate(-"+timePassed/11.1+"deg)";
             title.style.marginLeft =  -(timePassed / 7.69) +'px';
         } else {
-            tutto.style.left = (timePassed / 2) + 'px';
+            tutto.style.left = (timePassed / 2.2) + 'px';
             title.style.transform = "rotate("+(-90+timePassed/11.1)+"deg)";
             title.style.marginLeft = -130 +(timePassed / 7.69) +'px';
         }
