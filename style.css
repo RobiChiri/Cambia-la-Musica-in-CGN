@@ -273,7 +273,7 @@ section {
 #TestoB {
   position: relative;
   top: -250px;
-
+  height: 40%;
 }
 
 
@@ -312,6 +312,12 @@ aside hr {
 
 #special {
   list-style: none;
+}
+
+aside li:hover
+{
+  border-left: 2px solid #ffebd5;
+  border-right: 2px solid ffebd5;
 }
 
 /* FLEX SIDEBAR*/
@@ -463,6 +469,18 @@ footer ul {
   text-align: left;
   align-items: flex-start;
   color: #ffebd5;
+}
+
+footer li:hover
+{
+  border-left: 2px solid #383838;
+  border-right: 2px solid #303030;
+}
+
+/* Risoluzione problema del rollover */
+footer li:first-child,
+footer li:last-child {
+  background: none;
 }
 
 footer hr {
