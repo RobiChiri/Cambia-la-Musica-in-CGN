@@ -9,11 +9,24 @@
     <title>Pagina Form</title>
 </head>
 
-<body>
+<body class="form">
+
+    <header class="immaginenavbar" id="boxHeader">
+        <div class="navbarcontainer">
+            <img id="bgsinistra" src="Content/images/bkg.png" height="27%" width="27%">
+            <img id="cambiamusica" src="Content/images/cambia-la-musica.png" height="45%  " width="45%">
+            <img id="bgdestra1" src="Content/images/bkg.png" height="27%" width="27%">
+            <img id="bgdestra2" src="Content/images/bkg.png" height="27%" width="27%">
+            <form action="index.html" method="post" target="_self" id="formQuiz"><button type="submit"
+                    class="StylePulsanti" id="VaiQuiz">HOME</button></form>
+            <img id="logo" src="Content/images/logoCGN.png" height="4%" width="4%">
+        </div>
+    </header>
+
     <div class="formcontainer">
-        <header>
-            <h1 id="titolo">QUIZ</h1>
-        </header>
+        <div id="titolo">
+            <h1>QUIZ</h1>
+        </div>
 
         <fieldset id="domanda">
             <legend align="center" id="domanda1">DOMANDA1:</legend>
@@ -34,12 +47,9 @@
             <input id="rs6" type="radio" name="risposta3" value="falso" />falso<br>
         </fieldset>
 
-        <button type="button" id="bottoneinvio" class="StylePulsanti" onclick="controllaRisultato()">INVIA RISPOSTA</button>
-
         <div class="pulsanti">
-            <button type="button" id="bottoni1" class="StylePulsanti" onclick="rifai()">RIPROVA</button>
-            <button id="bottoneVuoto"> </button>
-            <form action="index.html" method="post" target="_self" id="formbutton2"><button type="submit" class="StylePulsanti" id="bottoni2"> HOME</button></form>
+            <div id="bottoneinvio"><button type="button" class="StylePulsanti" onclick="controllaRisultato()">INVIA RISPOSTA</button></div>
+            <div id="bottoneTryAgain"><button type="button" class="StylePulsanti" onclick="rifai()">RIPROVA</button></div>
         </div>
 
         <p id="risultato"></p>
