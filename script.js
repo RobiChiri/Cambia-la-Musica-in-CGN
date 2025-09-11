@@ -55,6 +55,10 @@ function fieldBase(Border){
 }
 
 
+function checkedTolto(radioButtons){
+    radioButtons.checked = false;
+}
+
 function rifai(){
     scegliDomande();
     var Border1 = document.getElementById("domanda1").parentElement.style;
@@ -70,6 +74,19 @@ function rifai(){
     var risultatoScritta = document.getElementById("risultato");
 
     risultatoScritta.textContent = "";
+
+
+    const radioButtons1 = document.querySelectorAll('input[name="risposta1"]');
+    const radioButtons2 = document.querySelectorAll('input[name="risposta2"]');
+    const radioButtons3 = document.querySelectorAll('input[name="risposta3"]');
+
+
+    for (var i = 0; i < 2; i++) {
+        debugger;
+        checkedTolto(radioButtons1[i]);
+        checkedTolto(radioButtons2[i]);
+        checkedTolto(radioButtons3[i]);
+    }
 }
 
 
