@@ -59,9 +59,6 @@ function checkedTolto(radioButtons) {
     radioButtons.checked = false;
 }
 
-function checkedTolto(radioButtons) {
-    radioButtons.checked = false;
-}
 
 
 function rifai() {
@@ -249,33 +246,45 @@ function MostraF() {
 var miaVarS = true;
 
 
-function MostraS() {
+
+function animazione(pos) {
     var tutto = document.getElementById("Generale");
+    var start = Date.now(); // memorizziamo il momento di partenza
+
+    var timer = setInterval(function () {
+        // quanto tempo è passato dall'inizio?
+        var timePassed = Date.now() - start;
+
+        if (timePassed >= 1000) {
+            clearInterval(timer); // completiamo l'animazione dopo 2 secondi
+            return;
+        }
+
+        // tracciamo l'animazione all'istante timePassed
+        draw(timePassed);
+
+    }, 1);
+
+    // via via che timePassed va da 0 a 1000
+    // left assume valori che variano tra 0px e 200px
+    function draw(timePassed) {
+        if (pos) {
+            tutto.style.top = 200 - (timePassed / 5) + 'px';
+        } else {
+            tutto.style.top = (timePassed / 5) + 'px';
+        }
+
+    }
+}
+
+
+function MostraS() {
+
 
     if (miaVarS) {
 
 
-        var start = Date.now(); // memorizziamo il momento di partenza
-
-        var timer = setInterval(function () {
-            // quanto tempo è passato dall'inizio?
-            var timePassed = Date.now() - start;
-
-            if (timePassed >= 1000) {
-                clearInterval(timer); // completiamo l'animazione dopo 2 secondi
-                return;
-            }
-
-            // tracciamo l'animazione all'istante timePassed
-            draw(timePassed);
-
-        }, 1);
-
-        // via via che timePassed va da 0 a 1000
-        // left assume valori che variano tra 0px e 200px
-        function draw(timePassed) {
-            tutto.style.top = 200 - (timePassed / 5) + 'px';
-        }
+        animazione(true)
 
 
         setTimeout(function () {
@@ -286,27 +295,7 @@ function MostraS() {
     }
     else {
 
-        var start = Date.now(); // memorizziamo il momento di partenza
-
-        var timer = setInterval(function () {
-            // quanto tempo è passato dall'inizio?
-            var timePassed = Date.now() - start;
-
-            if (timePassed >= 1000) {
-                clearInterval(timer); // completiamo l'animazione dopo 2 secondi
-                return;
-            }
-
-            // tracciamo l'animazione all'istante timePassed
-            draw(timePassed);
-
-        }, 1);
-
-        // via via che timePassed va da 0 a 1000
-        // left assume valori che variano tra 0px e 200px
-        function draw(timePassed) {
-            tutto.style.top = (timePassed / 5) + 'px';
-        }
+        animazione(false);
 
         document.getElementById("BoxLista").style.display = "none";
         miaVarS = true;
