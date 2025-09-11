@@ -325,7 +325,8 @@ aside li:hover
 
 #Generale {
   order: 1;
-
+  position: relative;
+  top: 200px;
   display: flex;
   flex-direction: row;
 
