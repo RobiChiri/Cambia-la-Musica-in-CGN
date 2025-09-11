@@ -200,7 +200,6 @@ section {
   order: 2;
   display: flex;
   flex-direction: row;
-
 }
 
 #Centralee {
@@ -219,7 +218,6 @@ section {
   order: 2;
   text-align: center;
   margin-left: 6%;
-
 }
 
 #sfondocard3 {
@@ -250,7 +248,6 @@ section {
   top: 20px;
   left: 90px;
   z-index: 1;
-
 }
 
 #titolo {
@@ -267,22 +264,18 @@ section {
 }
 
 #testocentrale {
-  position: relative;
-  top: -100px;
-  width: 90%;
-  height: 140px;
-  font-size: smaller;
-  background-color: #ffebd5;
-  line-height: 15px;
-  margin-left: 80px;
-
   text-align: justify;
 }
 
 #TestoB {
   position: relative;
-  top: -250px;
-  height: 40%;
+  top: -30%;
+  width: 90%;
+  height: 140px;
+
+  background-color: #ffebd5;
+
+  margin-left: 7.5%;
 }
 
 

@@ -242,12 +242,12 @@ function animazioneF(pos) {
     // left assume valori che variano tra 0px e 200px
     function draw(timePassed) {
         if (pos) {
-            tutto.style.left = 450 - (timePassed / 2.2) + 'px';
+            tutto.style.left = 450 - (timePassed / 2.22) + 'px';
             title.style.transform = "rotate(-"+timePassed/11.1+"deg)";
             title.style.marginLeft =  -(timePassed / 7.69) +'px';
         } else {
-            tutto.style.left = (timePassed / 2) + 'px';
-            title.style.transform = "rotate("+(-90+timePassed/11.1)+"deg)";
+            tutto.style.left = (timePassed / 2.22) + 'px';
+            title.style.transform = "rotate("+(-90+timePassed/11.11)+"deg)";
             title.style.marginLeft = -130 +(timePassed / 7.69) +'px';
         }
 
