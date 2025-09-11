@@ -301,6 +301,12 @@ aside hr {
   list-style: none;
 }
 
+aside li:hover
+{
+  border-left: 2px solid #ffebd5;
+  border-right: 2px solid ffebd5;
+}
+
 /* FLEX SIDEBAR*/
 
 
@@ -458,9 +464,8 @@ footer ul {
 
 footer li:hover
 {
-  border-left: 1.5px;
-  border-right: 1.5px;
-  border-style: groove;
+  border-left: 2px solid #383838;
+  border-right: 2px solid #303030;
 }
 
 footer hr {
