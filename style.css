@@ -1,4 +1,8 @@
 /* NAVBAR*/
+* {
+  font-family: Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
 body {
   background-color: #ffebd5;
   padding: 0;
@@ -439,7 +443,7 @@ footer div {
   /*position: relative;*/
 
   /*Proprietà per mettere in orizzontale la scritta "NOTE STONATE"
-  transform: rotate(-90deg);          
+  transform: rotate(-90deg);
   margin-left: -130px;*/
 
   width: 250px;
