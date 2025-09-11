@@ -441,12 +441,13 @@ footer div {
   /*background-color: chocolate;*/
   color: white;
   /*position: relative;*/
-  transform: rotate(-90deg);
+
+  /*Proprietà per mettere in orizzontale la scritta "NOTE STONATE"
+  transform: rotate(-90deg);          
+  margin-left: -130px;*/
+
   width: 250px;
-
   text-align: center;
-  margin-left: -130px;
-
   font-size: 25px;
 }
 
@@ -457,6 +458,10 @@ footer div {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+
+  /*Posizionamento iniziale della scritta con l'immagine al centro*/
+  position: relative;
+  left: 30%;
 
   width: 300px;
   height: 310px;
