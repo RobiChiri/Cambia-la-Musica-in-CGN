@@ -217,6 +217,7 @@ function NotaClick(posizione) {
 
 var miaVarF = true;
 var animaFOngoing = false;
+const timeF = 1000;
 
 function animazioneF(pos) {
     var tutto = document.getElementById("figlio1").parentElement;
@@ -227,7 +228,7 @@ function animazioneF(pos) {
 
         var timePassed = Date.now() - start;
 
-        if (timePassed >= 1000) {
+        if (timePassed >= timeF) {
             clearInterval(timer); 
             return;
         }
@@ -264,7 +265,7 @@ function MostraF() {
                 document.getElementById("listaD").style.display = "block";
                 miaVarF = false;
                 animaFOngoing = false;
-            }, 1000);
+            }, timeF);
         }
         
     } else {
@@ -278,7 +279,7 @@ function MostraF() {
             miaVarF = true;
             setTimeout(function () {
                 animaFOngoing = false;
-            }, 1000);
+            }, timeF);
         }
         
     }
@@ -291,7 +292,7 @@ function MostraF() {
 
 var miaVarS = true;
 var animaSOngoin = false;
-
+const timeS = 1000;
 
 function animazioneS(pos) {
     var tutto = document.getElementById("Generale");
@@ -301,7 +302,7 @@ function animazioneS(pos) {
 
         var timePassed = Date.now() - start;
 
-        if (timePassed >= 1000) {
+        if (timePassed >= timeS) {
             clearInterval(timer); 
             return;
         }
@@ -335,7 +336,7 @@ function MostraS() {
                 document.getElementById("BoxLista").style.display = "block";
                 miaVarS = false;
                 animaSOngoin = false;
-            }, 1000);
+            }, timeS);
         }
 
     }
@@ -348,7 +349,7 @@ function MostraS() {
             miaVarS = true;
             setTimeout(function () {
                 animaSOngoin = false;
-            }, 1000);
+            }, timeS);
         }
         
     }
@@ -359,6 +360,7 @@ function MostraS() {
 var stato = [true, true, true];
 var animaGoing = [false,false,false];
 
+const TimeD = 1000;
 function animazioneD(pos, numero) {
     var sfondo = document.getElementById("sfondocard" + (numero + 1));
     var start = Date.now(); // memorizziamo il momento di partenza
@@ -367,7 +369,7 @@ function animazioneD(pos, numero) {
 
         var timePassed = Date.now() - start;
 
-        if (timePassed >= 1000) {
+        if (timePassed >= TimeD) {
             clearInterval(timer); 
             return;
         }
@@ -442,7 +444,7 @@ function prova(numero) {
             setTimeout(function () {
                 sfondo.style.visibility = "hidden";
                 animaGoing[numero] = false;
-            }, 1000);
+            }, TimeD);
             
         }
         
@@ -469,7 +471,7 @@ function prova(numero) {
                          break;
                  }
                  animaGoing[numero] = false;
-             }, 1000);
+             }, TimeD);
     
             var sfondo = document.getElementById("sfondocard" + (numero + 1)).style.visibility = "visible";
             stato[numero] = true;
@@ -482,8 +484,11 @@ function prova(numero) {
     var testo = document.getElementById("TestoB");
     var footer = document.getElementById("boxFooter");
     if (!stato[0] && !stato[1] && !stato[2]) {
-        testo.style.top = -3 + '%';
-        blocco.style.display = "none";
+        
+        setTimeout(function () {
+            blocco.style.display = "none";
+            testo.style.top = -3 + '%';
+        }, TimeD);
         footer.style.top = -15 + '%';
     } else {
         blocco.style.display = "flex";
