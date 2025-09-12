@@ -144,6 +144,8 @@ function controllaRisultato() {
             risultatoScritta.style.visibility = "visible";
             risultatoScritta.style.display = "block";
         }
+    }else{
+        alert("hai già inviato");
     }
 
 
