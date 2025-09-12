@@ -241,12 +241,12 @@ function animazioneF(pos) {
     function draw(timePassed) {
         if (pos) {
             tutto.style.left = 450 - (timePassed / 2.22) + 'px';
-            title.style.transform = "rotate(-"+timePassed/11.1+"deg)";
-            title.style.marginLeft =  -(timePassed / 7.69) +'px';
+            title.style.transform = "rotate(-" + timePassed / 11.1 + "deg)";
+            title.style.marginLeft = -(timePassed / 7.69) + 'px';
         } else {
             tutto.style.left = (timePassed / 2.22) + 'px';
-            title.style.transform = "rotate("+(-90+timePassed/11.11)+"deg)";
-            title.style.marginLeft = -130 +(timePassed / 7.69) +'px';
+            title.style.transform = "rotate(" + (-90 + timePassed / 11.11) + "deg)";
+            title.style.marginLeft = -130 + (timePassed / 7.69) + 'px';
         }
 
     }
@@ -340,13 +340,138 @@ function MostraS() {
 
     }
 }
-var stato1=false; 
-function prova(){
-    
-    document.getElementById("sfondocard1").style.visibility="hidden";
 
 
+var stato = [true, true, true];
 
+
+function animazioneD(pos, numero) {
+    var sfondo = document.getElementById("sfondocard" + (numero + 1));
+    var start = Date.now(); // memorizziamo il momento di partenza
+
+    var timer = setInterval(function () {
+        // quanto tempo è passato dall'inizio?
+        var timePassed = Date.now() - start;
+
+        if (timePassed >= 1000) {
+            clearInterval(timer); // completiamo l'animazione dopo 2 secondi
+            return;
+        }
+
+        // tracciamo l'animazione all'istante timePassed
+        draw(timePassed);
+
+    }, 1);
+
+    // via via che timePassed va da 0 a 1000
+    // left assume valori che variano tra 0px e 200px
+    function draw(timePassed) {
+        if (pos) {
+            sfondo.style.height = 300 - (timePassed / 3.33) + 'px';
+        } else {
+            sfondo.style.height = 0 + (timePassed / 3.33) + 'px';
+        }
+
+    }
+}
+
+//animazione ancora da fare per i blocchi
+function animazioneC(pos, numero) {
+    var sfondo = document.getElementById("sfondocard" + (numero + 1));
+    var start = Date.now(); // memorizziamo il momento di partenza
+
+    var timer = setInterval(function () {
+        // quanto tempo è passato dall'inizio?
+        var timePassed = Date.now() - start;
+
+        if (timePassed >= 1000) {
+            clearInterval(timer); // completiamo l'animazione dopo 2 secondi
+            return;
+        }
+
+        // tracciamo l'animazione all'istante timePassed
+        draw(timePassed);
+
+    }, 1);
+
+    // via via che timePassed va da 0 a 1000
+    // left assume valori che variano tra 0px e 200px
+    function draw(timePassed) {
+        if (pos) {
+            sfondo.style.height = 300 - (timePassed / 3.33) + 'px';
+        } else {
+            sfondo.style.height = 0 + (timePassed / 3.33) + 'px';
+        }
+
+    }
+}
+
+function prova(numero) {
+    var sfondo = document.getElementById("sfondocard" + (numero + 1));
+
+    if (stato[numero]) {
+
+        switch (numero) {
+            case 0:
+                document.getElementById("kw1").parentElement.style.visibility = "hidden";
+                document.getElementById("kw5").parentElement.style.visibility = "hidden";
+                break;
+            case 1:
+                document.getElementById("ColonnaD2").style.visibility = "hidden";
+                document.getElementById("ColonnaS2").style.visibility = "hidden";
+                document.getElementById("Centralee").style.visibility = "hidden";
+                break;
+            case 2:
+                document.getElementById("kw14").style.visibility = "hidden";
+                document.getElementById("kw15").style.visibility = "hidden";
+                break;
+        }
+
+        animazioneD(true, numero);
+        stato[numero] = false;
+        setTimeout(function () {
+            sfondo.style.visibility = "hidden";
+
+        }, 1000);
+
+    } else {
+
+        animazioneD(false, numero);
+
+        setTimeout(function () {
+             switch (numero) {
+                 case 0:
+                     document.getElementById("kw1").parentElement.style.visibility = "visible";
+                     document.getElementById("kw5").parentElement.style.visibility = "visible";
+                     break;
+                 case 1:
+                     document.getElementById("ColonnaD2").style.visibility = "visible";
+                     document.getElementById("ColonnaS2").style.visibility = "visible";
+                     document.getElementById("Centralee").style.visibility = "visible";
+                     break;
+                 case 2:
+                     document.getElementById("kw14").style.visibility = "visible";
+                     document.getElementById("kw15").style.visibility = "visible";
+                     break;
+             }
+         }, 1000);
+
+        var sfondo = document.getElementById("sfondocard" + (numero + 1)).style.visibility = "visible";
+        stato[numero] = true;
+    }
+
+    var blocco = document.getElementById("sfondocard1").parentElement;
+    var testo = document.getElementById("TestoB");
+    var footer = document.getElementById("boxFooter");
+    if (!stato[0] && !stato[1] && !stato[2]) {
+        testo.style.top = -3 + '%';
+        blocco.style.display = "none";
+        footer.style.top = -15 + '%';
+    } else {
+        blocco.style.display = "flex";
+        testo.style.top = -30 + '%';
+        footer.style.top = 0;
+    }
 
 }
 
