@@ -1,7 +1,7 @@
 //NAVBAR
 var domanda, scelto;
 
-domanda = [["Le fasi di una riunione sono due: svolgimento e chiusura", false], ["Per mantenere il ritmo giusto bisogna interrompere molto spesso per far vedere di star partecipando", false], ["Il nostro proposito nobile è come una bussola", true], ["Non bisogna avere un unico obiettivo chiaro ma molti obiettivi confusi da andare a discutere in sede di meeting", false], ["Il facilitatore è colui che andrà a verbalizzare le idee emerse e rielaborerà il To-Do", false], [" È sempre opportuno fare una riunione", false], ["È importante scegliere un luogo adatto per la riunione", true], ["I meeting sono un insieme di accordi", true], ["Lavorare in gruppo porta più frutti perché porta meno distrazioni", true], ["Non aspettare che le cose cambino da sole comincia a fare la tua parte", true],];
+domanda = [["Le fasi di una riunione sono due: svolgimento e chiusura", false], ["Per mantenere il ritmo giusto bisogna interrompere molto spesso per far vedere di star partecipando", false], ["Il nostro proposito nobile è come una bussola", true], ["Non bisogna avere un unico obiettivo chiaro ma molti obiettivi confusi da andare a discutere in sede di meeting", false], ["Il facilitatore è colui che andrà a verbalizzare le idee emerse e rielaborerà il To-Do", false], [" È sempre opportuno fare una riunione", false], ["È importante scegliere un luogo adatto per la riunione", true], ["I meeting sono un insieme di accordi", true], ["Lavorare in gruppo porta più frutti perché porta meno distrazioni", true], ["Non aspettare che le cose cambino da sole comincia a fare la tua parte", true]];
 
 document.addEventListener('DOMContentLoaded', function () {
     scegliDomande();
@@ -14,7 +14,7 @@ var a, b, c;
 function random(max) {
     return Math.round(Math.random() * max);
 }
-function sito(){
+function sito() {
     window.open("https://www.cgn.it", "_blank");;
 }
 
@@ -229,7 +229,7 @@ function animazioneF(pos) {
         var timePassed = Date.now() - start;
 
         if (timePassed >= timeF) {
-            clearInterval(timer); 
+            clearInterval(timer);
             return;
         }
 
@@ -255,7 +255,7 @@ function animazioneF(pos) {
 
 function MostraF() {
     if (miaVarF) {
-        if(!animaFOngoing){
+        if (!animaFOngoing) {
             animaFOngoing = true;
             animazioneF(true);
 
@@ -267,9 +267,9 @@ function MostraF() {
                 animaFOngoing = false;
             }, timeF);
         }
-        
+
     } else {
-        if(!animaFOngoing){
+        if (!animaFOngoing) {
             animaFOngoing = true;
             animazioneF(false);
 
@@ -281,7 +281,7 @@ function MostraF() {
                 animaFOngoing = false;
             }, timeF);
         }
-        
+
     }
 
 }
@@ -303,7 +303,7 @@ function animazioneS(pos) {
         var timePassed = Date.now() - start;
 
         if (timePassed >= timeS) {
-            clearInterval(timer); 
+            clearInterval(timer);
             return;
         }
 
@@ -328,7 +328,7 @@ function MostraS() {
 
 
     if (miaVarS) {
-        if(!animaSOngoin){
+        if (!animaSOngoin) {
             animaSOngoin = true;
             animazioneS(true)
 
@@ -341,7 +341,7 @@ function MostraS() {
 
     }
     else {
-        if(!animaSOngoin){
+        if (!animaSOngoin) {
             animaSOngoin = true;
             animazioneS(false);
 
@@ -351,14 +351,14 @@ function MostraS() {
                 animaSOngoin = false;
             }, timeS);
         }
-        
+
     }
 }
 
 
 
 var stato = [true, true, true];
-var animaGoing = [false,false,false];
+var animaGoing = [false, false, false];
 
 const TimeD = 1000;
 function animazioneD(pos, numero) {
@@ -370,7 +370,7 @@ function animazioneD(pos, numero) {
         var timePassed = Date.now() - start;
 
         if (timePassed >= TimeD) {
-            clearInterval(timer); 
+            clearInterval(timer);
             return;
         }
 
@@ -388,9 +388,10 @@ function animazioneD(pos, numero) {
     }
 }
 
-//animazione ancora da fare per i blocchi
-function animazioneC(pos, numero) {
-    var sfondo = document.getElementById("sfondocard" + (numero + 1));
+//animazione ancora da fare per il testo e footer
+function animazioneT(pos) {
+    var testo = document.getElementById("TestoB");
+    var footer = document.getElementById("boxFooter");
     var start = Date.now(); // memorizziamo il momento di partenza
 
     var timer = setInterval(function () {
@@ -398,7 +399,7 @@ function animazioneC(pos, numero) {
         var timePassed = Date.now() - start;
 
         if (timePassed >= 1000) {
-            clearInterval(timer); 
+            clearInterval(timer);
             return;
         }
 
@@ -409,9 +410,12 @@ function animazioneC(pos, numero) {
 
     function draw(timePassed) {
         if (pos) {
-            sfondo.style.height = 300 - (timePassed / 3.33) + 'px';
+            footer.style.top = (0 - (timePassed / 66.66)) + '%';
+            testo.style.top = (-30 + (timePassed / 37.03)) + '%';
         } else {
-            sfondo.style.height = 0 + (timePassed / 3.33) + 'px';
+            console.log((-15 + (timePassed / 66.66)) + '%');
+            footer.style.top = (-15 + (timePassed / 66.66)) + '%';
+            testo.style.top = (-3 - (timePassed / 37.03)) + '%';
         }
 
     }
@@ -421,7 +425,7 @@ function prova(numero) {
     var sfondo = document.getElementById("sfondocard" + (numero + 1));
 
     if (stato[numero]) {
-        if(!animaGoing[numero]){
+        if (!animaGoing[numero]) {
             animaGoing[numero] = true;
             switch (numero) {
                 case 0:
@@ -438,62 +442,80 @@ function prova(numero) {
                     document.getElementById("kw15").style.visibility = "hidden";
                     break;
             }
-    
+
             animazioneD(true, numero);
             stato[numero] = false;
             setTimeout(function () {
                 sfondo.style.visibility = "hidden";
                 animaGoing[numero] = false;
             }, TimeD);
-            
+
         }
-        
+
     } else {
 
-        if(animaGoing[numero] == false){
+        if (animaGoing[numero] == false) {
             animaGoing[numero] = true;
             animazioneD(false, numero);
 
             setTimeout(function () {
-                 switch (numero) {
-                     case 0:
-                         document.getElementById("kw1").parentElement.style.visibility = "visible";
-                         document.getElementById("kw5").parentElement.style.visibility = "visible";
-                         break;
-                     case 1:
-                         document.getElementById("ColonnaD2").style.visibility = "visible";
-                         document.getElementById("ColonnaS2").style.visibility = "visible";
-                         document.getElementById("Centralee").style.visibility = "visible";
-                         break;
-                     case 2:
-                         document.getElementById("kw14").style.visibility = "visible";
-                         document.getElementById("kw15").style.visibility = "visible";
-                         break;
-                 }
-                 animaGoing[numero] = false;
-             }, TimeD);
-    
+                switch (numero) {
+                    case 0:
+                        document.getElementById("kw1").parentElement.style.visibility = "visible";
+                        document.getElementById("kw5").parentElement.style.visibility = "visible";
+                        break;
+                    case 1:
+                        document.getElementById("ColonnaD2").style.visibility = "visible";
+                        document.getElementById("ColonnaS2").style.visibility = "visible";
+                        document.getElementById("Centralee").style.visibility = "visible";
+                        break;
+                    case 2:
+                        document.getElementById("kw14").style.visibility = "visible";
+                        document.getElementById("kw15").style.visibility = "visible";
+                        break;
+                }
+                animaGoing[numero] = false;
+            }, TimeD);
+
             var sfondo = document.getElementById("sfondocard" + (numero + 1)).style.visibility = "visible";
             stato[numero] = true;
-            
+
         }
-        
+
     }
 
     var blocco = document.getElementById("sfondocard1").parentElement;
     var testo = document.getElementById("TestoB");
     var footer = document.getElementById("boxFooter");
+    var last = false;
     if (!stato[0] && !stato[1] && !stato[2]) {
-        
+        animazioneT(true);
         setTimeout(function () {
             blocco.style.display = "none";
             testo.style.top = -3 + '%';
+            last = true;
+            footer.style.top = -15 + '%';
         }, TimeD);
-        footer.style.top = -15 + '%';
+        //footer.style.top = -15 + '%';
     } else {
-        blocco.style.display = "flex";
-        testo.style.top = -30 + '%';
-        footer.style.top = 0;
+        console.log(last);
+        if (last) {
+
+            animazioneT(false);
+            setTimeout(function () {
+                blocco.style.display = "flex";
+                testo.style.top = -30 + '%';
+                footer.style.top = 0;
+                last = false;
+            }, TimeD);
+
+        } else {
+            blocco.style.display = "flex";
+            testo.style.top = -30 + '%';
+            footer.style.top = 0;
+        }
+
+
     }
 
 }
