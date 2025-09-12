@@ -97,7 +97,7 @@ function rifai() {
 
 
 //funzione per controllare se un radiobutton è checkato oppure no
-function radioChecked(radioButtons, Border, i) {
+function radioChecked(radioButtons, Border, i, a) {
     if (radioButtons.checked) {
         if ((radioButtons.getAttribute('value') == "vero" && domanda[a][1]) || (radioButtons.getAttribute('value') == "falso" && !domanda[a][1])) {
             Border.borderColor = 'lightgreen';
@@ -114,37 +114,42 @@ function radioChecked(radioButtons, Border, i) {
 
 function controllaRisultato() {
 
+    if (!cliccato) {
+        const radioButtons1 = document.querySelectorAll('input[name="risposta1"]');
+        const radioButtons2 = document.querySelectorAll('input[name="risposta2"]');
+        const radioButtons3 = document.querySelectorAll('input[name="risposta3"]');
+
+
+
+        var Border1 = document.getElementById("domanda1").parentElement.style;
+        var Border2 = document.getElementById("domanda2").parentElement.style;
+        var Border3 = document.getElementById("domanda3").parentElement.style;
+
+        for (var i = 0; i < 2; i++) {
+            debugger;
+            radioChecked(radioButtons1[i], Border1, i,a);
+            radioChecked(radioButtons2[i], Border2, i,b);
+            radioChecked(radioButtons3[i], Border3, i,c);
+        }
+
+        var risultatoScritta = document.getElementById("risultato");
+        if (Border1.borderColor == 'lightgreen' && Border2.borderColor == 'lightgreen' && Border3.borderColor == 'lightgreen') {
+            risultatoScritta.textContent = "BRAVO SEI PASSATO!";
+            risultatoScritta.style.color = 'lightgreen';
+            risultatoScritta.style.visibility = "visible";
+            risultatoScritta.style.display = "block";
+        } else {
+            risultatoScritta.textContent = "NOO NON SEI PASSATO!";
+            risultatoScritta.style.color = 'red';
+            risultatoScritta.style.visibility = "visible";
+            risultatoScritta.style.display = "block";
+        }
+    }else{
+        alert("hai già inviato");
+    }
+
 
     cliccato = true;
-    const radioButtons1 = document.querySelectorAll('input[name="risposta1"]');
-    const radioButtons2 = document.querySelectorAll('input[name="risposta2"]');
-    const radioButtons3 = document.querySelectorAll('input[name="risposta3"]');
-
-
-
-    var Border1 = document.getElementById("domanda1").parentElement.style;
-    var Border2 = document.getElementById("domanda2").parentElement.style;
-    var Border3 = document.getElementById("domanda3").parentElement.style;
-
-    for (var i = 0; i < 2; i++) {
-        debugger;
-        radioChecked(radioButtons1[i], Border1, i);
-        radioChecked(radioButtons2[i], Border2, i);
-        radioChecked(radioButtons3[i], Border3, i);
-    }
-
-    var risultatoScritta = document.getElementById("risultato");
-    if (Border1.borderColor == 'lightgreen' && Border2.borderColor == 'lightgreen' && Border3.borderColor == 'lightgreen') {
-        risultatoScritta.textContent = "BRAVO SEI PASSATO!";
-        risultatoScritta.style.color = 'lightgreen';
-        risultatoScritta.style.visibility = "visible";
-        risultatoScritta.style.display = "block";
-    } else {
-        risultatoScritta.textContent = "NOO NON SEI PASSATO!";
-        risultatoScritta.style.color = 'red';
-        risultatoScritta.style.visibility = "visible";
-        risultatoScritta.style.display = "block";
-    }
 }
 
 
