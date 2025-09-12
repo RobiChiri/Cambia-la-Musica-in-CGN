@@ -223,21 +223,20 @@ function animazioneF(pos) {
     var start = Date.now(); // memorizziamo il momento di partenza
 
     var timer = setInterval(function () {
-        // quanto tempo è passato dall'inizio?
+
         var timePassed = Date.now() - start;
 
         if (timePassed >= 1000) {
-            clearInterval(timer); // completiamo l'animazione dopo 2 secondi
+            clearInterval(timer); 
             return;
         }
 
-        // tracciamo l'animazione all'istante timePassed
+
         draw(timePassed);
 
     }, 1);
 
-    // via via che timePassed va da 0 a 1000
-    // left assume valori che variano tra 0px e 200px
+
     function draw(timePassed) {
         if (pos) {
             tutto.style.left = 450 - (timePassed / 2.22) + 'px';
@@ -286,24 +285,23 @@ var miaVarS = true;
 
 function animazioneS(pos) {
     var tutto = document.getElementById("Generale");
-    var start = Date.now(); // memorizziamo il momento di partenza
+    var start = Date.now();
 
     var timer = setInterval(function () {
-        // quanto tempo è passato dall'inizio?
+
         var timePassed = Date.now() - start;
 
         if (timePassed >= 1000) {
-            clearInterval(timer); // completiamo l'animazione dopo 2 secondi
+            clearInterval(timer); 
             return;
         }
 
-        // tracciamo l'animazione all'istante timePassed
+
         draw(timePassed);
 
     }, 1);
 
-    // via via che timePassed va da 0 a 1000
-    // left assume valori che variano tra 0px e 200px
+
     function draw(timePassed) {
         if (pos) {
             tutto.style.top = 200 - (timePassed / 5) + 'px';
@@ -342,29 +340,27 @@ function MostraS() {
 }
 
 
-var stato = [true, true, true];
 
+var stato = [true, true, true];
+var animaGoing = [false,false,false];
 
 function animazioneD(pos, numero) {
     var sfondo = document.getElementById("sfondocard" + (numero + 1));
     var start = Date.now(); // memorizziamo il momento di partenza
 
     var timer = setInterval(function () {
-        // quanto tempo è passato dall'inizio?
+
         var timePassed = Date.now() - start;
 
         if (timePassed >= 1000) {
-            clearInterval(timer); // completiamo l'animazione dopo 2 secondi
+            clearInterval(timer); 
             return;
         }
 
-        // tracciamo l'animazione all'istante timePassed
         draw(timePassed);
 
     }, 1);
 
-    // via via che timePassed va da 0 a 1000
-    // left assume valori che variano tra 0px e 200px
     function draw(timePassed) {
         if (pos) {
             sfondo.style.height = 300 - (timePassed / 3.33) + 'px';
@@ -385,17 +381,15 @@ function animazioneC(pos, numero) {
         var timePassed = Date.now() - start;
 
         if (timePassed >= 1000) {
-            clearInterval(timer); // completiamo l'animazione dopo 2 secondi
+            clearInterval(timer); 
             return;
         }
 
-        // tracciamo l'animazione all'istante timePassed
+
         draw(timePassed);
 
     }, 1);
 
-    // via via che timePassed va da 0 a 1000
-    // left assume valori che variano tra 0px e 200px
     function draw(timePassed) {
         if (pos) {
             sfondo.style.height = 300 - (timePassed / 3.33) + 'px';
@@ -410,54 +404,63 @@ function prova(numero) {
     var sfondo = document.getElementById("sfondocard" + (numero + 1));
 
     if (stato[numero]) {
-
-        switch (numero) {
-            case 0:
-                document.getElementById("kw1").parentElement.style.visibility = "hidden";
-                document.getElementById("kw5").parentElement.style.visibility = "hidden";
-                break;
-            case 1:
-                document.getElementById("ColonnaD2").style.visibility = "hidden";
-                document.getElementById("ColonnaS2").style.visibility = "hidden";
-                document.getElementById("Centralee").style.visibility = "hidden";
-                break;
-            case 2:
-                document.getElementById("kw14").style.visibility = "hidden";
-                document.getElementById("kw15").style.visibility = "hidden";
-                break;
+        if(!animaGoing[numero]){
+            animaGoing[numero] = true;
+            switch (numero) {
+                case 0:
+                    document.getElementById("kw1").parentElement.style.visibility = "hidden";
+                    document.getElementById("kw5").parentElement.style.visibility = "hidden";
+                    break;
+                case 1:
+                    document.getElementById("ColonnaD2").style.visibility = "hidden";
+                    document.getElementById("ColonnaS2").style.visibility = "hidden";
+                    document.getElementById("Centralee").style.visibility = "hidden";
+                    break;
+                case 2:
+                    document.getElementById("kw14").style.visibility = "hidden";
+                    document.getElementById("kw15").style.visibility = "hidden";
+                    break;
+            }
+    
+            animazioneD(true, numero);
+            stato[numero] = false;
+            setTimeout(function () {
+                sfondo.style.visibility = "hidden";
+                animaGoing[numero] = false;
+            }, 1000);
+            
         }
-
-        animazioneD(true, numero);
-        stato[numero] = false;
-        setTimeout(function () {
-            sfondo.style.visibility = "hidden";
-
-        }, 1000);
-
+        
     } else {
 
-        animazioneD(false, numero);
+        if(animaGoing[numero] == false){
+            animaGoing[numero] = true;
+            animazioneD(false, numero);
 
-        setTimeout(function () {
-             switch (numero) {
-                 case 0:
-                     document.getElementById("kw1").parentElement.style.visibility = "visible";
-                     document.getElementById("kw5").parentElement.style.visibility = "visible";
-                     break;
-                 case 1:
-                     document.getElementById("ColonnaD2").style.visibility = "visible";
-                     document.getElementById("ColonnaS2").style.visibility = "visible";
-                     document.getElementById("Centralee").style.visibility = "visible";
-                     break;
-                 case 2:
-                     document.getElementById("kw14").style.visibility = "visible";
-                     document.getElementById("kw15").style.visibility = "visible";
-                     break;
-             }
-         }, 1000);
-
-        var sfondo = document.getElementById("sfondocard" + (numero + 1)).style.visibility = "visible";
-        stato[numero] = true;
+            setTimeout(function () {
+                 switch (numero) {
+                     case 0:
+                         document.getElementById("kw1").parentElement.style.visibility = "visible";
+                         document.getElementById("kw5").parentElement.style.visibility = "visible";
+                         break;
+                     case 1:
+                         document.getElementById("ColonnaD2").style.visibility = "visible";
+                         document.getElementById("ColonnaS2").style.visibility = "visible";
+                         document.getElementById("Centralee").style.visibility = "visible";
+                         break;
+                     case 2:
+                         document.getElementById("kw14").style.visibility = "visible";
+                         document.getElementById("kw15").style.visibility = "visible";
+                         break;
+                 }
+                 animaGoing[numero] = false;
+             }, 1000);
+    
+            var sfondo = document.getElementById("sfondocard" + (numero + 1)).style.visibility = "visible";
+            stato[numero] = true;
+            
+        }
+        
     }
 
     var blocco = document.getElementById("sfondocard1").parentElement;
