@@ -97,7 +97,7 @@ function rifai() {
 
 
 //funzione per controllare se un radiobutton è checkato oppure no
-function radioChecked(radioButtons, Border, i) {
+function radioChecked(radioButtons, Border, i, a) {
     if (radioButtons.checked) {
         if ((radioButtons.getAttribute('value') == "vero" && domanda[a][1]) || (radioButtons.getAttribute('value') == "falso" && !domanda[a][1])) {
             Border.borderColor = 'lightgreen';
@@ -127,9 +127,9 @@ function controllaRisultato() {
 
         for (var i = 0; i < 2; i++) {
             debugger;
-            radioChecked(radioButtons1[i], Border1, i);
-            radioChecked(radioButtons2[i], Border2, i);
-            radioChecked(radioButtons3[i], Border3, i);
+            radioChecked(radioButtons1[i], Border1, i,a);
+            radioChecked(radioButtons2[i], Border2, i,b);
+            radioChecked(radioButtons3[i], Border3, i,c);
         }
 
         var risultatoScritta = document.getElementById("risultato");
