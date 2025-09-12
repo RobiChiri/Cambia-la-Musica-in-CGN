@@ -20,10 +20,11 @@ body {
 
 .pulsanti div:hover
 {
-  border-bottom: 3px solid rgb(248, 180, 53);
-  border-right: 3px solid rgb(248, 180, 53);
-  border-left: 3px solid rgb(248, 180, 53);
-  border-top: 3px solid rgb(248, 180, 53);
+  
+  border-bottom: 3px solid rgb(175, 114, 0);
+  border-right: 3px solid rgb(175, 114, 0);
+  border-left: 3px solid rgb(175, 114, 0);
+  border-top: 3px solid rgb(175, 114, 0);
   border-radius: 6px;
 }
 
@@ -494,7 +495,10 @@ footer hr {
   color: #ffebd5;
   list-style: none;
 }
-#listaD,#listaC,#listaF{
+
+#listaD,
+#listaC,
+#listaF {
   display: none;
 }
 

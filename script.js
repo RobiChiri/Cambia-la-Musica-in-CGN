@@ -15,6 +15,7 @@ function random(max) {
     return Math.round(Math.random() * max);
 }
 function sito() {
+
     window.open("https://www.cgn.it", "_blank");;
 }
 
@@ -461,24 +462,24 @@ function prova(numero) {
             animaGoing[numero] = true;
             animazioneD(false, numero);
 
-            setTimeout(function () {
-                switch (numero) {
-                    case 0:
-                        document.getElementById("kw1").parentElement.style.visibility = "visible";
-                        document.getElementById("kw5").parentElement.style.visibility = "visible";
-                        break;
-                    case 1:
-                        document.getElementById("ColonnaD2").style.visibility = "visible";
-                        document.getElementById("ColonnaS2").style.visibility = "visible";
-                        document.getElementById("Centralee").style.visibility = "visible";
-                        break;
-                    case 2:
-                        document.getElementById("kw14").style.visibility = "visible";
-                        document.getElementById("kw15").style.visibility = "visible";
-                        break;
-                }
-                animaGoing[numero] = false;
-            }, TimeD);
+        setTimeout(function () {
+            
+             switch (numero) {
+                 case 0:
+                     document.getElementById("kw1").parentElement.style.visibility = "visible";
+                     document.getElementById("kw5").parentElement.style.visibility = "visible";
+                     break;
+                 case 1:
+                     document.getElementById("ColonnaD2").style.visibility = "visible";
+                     document.getElementById("ColonnaS2").style.visibility = "visible";
+                     document.getElementById("Centralee").style.visibility = "visible";
+                     break;
+                 case 2:
+                     document.getElementById("kw14").style.visibility = "visible";
+                     document.getElementById("kw15").style.visibility = "visible";
+                     break;
+             }
+         }, 1000);
 
             var sfondo = document.getElementById("sfondocard" + (numero + 1)).style.visibility = "visible";
             stato[numero] = true;
