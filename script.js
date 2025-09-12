@@ -216,6 +216,7 @@ function NotaClick(posizione) {
 
 
 var miaVarF = true;
+var animaFOngoing = false;
 
 function animazioneF(pos) {
     var tutto = document.getElementById("figlio1").parentElement;
@@ -253,24 +254,33 @@ function animazioneF(pos) {
 
 function MostraF() {
     if (miaVarF) {
+        if(!animaFOngoing){
+            animaFOngoing = true;
+            animazioneF(true);
 
-        animazioneF(true);
-
-        setTimeout(function () {
-            document.getElementById("listaF").style.display = "block";
-            document.getElementById("listaC").style.display = "block";
-            document.getElementById("listaD").style.display = "block";
-            miaVarF = false;
-        }, 1000);
-
+            setTimeout(function () {
+                document.getElementById("listaF").style.display = "block";
+                document.getElementById("listaC").style.display = "block";
+                document.getElementById("listaD").style.display = "block";
+                miaVarF = false;
+                animaFOngoing = false;
+            }, 1000);
+        }
+        
     } else {
+        if(!animaFOngoing){
+            animaFOngoing = true;
+            animazioneF(false);
 
-        animazioneF(false);
-
-        document.getElementById("listaF").style.display = "none";
-        document.getElementById("listaC").style.display = "none";
-        document.getElementById("listaD").style.display = "none";
-        miaVarF = true;
+            document.getElementById("listaF").style.display = "none";
+            document.getElementById("listaC").style.display = "none";
+            document.getElementById("listaD").style.display = "none";
+            miaVarF = true;
+            setTimeout(function () {
+                animaFOngoing = false;
+            }, 1000);
+        }
+        
     }
 
 }
@@ -280,7 +290,7 @@ function MostraF() {
 
 
 var miaVarS = true;
-
+var animaSOngoin = false;
 
 
 function animazioneS(pos) {
@@ -317,25 +327,30 @@ function MostraS() {
 
 
     if (miaVarS) {
+        if(!animaSOngoin){
+            animaSOngoin = true;
+            animazioneS(true)
 
-
-        animazioneS(true)
-
-
-        setTimeout(function () {
-            document.getElementById("BoxLista").style.display = "block";
-            miaVarS = false;
-        }, 1000);
+            setTimeout(function () {
+                document.getElementById("BoxLista").style.display = "block";
+                miaVarS = false;
+                animaSOngoin = false;
+            }, 1000);
+        }
 
     }
     else {
+        if(!animaSOngoin){
+            animaSOngoin = true;
+            animazioneS(false);
 
-        animazioneS(false);
-
-        document.getElementById("BoxLista").style.display = "none";
-        miaVarS = true;
-
-
+            document.getElementById("BoxLista").style.display = "none";
+            miaVarS = true;
+            setTimeout(function () {
+                animaSOngoin = false;
+            }, 1000);
+        }
+        
     }
 }
 
